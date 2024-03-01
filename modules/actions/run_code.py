@@ -9,7 +9,7 @@ from modules.const import WORKSPACE_ROOT
 from modules.utils import call_reset_environment, read_file
 from modules.llm.gpt import GPT
 from modules.utils.common import BugSource, TestResult
-
+from config
 PROMPT_TEMPLATE = """
 Role: You are a senior development and qa engineer, your role is summarize the code running result.
 If the running result does not include an error, you should explicitly approve the result.
