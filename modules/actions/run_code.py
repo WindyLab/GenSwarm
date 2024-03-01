@@ -9,7 +9,7 @@ from modules.const import WORKSPACE_ROOT
 from modules.utils import call_reset_environment, read_file
 from modules.llm.gpt import GPT
 from modules.utils.common import BugSource, TestResult
-from config
+from config.parameters import process_time_out
 PROMPT_TEMPLATE = """
 Role: You are a senior development and qa engineer, your role is summarize the code running result.
 If the running result does not include an error, you should explicitly approve the result.
@@ -75,8 +75,8 @@ class RunCode(Action):
         )
 
         try:
-            # Wait for the process to complete, with a timeout
-            stdout, stderr = process.communicate(timeout=20)
+            # Wait for the process to complete, with a timeout, default 20s
+            stdout, stderr = process.communicate(timeout=process_time_out)
             return stdout.decode("utf-8"), stderr.decode("utf-8")
         except subprocess.TimeoutExpired:
             self._logger.info("The command did not complete within the given timeout.")
