@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="229d52b9-a2c1-4773-8a6e-be90d886c18d" name="Changes" comment="none: system default files">
+    <list default="true" id="229d52b9-a2c1-4773-8a6e-be90d886c18d" name="Changes" comment="feat: add parameters.py">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/parameters.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/parameters.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,32 +39,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.environment.executor": "Run",
-    "Python.framework.executor": "Run",
-    "Python.functions.executor": "Run",
-    "Python.robot.executor": "Run",
-    "Python.run (1).executor": "Run",
-    "Python.run (2).executor": "Run",
-    "Python.run (3).executor": "Run",
-    "Python.run (4).executor": "Run",
-    "Python.run (5).executor": "Debug",
-    "Python.run.executor": "Run",
-    "Python.workflow.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature-timeout",
-    "last_opened_file_path": "/home/ubuntu/Desktop/CodeLLM/workspace/2024-02-29_20-18-37",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "http.proxy",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.environment.executor&quot;: &quot;Run&quot;,
+    &quot;Python.framework.executor&quot;: &quot;Run&quot;,
+    &quot;Python.functions.executor&quot;: &quot;Run&quot;,
+    &quot;Python.robot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.run (2).executor&quot;: &quot;Run&quot;,
+    &quot;Python.run (3).executor&quot;: &quot;Run&quot;,
+    &quot;Python.run (4).executor&quot;: &quot;Run&quot;,
+    &quot;Python.run (5).executor&quot;: &quot;Debug&quot;,
+    &quot;Python.run.executor&quot;: &quot;Run&quot;,
+    &quot;Python.workflow.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature-timeout&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ubuntu/Desktop/CodeLLM/workspace/2024-02-29_20-18-37&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="CodeLLM" is-module-sdk="true">
@@ -239,7 +240,8 @@
       <workItem from="1709119477967" duration="6048000" />
       <workItem from="1709167769583" duration="13812000" />
       <workItem from="1709201028868" duration="271000" />
-      <workItem from="1709201311163" duration="23770000" />
+      <workItem from="1709201311163" duration="23969000" />
+      <workItem from="1709275452532" duration="235000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -409,7 +411,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709274590820</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="feat: add parameters.py">
+      <option name="closed" value="true" />
+      <created>1709274754982</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1709274754982</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,7 +485,8 @@
     <MESSAGE value="perf: uss process_timeout parameter" />
     <MESSAGE value="perf: use process_time_out parameter" />
     <MESSAGE value="none: system default files" />
-    <option name="LAST_COMMIT_MESSAGE" value="none: system default files" />
+    <MESSAGE value="feat: add parameters.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add parameters.py" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
