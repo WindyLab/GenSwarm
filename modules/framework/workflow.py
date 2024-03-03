@@ -7,7 +7,13 @@ from modules.utils import init_workspace
 from modules.utils.logger import setup_logger
 from modules.framework.stage_transition import StageTransition
 from modules.framework.workflow_context import WorkflowContext
-
+import argparse
+args = argparse.Namespace()
+def parse_args():
+    global args
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--runcode_T', type=int, default=20, help='set time out for run_code action, default 20s') #  time out for run code
+    args = parser.parse_args()
 
 class Workflow:
     STAGE_POOL = {
@@ -66,6 +72,7 @@ class Workflow:
 
 
 if __name__ == "__main__":
+    parse_args()
     task_list = [
         "Gather these robots together at the position of leader robot",
         "Gather the robots to point (2,3)",

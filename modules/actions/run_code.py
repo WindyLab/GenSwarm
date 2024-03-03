@@ -76,7 +76,8 @@ class RunCode(Action):
 
         try:
             # Wait for the process to complete, with a timeout
-            stdout, stderr = process.communicate(timeout=20)
+            from modules.framework.workflow import args
+            stdout, stderr = process.communicate(timeout=args.runcode_T)
             return stdout.decode("utf-8"), stderr.decode("utf-8")
         except subprocess.TimeoutExpired:
             self._logger.info("The command did not complete within the given timeout.")
