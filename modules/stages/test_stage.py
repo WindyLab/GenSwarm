@@ -3,8 +3,7 @@ import difflib
 from modules.stages.stage import Stage, StageResult
 from modules.actions import WriteCode, RunCode
 from modules.utils import read_file
-from modules.const import WORKSPACE_ROOT
-from modules.framework.prompts import *
+from modules.prompt.const import WORKSPACE_ROOT
 from modules.framework.workflow_context import FileStatus, FileInfo
 from modules.utils.common import BugSource
 

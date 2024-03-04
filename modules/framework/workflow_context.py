@@ -2,7 +2,7 @@ from enum import Enum
 
 from pydantic import BaseModel, Field
 from modules.utils import read_file, write_file
-from modules.const import WORKSPACE_ROOT
+from modules.prompt.const import WORKSPACE_ROOT
 
 
 class FileStatus(Enum):

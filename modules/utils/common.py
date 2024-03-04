@@ -3,7 +3,6 @@ import re
 import ast
 import shutil
 import rospy
-import cv2
 from typing import Any
 from enum import Enum
 from std_srvs.srv import SetBool
@@ -68,7 +67,7 @@ def copy_folder(source_folder, destination_folder):
 
 
 def init_workspace():
-    from modules.const import WORKSPACE_ROOT, PROJECT_ROOT
+    from modules.prompt.const import WORKSPACE_ROOT, PROJECT_ROOT
     if not os.path.exists(WORKSPACE_ROOT):
         os.makedirs(WORKSPACE_ROOT)
         os.makedirs(os.path.join(WORKSPACE_ROOT, 'data/frames'))
