@@ -1,8 +1,9 @@
 from enum import Enum
 
 from pydantic import BaseModel, Field
-from modules.utils import read_file, write_file
-from modules.prompt.const import WORKSPACE_ROOT
+
+from modules.utils import read_file, write_file, append_file
+from modules.const import WORKSPACE_ROOT
 
 
 class FileStatus(Enum):
@@ -40,6 +41,24 @@ class FileInfo(BaseModel):
             self.status = FileStatus.NOT_TESTED
         write_file(WORKSPACE_ROOT, self.name, content)
 
+class FileLog(BaseModel):
+    name: str = Field(default='')
+    # status: FileStatus = Field(default=FileStatus.NOT_WRITTEN)
+    version: int = Field(default=0)
+
+    def __init__(self, name: str = '', message: str = ''):
+        super().__init__()
+        self.name = name
+        self._message = message
+
+    @property
+    def message(self):
+        self._message = read_file(WORKSPACE_ROOT, self.name)
+        return self._message
+
+    @message.setter
+    def message(self, content: str):
+        append_file(WORKSPACE_ROOT, self.name, content)
 
 class WorkflowContext():
     _instance = None
@@ -53,6 +72,7 @@ class WorkflowContext():
     }
     sequence_diagram: FileInfo = FileInfo(name='sequence_diagram.md')
     run_result: FileInfo = FileInfo(name='run_result.md')
+    log: FileLog = FileLog(name='log.md')
 
     def __new__(cls, *args, **kwargs):
         if not cls._instance:

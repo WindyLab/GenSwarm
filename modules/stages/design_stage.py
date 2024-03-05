@@ -29,7 +29,6 @@ class DesignStage(Stage):
             robot_api=ROBOT_API,
             function_list=function_list_str,
             env_des=ENV_DES
-
         )
         await self._action.run(prompt=prompt)
 

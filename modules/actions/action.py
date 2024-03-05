@@ -40,9 +40,19 @@ class Action(ABC):
         return code
 
     async def _ask(self, prompt: str) -> str:
-        self._logger.debug(format_log_message("Prompt", prompt))
         result = await self._llm.ask(prompt)
+        # store PROMPT and RESULT in the log.md
+        # make sure output them after _llm.ask(), for it's an asynchronize function
+        self._logger.debug(format_log_message("Prompt", prompt))
         self._logger.info(format_log_message("Response", result))
+        self._context.log.message = (
+            f'***\n'
+            f'# *Prompt of {self.__class__.__name__}:*\n'
+            f'{prompt}\n'
+            f"# *Response from {self.__class__.__name__}:*\n"
+            f"{result}\n"
+            f"***\n"
+        )
         return result
 
 

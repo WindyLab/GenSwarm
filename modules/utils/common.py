@@ -57,6 +57,12 @@ def write_file(directory, filename, content):
     print(f"File written: {file_path}")
     return file_path
 
+def append_file(directory, filename, content):
+    file_path = os.path.join(directory, filename)
+    with open(file_path, 'a') as file:
+        file.write(content)
+    print(f"Log appended: {file_path}")
+    return file_path
 
 def copy_folder(source_folder, destination_folder):
     try:
