@@ -38,7 +38,7 @@ def set_robot_velocity_by_id(robot_id, velocity):
     Input:
     - robot_id(int): The ID of the robot to set the velocity for.
     Output:
-    -  numpy.ndarray(float,float): The new velocity to set.
+    -  None
     '''
 
 def get_all_robot_ids():

@@ -72,8 +72,9 @@ if __name__ == "__main__":
         "Gather the robots along the y=x trajectory",
         'Move the robots to form a square formation',
         'First, move the robot to form a square formation. Then, move the robots to form a triangle formation.Finally gather these robots together',
-        "Initially, gather all robots at the center of the environment, confirming their arrival before proceeding. Next, arrange the robots into a square formation with each side measuring exactly 1.0 meter, ensuring the formation's precision with right angles and equal sides. Once the square is confirmed, guide the robots to trace a circular path while maintaining the square formation. Constant monitoring is required to preserve the formation's integrity and the path's accuracy throughout the movement."
+        "Initially, gather all robots at the center of the environment, confirming their arrival before proceeding. Next, arrange the robots into a square formation with each side measuring exactly 1.0 meter, ensuring the formation's precision with right angles and equal sides. Once the square is confirmed, guide the robots to trace a circular path while maintaining the square formation. Constant monitoring is required to preserve the formation's integrity and the path's accuracy throughout the movement.",
+        "control the robots to flock "
     ]
     init_workspace()
-    workflow = Workflow(task_list[0])
+    workflow = Workflow(task_list[-1])
     asyncio.run(workflow.run())
