@@ -37,21 +37,28 @@ class APIKeyManager:
             str: The allocated API key.
         """
         if not self._available_keys:
-            raise Exception("No available keys to allocate.")
-
-        # allocated_key = random.choice(self._available_keys)
-        allocated_key = self._available_keys[12]
-        self._available_keys.remove(allocated_key)
+          allocated_key = _api_key
+        else:
+          # allocated_key = random.choice(self._available_keys)
+          allocated_key = self._available_keys[12]
+          self._available_keys.remove(allocated_key)
         return allocated_key
 
 _current_dir = os.path.dirname(os.path.abspath(__file__))
 _config_path = os.path.join(_current_dir, '../../config/api_data/keys.yml')
 
-with open(_config_path, 'r') as config_file:
-    _config = yaml.safe_load(config_file)
+try:
+    with open(_config_path, 'r') as config_file:
+        _config = yaml.safe_load(config_file)
+        api_base = _config.get('api_base', '')
+        _keys_dict = _config.get('api_keys', '')
+except FileNotFoundError:
+    print(f"Error: Configuration file '{_config_path}' not found.")
+    api_base = os.getenv('API_BASE')
+    _api_key = os.getenv('API_KEY')
+    _keys_dict = {}
 
-api_base = _config.get('api_base', '')
-_keys_dict = _config.get('api_keys', '')
+    
 key_manager = APIKeyManager(_keys_dict)
 
 if __name__ == "__main__":
