@@ -37,7 +37,7 @@ class Stage(ABC, BaseModel):
         self._context.log.format_message(str(self), "stage")
         return await self._run()
 
-    def _run(self) -> StageResult:
+    async def _run(self) -> StageResult:
         return StageResult()
 
 
