@@ -22,16 +22,16 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Cache Docker image
-        uses: actions/cache@v2
-        with:
-          path: /path/to/docker/image.tar
-          key: ${{ runner.os }}-docker-${{ hashFiles('**/Dockerfile') }}
-          restore-keys: |
-            ${{ runner.os }}-docker-
+      uses: actions/cache@v2
+      with:
+        path: /path/to/docker/image.tar
+        key: ${{ runner.os }}-docker-${{ hashFiles('**/Dockerfile') }}
+        restore-keys: |
+          ${{ runner.os }}-docker-
       
-      - name: Load Docker image from cache
-        if: steps.cache-docker.outputs.cache-hit == 'true'
-        run: docker load -i /path/to/docker/image.tar
+    - name: Load Docker image from cache
+      if: steps.cache-docker.outputs.cache-hit == 'true'
+      run: docker load -i /path/to/docker/image.tar
       
     - name: Run unit tests in Docker container
       env:
