@@ -16,7 +16,7 @@ class TestCommon(unittest.TestCase):
 
     def test_get_class_name(self):
         class TestClass: pass
-        self.assertEqual(get_class_name(TestClass), 'TestClass_9')
+        self.assertEqual(get_class_name(TestClass), 'TestClass')
 
     def test_any_to_str(self):
         self.assertEqual(any_to_str(5), 'int')
