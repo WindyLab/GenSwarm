@@ -22,4 +22,6 @@ jobs:
       uses: actions/checkout@v2
       
     - name: Run unit tests in Docker container
-      run: docker run -v .:/src huabench/code-llm /bin/bash -c "conda run --no-capture-output -n py310 python -m unittest discover -v"
+      env:
+          API_KEY: ${{ secrets.LLM_API_KEY }}
+      run: docker run -v .:/src -e API_KEY=$API_KEY huabench/code-llm /bin/bash -c "conda run --no-capture-output -n py310 python -m unittest discover -v"
