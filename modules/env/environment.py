@@ -1,3 +1,4 @@
+from os import listdir, makedirs
 import numpy as np
 import rospy
 import matplotlib.pyplot as plt
@@ -82,9 +83,11 @@ class Env:
             self._robots.positions = self._robots_initial_positions.copy()
             self._robots.velocities = np.zeros_like(self._robots.velocities)
             self._robots.history = [self._robots.positions.copy()]
-            print("Test started!")
+            self._count = len(listdir(f"{self._data_path}/frames"))  # this is used to number the 'frames' folder
+            makedirs(f"{self._data_path}/frames/frame{self._count}")
+            print(f"Test{self._count} started!")
         else:
-            print("Test stopped!")
+            print(f"Test{self._count} stopped!")
 
     def step(self):
         if self._run_test:
@@ -131,7 +134,7 @@ class Env:
                 self._leader.position[0],
                 self._leader.position[1],
                 marker='*',
-                markersize=11,
+                markersize=12,
                 color=self._colors[-1],
                 linestyle='None',
                 label="Leader position"
@@ -146,7 +149,7 @@ class Env:
             plt.draw()
             plt.pause(0.001)  # This is necessary for the plot to update
         frame_id = len(self._robots.history)
-        plt.savefig(f'{self._data_path}/frames/{frame_id}.png')
+        plt.savefig(f'{self._data_path}/frames/frame{self._count}/{frame_id}.png')
 
     def run(self):
         print("Environment started!")

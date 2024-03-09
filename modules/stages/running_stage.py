@@ -38,9 +38,10 @@ class RunningStage(Stage):
             call_reset_environment(True)
             from modules.utils import generate_video_from_frames, root_manager
             data_root = root_manager.data_root
+            number = len(listdir(f"{data_root}/frames"))-1 # the number of frame{} folder in the data/frames
             generate_video_from_frames(
-                frames_folder=f"{data_root}/frames",
-                video_path=f"{data_root}/output{len(listdir(data_root))}.mp4",
+                frames_folder=f"{data_root}/frames/frame{number}",
+                video_path=f"{data_root}/output{number}.mp4",
             )
         return '\n'.join(result_list)
 
