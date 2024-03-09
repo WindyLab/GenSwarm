@@ -1,7 +1,9 @@
+import asyncio
+from os import listdir
+
 from modules.actions import RunCode
 from modules.stages.stage import Stage, StageResult
 from modules.utils import get_param, call_reset_environment
-import asyncio
 
 
 class RunningStage(Stage):
@@ -36,8 +38,10 @@ class RunningStage(Stage):
             call_reset_environment(True)
             from modules.utils import generate_video_from_frames, root_manager
             data_root = root_manager.data_root
-            generate_video_from_frames(frames_folder=f"{data_root}/frames",
-                                       video_path=f"{data_root}/output.mp4")
+            generate_video_from_frames(
+                frames_folder=f"{data_root}/frames",
+                video_path=f"{data_root}/output{len(listdir(data_root))}.mp4",
+            )
         return '\n'.join(result_list)
 
     async def _run(self) -> StageResult:
@@ -50,6 +54,6 @@ if __name__ == '__main__':
     run_test = RunningStage(RunCode())
     from modules.utils import root_manager
 
-    path = '/home/ubuntu/Desktop/CodeLLM/workspace/2024-03-08_09-04-17'
+    path = '/home/ubuntu/Desktop/CodeLLM/workspace/2024-03-09_10-38-59'
     root_manager.update_root(path)
     asyncio.run(run_test.run())

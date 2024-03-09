@@ -18,7 +18,6 @@ class Env:
             if_leader=False,
             leader_speed=0.5,
             render_interval=1,
-
     ):
         rospy.init_node('env_node', anonymous=True)
         self._size = size
