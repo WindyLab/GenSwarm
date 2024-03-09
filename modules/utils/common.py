@@ -173,7 +173,7 @@ def set_param(param_name, param_value):
     print(f"Setting param {param_name} to {param_value}")
 
 
-def generate_video_from_frames(frames_folder, video_path, fps=10):
+def generate_video_from_frames(frames_folder, video_path, fps=15):
     print(f"Generating video from frames in {frames_folder}")
     try:
         frame_files = sorted(
