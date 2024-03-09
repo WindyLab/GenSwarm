@@ -2,10 +2,8 @@ import numpy as np
 import rospy
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator
-from std_msgs.msg import Float32MultiArray
 from std_srvs.srv import SetBool, SetBoolResponse
 
-from robot import Leader
 from manager import Manager
 
 
@@ -18,6 +16,7 @@ class Env:
             if_leader=False,
             leader_speed=0.5,
             render_interval=1,
+            magnification=1.1
     ):
         rospy.init_node('env_node', anonymous=True)
         self._size = size
@@ -26,13 +25,21 @@ class Env:
         self._leader_speed = leader_speed
         self._manager = Manager(n_robots, size, if_leader=if_leader)
         self._robots = self._manager.robots
+        rospy.set_param('robots_num', n_robots)
+
+        # list of the robot color
+        self._colors = plt.colormaps.get_cmap('viridis')(np.linspace(0, 1, n_robots))
+
         if if_leader:
             self._leader = self._robots.leader
+            n_robots += 1
+            red = np.array([[1.0, 0, 0, 1]], dtype=np.float64)  # Red in RGABs
+            self._colors = np.append(self._colors, red, axis=0)
         else:
             self._leader = None
         self._robots_initial_positions = self._robots.positions.copy()
         self._reset_service = rospy.Service('/reset_environment', SetBool, self.reset_environment_callback)
-        rospy.set_param('robots_num', n_robots)
+
         # flag to indicate if the test is running,if running, the robots will save their positions to history
         self._run_test = False
         # flag to indicate if the frames should be rendered
@@ -46,6 +53,9 @@ class Env:
 
         # history of the robots' positions ,pop from the deque
         self._history = None
+
+        # map magnification factor
+        self._magn = magnification
 
     def reset_environment_callback(self, req):
         """
@@ -100,25 +110,38 @@ class Env:
         traj_len, robot_num, _ = self._history.shape
         for i in range(robot_num):
             show_len = min(20, traj_len)
-            self._ax.plot(self._history[-show_len:, i, 0],
-                          self._history[-show_len:, i, 1],
-                          label=f"Robot {i} path")
-            self._ax.plot(self._history[-1, i, 0],
-                          self._history[-1, i, 1],
-                          'o',
-                          label=f"Robot {i} position")
+            self._ax.plot(
+                self._history[-show_len:, i, 0],
+                self._history[-show_len:, i, 1],
+                '.',  # use '.' can show the speed of the robots by the density of the trajectory points
+                markersize=1,
+                color=self._colors[i],
+                label=f"Robot {i} path",
+            )
+            self._ax.plot(
+                self._history[-1, i, 0],
+                self._history[-1, i, 1],
+                'o',
+                markersize=5,
+                color=self._colors[i],
+                label=f"Robot {i} position",
+            )
         if self._leader:
-            self._ax.plot(self._leader.position[0], self._leader.position[1],
-                          marker='*', markersize=12, color='r',
-                          linestyle='None', label="Leader position")
-        self._ax.set_xlim(-0.7 * self._size[0], 0.7 * self._size[0])
-        self._ax.set_ylim(-0.7 * self._size[1], 0.7 * self._size[1])
+            self._ax.plot(
+                self._leader.position[0],
+                self._leader.position[1],
+                marker='*',
+                markersize=11,
+                color=self._colors[-1],
+                linestyle='None',
+                label="Leader position"
+            )
 
         major_locator = MultipleLocator(1)
         self._ax.xaxis.set_major_locator(major_locator)
         self._ax.yaxis.set_major_locator(major_locator)
-        self._ax.set_xlim(-self._size[0], self._size[0])
-        self._ax.set_ylim(-self._size[1], self._size[1])
+        self._ax.set_xlim(-self._magn / 2 * self._size[0], self._magn / 2 * self._size[0])
+        self._ax.set_ylim(-self._magn / 2 * self._size[1], self._magn / 2 * self._size[1])
         if self._render_frames:
             plt.draw()
             plt.pause(0.001)  # This is necessary for the plot to update
