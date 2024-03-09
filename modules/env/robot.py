@@ -52,7 +52,7 @@ class Robot:
 
 
 class Robots:
-    def __init__(self, n_robots, env_size,if_leader=False):
+    def __init__(self, n_robots, env_size, if_leader=False):
         self._env_size = env_size
         initial_positions = self.generate_robots_random_positions(n_robots)
         self._robots = self.create_robots(n_robots, initial_positions)
@@ -138,28 +138,34 @@ class Robots:
 
 class Leader(Robot):
     def __init__(self, initial_position, max_speed=2.0):
-        super().__init__(0, initial_position, max_speed)
+        super().__init__(robot_id=0, initial_position=initial_position, max_speed=max_speed)
         self.trajectory = []
         self.angle = 0
-        self._init_position = initial_position
+        self.position = initial_position
 
-    def move_in_circle(self, radius, speed, dt):
+    def move_in_circle(self, center, radius, speed, dt):
         speed = np.clip(speed, 0, self.max_speed)
         omega = speed / radius
 
         self.angle += omega * dt
 
-        # 计算新位置
-        new_x = radius * np.cos(self.angle)
-        new_y = radius * np.sin(self.angle)
-        self.position = np.array([new_x, new_y]) + self._init_position
+        # target position
+        new_x = center[0] + radius * np.cos(self.angle)
+        new_y = center[1] + radius * np.sin(self.angle)
+        target_pos = np.array([new_x, new_y], dtype=np.float64)
 
+        # delta pos = target pos vector - current pos vector
+        delta_pos = target_pos - self.position
+        if np.linalg.norm(delta_pos) > speed:
+            delta_pos = delta_pos * speed / np.linalg.norm(delta_pos)
+
+        # next position = current pos + delta pos
+        self.position += delta_pos
         self.trajectory.append(self.position)
 
     def move(self, speed, dt, shape: str = None):
         # TODO add more methods to move the leader in different patterns
         if shape == 'circle':
-            self.move_in_circle(3, speed, dt)
+            self.move_in_circle(center=[0, 0], radius=3, speed=speed, dt=dt)
         if shape is None:
             return
-

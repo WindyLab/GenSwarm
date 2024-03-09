@@ -38,11 +38,13 @@ class RunningStage(Stage):
             call_reset_environment(True)
             from modules.utils import generate_video_from_frames, root_manager
             data_root = root_manager.data_root
-            number = len(listdir(f"{data_root}/frames"))-1 # the number of frame{} folder in the data/frames
+            number = len(listdir(f"{data_root}/frames")) # the number of frame{} folder in the data/frames
             generate_video_from_frames(
                 frames_folder=f"{data_root}/frames/frame{number}",
                 video_path=f"{data_root}/output{number}.mp4",
             )
+            print(f"synthesize frame{number} ---> output{number}.mp4")
+            print("############END############")
         return '\n'.join(result_list)
 
     async def _run(self) -> StageResult:
