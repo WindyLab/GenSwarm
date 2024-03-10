@@ -144,20 +144,21 @@ class Leader(Robot):
         self.position = initial_position
 
     def move_in_circle(self, center, radius, speed, dt):
-        speed = np.clip(speed, 0, self.max_speed)
-        omega = speed / radius
+        if abs(speed) > self.max_speed:
+            speed = np.sign(speed) * self.max_speed
 
+        # The way mathematical integration maybe diverges
+        omega = speed / radius
         self.angle += omega * dt
 
         # target position
         new_x = center[0] + radius * np.cos(self.angle)
         new_y = center[1] + radius * np.sin(self.angle)
         target_pos = np.array([new_x, new_y], dtype=np.float64)
-
         # delta pos = target pos vector - current pos vector
         delta_pos = target_pos - self.position
-        if np.linalg.norm(delta_pos) > speed:
-            delta_pos = delta_pos * speed / np.linalg.norm(delta_pos)
+        if np.linalg.norm(delta_pos) > abs(speed) * dt:
+            delta_pos = delta_pos / np.linalg.norm(delta_pos) * abs(speed) * dt
 
         # next position = current pos + delta pos
         self.position += delta_pos
