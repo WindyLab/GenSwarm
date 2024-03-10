@@ -1,7 +1,8 @@
 from os import listdir, makedirs
+
+import matplotlib.pyplot as plt
 import numpy as np
 import rospy
-import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator
 from std_srvs.srv import SetBool, SetBoolResponse
 
@@ -49,6 +50,10 @@ class Env:
         # path to save the frames
         self._data_path = rospy.get_param('data_path', '.')
 
+        try:
+            self._count = len(listdir(f"{self._data_path}/frames/"))  # # this is used to number the 'frames' folder
+        except Exception as e:
+            print("Exception: ", e)
         # counter for total run time
         self._run_time = 0
 
@@ -83,8 +88,11 @@ class Env:
             self._robots.positions = self._robots_initial_positions.copy()
             self._robots.velocities = np.zeros_like(self._robots.velocities)
             self._robots.history = [self._robots.positions.copy()]
-            self._count = len(listdir(f"{self._data_path}/frames"))  # this is used to number the 'frames' folder
-            makedirs(f"{self._data_path}/frames/frame{self._count}")
+            try:
+                self._count = len(listdir(f"{self._data_path}/frames/"))  # this is used to number the 'frames' folder
+                makedirs(f"{self._data_path}/frames/frame{self._count}")
+            except Exception as e:
+                print("Exception: ", e)
             print(f"Test{self._count} started!")
         else:
             print(f"Test{self._count} stopped!")
@@ -92,10 +100,7 @@ class Env:
     def step(self):
         if self._run_test:
             if self._leader:
-                if self._leader_speed > 0:
-                    self._leader.move(self._leader_speed, self._dt, shape='circle')
-                else:
-                    self._leader.move(self._leader_speed, self._dt)
+                self._leader.move(self._leader_speed, self._dt, shape='circle')
             self._robots.move_robots(self._dt)
             self._run_time += 1
             self.render()
@@ -161,5 +166,5 @@ class Env:
 
 
 if __name__ == "__main__":
-    env = Env(if_leader=True, n_robots=10, size=(10, 10))
+    env = Env(if_leader=True, n_robots=10, size=(10, 10), leader_speed=-1)
     env.run()
