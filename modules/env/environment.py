@@ -85,6 +85,7 @@ class Env:
         self._run_test = not self._run_test
         if self._run_test:
             self._data_path = rospy.get_param('data_path', '.')
+            print("Data path: ",self._data_path)
             self._robots.positions = self._robots_initial_positions.copy()
             self._robots.velocities = np.zeros_like(self._robots.velocities)
             self._robots.history = [self._robots.positions.copy()]
@@ -93,9 +94,9 @@ class Env:
                 makedirs(f"{self._data_path}/frames/frame{self._count}")
             except Exception as e:
                 print("Exception: ", e)
-            print(f"Test{self._count} started!")
+            print(f"Test{self._count} started!\nSave images in {self._data_path}/frames/frame{self._count}")
         else:
-            print(f"Test{self._count} stopped!")
+            print(f"Test{self._count} stopped!\n")
 
     def step(self):
         if self._run_test:

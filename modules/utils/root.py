@@ -20,6 +20,7 @@ class RootManager:
         else:
             self.workspace_root = Path(workspace_root)
         self.data_root = self.workspace_root / "data"
+        set_param('data_path', str(self.data_root))  # this is important
 
     @staticmethod
     def get_project_root():
