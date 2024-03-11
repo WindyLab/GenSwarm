@@ -29,7 +29,8 @@ class TestCommon(unittest.TestCase):
         self.assertTrue(check_file_exists(self.test_dir, 'test.txt'))
 
     def test_write_file(self):
-        file_path = write_file(self.test_dir, 'test.txt', 'test content')
+        write_file(self.test_dir, 'test.txt', 'test content')
+        file_path = os.path.join(self.test_dir, 'test.txt')
         self.assertTrue(os.path.exists(file_path))
         with open(file_path, 'r') as file:
             content = file.read()

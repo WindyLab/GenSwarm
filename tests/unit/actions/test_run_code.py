@@ -8,8 +8,6 @@ class TestRunCode(unittest.IsolatedAsyncioTestCase):
         # Mock the _run_script method
         run_code = RunCode()
         run_code._run_script = AsyncMock(return_value=("stdout content", "stderr content"))
-        # Mock the logger methods
-        run_code._logger = AsyncMock()
         # Mock the code_info parameter
         code_info = {"command": ["ls", "-l"]}
         # Call the _run method
