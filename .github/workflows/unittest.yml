@@ -36,5 +36,9 @@ jobs:
       
     - name: Run unit tests in Docker container
       env:
-          API_KEY: ${{ secrets.LLM_API_KEY }}
-      run: docker run -v .:/src -e API_KEY=$API_KEY huabench/code-llm /bin/bash -c "conda run --no-capture-output -n py310 python -m unittest discover -v"
+        API_KEY: ${{ secrets.LLM_API_KEY }}
+      run: |
+        docker run -v .:/src -e API_KEY=$API_KEY huabench/code-llm /bin/bash -c "\
+        roscore & \
+        sleep 5; \
+        conda run --no-capture-output -n py310 python -m unittest discover -v"
