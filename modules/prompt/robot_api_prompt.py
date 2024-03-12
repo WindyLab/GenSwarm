@@ -9,7 +9,6 @@ def get_position():
     x, y = pos[0], pos[1]
     '''
 
-
 def set_velocity(velocity):
     '''
     Description: Set the velocity of the robot itself
@@ -20,14 +19,12 @@ def set_velocity(velocity):
     set_velocity(velocity)
     '''
 
-
 def get_velocity():
     '''
     Get the velocity of the robot.
     Returns:
     - numpy.ndarray: The velocity of the robot.
     '''
-
 
 def gather_field_view_data():
     '''
