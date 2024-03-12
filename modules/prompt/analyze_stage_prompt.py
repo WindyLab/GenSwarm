@@ -20,10 +20,14 @@ The generated result should be in the following fields:
 2. Definition: Professional explanations about the keywords?
 3. User Requirement Description: Detailed description of the task the user hopes to automate.
 4. Functional Requirements: List the functions expected to be developed based on your analysis and available resources. For each function, briefly describe its purpose and expected outcome. These functions should be decoupled from each other.
+5. Anything unclear: If you have some questions about the query, please put them here directly. If you don't have any questions, just say "It's all set".
 
 ## The output TEXT format is as follows:
 1. Keyword: <Keyword>
 2. Definition: <Definition>
 3. User Requirement: <User Requirement>
 4. Functional Requirements: <Functional Requirements>
+5. Anything unclear: <Anything unclear>
+
+User requirements: {instruction}
 """.strip()

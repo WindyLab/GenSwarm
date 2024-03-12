@@ -15,7 +15,7 @@ WRITE_FUNCTION_PROMPT_TEMPLATE = """
 ## Constraints: 
 The functions you generate need to comply with the following constraints.
 1. Above functions are in the same py file as yours and can be invoked directly using their function names.
-2. COMPLETE CODE: Your code will be part of the entire project, so please implement complete, reliable, reusable code snippets.
+2. Write complete code, your code will not be modified, if you can't write complete code, simplify the function
 3. Set default value: If there is any setting, ALWAYS SET A DEFAULT VALUE, ALWAYS USE STRONG TYPE AND EXPLICIT VARIABLE. 
 4. Before using a others functions/modules, make sure to import them first.
 5. YOU MUST FOLLOW "Data structures and interface definitions". DONT CHANGE ANY DESIGN.
@@ -48,6 +48,7 @@ from functions imports *
 1. the functions provided are available, you can use them by "from functions import *" 
 2. Set default value: If there is any setting, ALWAYS SET A DEFAULT VALUE, ALWAYS USE STRONG TYPE AND EXPLICIT VARIABLE. 
 3. Ensure the generated code contains a 'if __name__ == '__main__':' statement and can be executed directly
+4. Write complete code, your code will not be modified, and if you can't write complete code, simplify the function.
 
 ## The generated result should be in the following fields:
 1. explanation: think step by step. How to translate the sequence diagram into Python code.
