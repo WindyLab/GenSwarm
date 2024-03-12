@@ -103,7 +103,7 @@ class WorkflowContext:
     _instance = None
     user_command: FileInfo = FileInfo(name='command.md')
     analysis: FileInfo = FileInfo(name='analysis.md')
-    function_list: list[str] = []
+    function_list: list[dict[str, str]] = []
     code_files: dict[str, FileInfo] = {
         'functions.py': FileInfo(name='functions.py'),
         'test.py': FileInfo(name='test.py'),

@@ -24,7 +24,8 @@ class DesignStage(Stage):
     async def _design_sequence_diagram(self):
         self._action = WriteSeqDiagram()
         analysis = self._context.analysis.message
-        function_list_str = "\n".join(self._context.function_list)
+        function_content_list = [f['content'] for f in self._context.function_list]
+        function_list_str = "\n".join(function_content_list)
         prompt = WriteSeqDiagram_PROMPT_TEMPLATE.format(
             analysis=analysis,
             robot_api=ROBOT_API,

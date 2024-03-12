@@ -5,7 +5,6 @@ import numpy as np
 import rospy
 from matplotlib.ticker import MultipleLocator
 from std_srvs.srv import SetBool, SetBoolResponse
-
 from manager import Manager
 
 
@@ -85,7 +84,7 @@ class Env:
         self._run_test = not self._run_test
         if self._run_test:
             self._data_path = rospy.get_param('data_path', '.')
-            print("Data path: ",self._data_path)
+            print("Data path: ", self._data_path)
             self._robots.positions = self._robots_initial_positions.copy()
             self._robots.velocities = np.zeros_like(self._robots.velocities)
             self._robots.history = [self._robots.positions.copy()]
@@ -101,7 +100,7 @@ class Env:
     def step(self):
         if self._run_test:
             if self._leader:
-                self._leader.move(self._leader_speed, self._dt, shape='circle')
+                self._leader.move(self._leader_speed, self._dt)
             self._robots.move_robots(self._dt)
             self._run_time += 1
             self.render()

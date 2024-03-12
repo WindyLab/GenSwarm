@@ -1,6 +1,9 @@
 import numpy as np
 from collections import deque
 
+import rospy
+from geometry_msgs.msg import Twist
+
 
 class Robot:
     def __init__(self, robot_id, initial_position, max_speed=2.0, communication_range=5.0):
@@ -142,6 +145,11 @@ class Leader(Robot):
         self.trajectory = []
         self.angle = 0
         self.position = initial_position
+        self._subscriber = rospy.Subscriber('/leader/velocity', Twist, self.velocity_callback)
+
+    def velocity_callback(self, data: Twist):
+        self.velocity = np.array([data.linear.x, data.linear.y])
+        self.velocity = np.clip(self.velocity, -self.max_speed, self.max_speed)
 
     def move_in_circle(self, center, radius, speed, dt):
         if abs(speed) > self.max_speed:
@@ -169,4 +177,4 @@ class Leader(Robot):
         if shape == 'circle':
             self.move_in_circle(center=[0, 0], radius=3, speed=speed, dt=dt)
         if shape is None:
-            return
+            self.position += self.velocity * dt

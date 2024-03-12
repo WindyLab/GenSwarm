@@ -1,5 +1,5 @@
 from modules.actions.action import Action
-from modules.utils import parse_code, extract_imports_and_functions
+from modules.utils import parse_code, extract_imports_and_functions, extract_top_level_function_names
 
 
 class WriteCode(Action):
@@ -13,18 +13,33 @@ class WriteCode(Action):
 
         filename = kwargs.get('filename')
         if filename not in self._context.code_files:
-            self._context.log.format_message(f"Write Code Failed: No filename found in context","error")
+            self._context.log.format_message(f"Write Code Failed: No filename found in context", "error")
             raise SystemExit
 
         elif filename == "functions.py":
-            import_list, function_list = extract_imports_and_functions(code)
-            if not function_list:
-                self._context.log.format_message(f"Write Code Failed: No function detected in the response","error")
-                raise Exception
-            elif len(function_list) > 1:
-                self._context.log.format_message(f"Write Code Failed: More than one function detected in the response: {function_list}","error")
+            if not kwargs.get('function_name'):
+                self._context.log.format_message(f"Write Code Failed: No function name provided", "error")
                 raise Exception  # to trigger retry
+            function_name = kwargs.get('function_name')
+            import_list, function_list = extract_imports_and_functions(code)
+            # avoid generating a function without any function
+            if not function_list:
+                self._context.log.format_message(f"Write Code Failed: No function detected in the response", "error")
+                raise Exception
+            # avoid generating more than one function
+            elif len(function_list) > 1:
+                self._context.log.format_message(
+                    f"Write Code Failed: More than one function detected in the response: {function_list}", "error")
+                raise Exception  # to trigger retry
+            # check if the function name matches the provided function name
+            # avoid generating a function with a different name
 
+            elif extract_top_level_function_names(function_list[0])[0] != function_name:
+
+                self._context.log.format_message(
+                    f"Write Code Failed: Function name:{extract_top_level_function_names(function_list[0])}"
+                    f"does not match the provided function name:{function_name}", "error")
+                raise Exception
             result = {
                 "import": import_list,
                 "code": function_list

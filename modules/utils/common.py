@@ -133,6 +133,25 @@ def extract_imports_and_functions(source_code):
     return imports, functions
 
 
+def extract_top_level_function_names(code_str: str) -> list[str]:
+    tree = ast.parse(code_str)
+
+    def add_parent_references(node, parent=None):
+        node.parent = parent
+        for child in ast.iter_child_nodes(node):
+            add_parent_references(child, node)
+
+    add_parent_references(tree)
+
+    function_names = []
+
+    for node in ast.walk(tree):
+        if isinstance(node, ast.FunctionDef) and isinstance(node.parent, ast.Module):
+            function_names.append(node.name)
+
+    return function_names
+
+
 def combine_unique_imports(import_list):
     unique_imports = set()
 
