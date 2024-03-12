@@ -2,11 +2,11 @@ DesignFunction_PROMPT_TEMPLATE = """
 In order to assist users in automating specific tasks, you need to design a series of decoupled Python functions based on user functional requirements and constraints.
 - These functions should be decoupled from each other. 
 - Each function can utilize the existing APIs.
-- Each function should have strong reusability and should have a sufficient number of inputs and outputs.
+- Each function should have strong reusable and should have well-defined input and output interfaces.
 - Each function does not need to provide the content of the function body; just giving a `pass` is suffice.
 
 These are the existing robot APIs, functions should try to reuse them as much as possible and refer to the design of them:
-{code}
+{robot_api}
 
 These are the environment description:
 {env_des}
@@ -46,9 +46,9 @@ constrains:
 
 The generated result should be in the following fields:
 explanation: think step by step. How do you make the diagram conform to the algorithm?
-sequence diagram: use Mermaid's sequenceDiagram to write sequence diagram, ```mermaid\nsequenceDiagram\n <your response>```
+sequence diagram: use Mermaid's sequenceDiagram to write sequence diagram: ```mermaid\nsequenceDiagram\n <your response>```
 
-The output TEXT  format is as follows:
+The output TEXT format is as follows:
 explanation: <explanation>
 sequence diagram: <sequence diagram>
 

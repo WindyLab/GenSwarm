@@ -4,7 +4,7 @@ from modules.actions import DesignFunction, WriteSeqDiagram
 from modules.prompt.robot_api_prompt import ROBOT_API
 from modules.prompt.env_description_prompt import ENV_DES
 from modules.utils import DesignPattern
-from modules.prompt.design_stage_prompt import DesignFunction_PROMPT_TEMPLATE,WriteSeqDiagram_PROMPT_TEMPLATE
+from modules.prompt.design_stage_prompt import DesignFunction_PROMPT_TEMPLATE, WriteSeqDiagram_PROMPT_TEMPLATE
 
 
 class DesignStage(Stage):
@@ -16,7 +16,7 @@ class DesignStage(Stage):
         self._action = DesignFunction()
         prompt = DesignFunction_PROMPT_TEMPLATE.format(
             analysis=self._context.analysis.message,
-            code=ROBOT_API,
+            robot_api=ROBOT_API,
             env_des=ENV_DES
         )
         await self._action.run(prompt=prompt)
