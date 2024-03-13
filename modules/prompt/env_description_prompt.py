@@ -9,4 +9,5 @@ Robot:
     Max Speed: 2m/s
     Control: velocity control
     Max Control Frequency: 20Hz
+    
 '''.strip()
