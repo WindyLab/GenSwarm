@@ -1,5 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
 
 class Entity:
     def __init__(self, entity_id, initial_position):
@@ -41,7 +40,11 @@ class Obstacles:
     def create_obstacles(n_obstacles, size):
         obstacle_list = []
         for i in range(n_obstacles):
+            repeat_time = 0
             while True:
+                repeat_time += 1
+                if repeat_time > 5:
+                    break
                 position = np.random.uniform(-0.5, 0.5, size=2) * size
                 radius = np.random.uniform(0.2, 1.0)
                 new_obstacle = Obstacle(i, position, radius=radius)
@@ -58,6 +61,7 @@ class Obstacles:
         return obstacle_list
 
 if __name__ == "__main__":
+    import matplotlib.pyplot as plt
     obstacle_list = Obstacles(10, 8)._obstacles
     fig, ax = plt.subplots()
     ax.set_aspect('equal', adjustable='box')
