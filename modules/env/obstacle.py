@@ -44,6 +44,7 @@ class Obstacles:
             while True:
                 repeat_time += 1
                 if repeat_time > 5:
+                    print("The map is too crowded to generate this obstacle.")
                     break
                 position = np.random.uniform(-0.5, 0.5, size=2) * size
                 radius = np.random.uniform(0.2, 1.0)
@@ -51,7 +52,7 @@ class Obstacles:
                 overlap = False
                 for obstacle in obstacle_list:
                     distance = np.linalg.norm(new_obstacle.position - obstacle.position)
-                    if distance < (new_obstacle.radius + obstacle.radius + 0.5):
+                    if distance < (new_obstacle.radius + obstacle.radius + 0.1):
                         overlap = True
                         break
                 if not overlap:

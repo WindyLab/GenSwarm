@@ -97,10 +97,10 @@ class Leader(Robot):
 
 
 class Robots:
-    def __init__(self, n_robots, env_size, if_leader=False):
+    def __init__(self, n_robots, env_size, obstacle_list, if_leader=False):
 
         self._env_size = env_size
-        self._robots = self.create_robots(n_robots, env_size)
+        self._robots = self.create_robots(n_robots, env_size, obstacle_list)
         if if_leader:
             self._leader = Leader(initial_position=(0, 0))
             self._robots.append(self._leader)
@@ -110,14 +110,31 @@ class Robots:
         self._histories = deque(maxlen=1000)
 
     @staticmethod
-    def create_robots(n_robots, size):
-        # TODO: optimize this function to avoid obstacles overlapping
+    def create_robots(n_robots, size, obstacle_list):
         robot_list = []
         for i in range(n_robots):
-            position = np.random.uniform(-0.5, 0.5, size=2) * size
-            radius = 0.15
-            robot_list.append(Robot(i, position, radius=radius))
-
+            repeat_time = 0
+            while True:
+                repeat_time += 1
+                if repeat_time > 5:
+                    print("The map is too crowded to generate this robot.")
+                    break
+                position = np.random.uniform(-0.5, 0.5, size=2) * size
+                radius = 0.15
+                overlap = False
+                for obstacle in obstacle_list.obstacles:
+                    distance = np.linalg.norm(obstacle.position - position)
+                    if distance < (obstacle.radius + radius + 0.1):
+                        overlap = True
+                        break
+                for robot in robot_list:
+                    distance = np.linalg.norm(robot.position - position)
+                    if distance < (robot.radius + radius + 0.1):
+                        overlap = True
+                        break
+                if not overlap:
+                    robot_list.append(Robot(i, position, radius=radius))
+                    break
         return robot_list
 
     @property

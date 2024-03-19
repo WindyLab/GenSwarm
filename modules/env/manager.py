@@ -10,8 +10,8 @@ from obstacle import Obstacles
 class Manager:
 
     def __init__(self, n_robots, n_obstacles, size, if_leader=False):
-        self._robots = Robots(n_robots, size, if_leader=if_leader)
         self._obstacles = Obstacles(n_obstacles, size)
+        self._robots = Robots(n_robots, size, self._obstacles, if_leader=if_leader)
         self._agent_num = n_robots
         self._if_leader = if_leader
         self._pub_list = []
@@ -73,3 +73,28 @@ class Manager:
                     )
 
             self._pub_list[i].publish(observations_msg)
+
+if __name__ == "__main__":
+    import matplotlib.pyplot as plt
+    manger = Manager(100,100,(10,10))
+    obstacle_list = manger.obstacles.obstacles
+    robot_list = manger.robots.robots
+    fig, ax = plt.subplots()
+    ax.set_aspect('equal', adjustable='box')
+    ax.set_xlim(-5, 5)
+    ax.set_ylim(-5, 5)
+    ax.set_xlabel('X')
+    ax.set_ylabel('Y')
+    ax.set_title('Obstacles')
+
+    for obstacle in obstacle_list:
+        circle = plt.Circle(obstacle.position, obstacle.radius, color='red', alpha=0.5)
+        ax.add_artist(circle)
+        #ax.text(obstacle.position[0], obstacle.position[1] + obstacle.radius, f'Radius: {obstacle.radius:.2f}', ha='center')
+    for robot in robot_list:
+        circle = plt.Circle(robot.position, robot.radius, color='green', alpha=0.5)
+        ax.add_artist(circle)
+        #ax.text(obstacle.position[0], obstacle.position[1] + obstacle.radius, f'Radius: {obstacle.radius:.2f}', ha='center')
+
+    plt.grid(True)
+    plt.show()
