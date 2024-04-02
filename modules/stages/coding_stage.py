@@ -76,6 +76,7 @@ class CodingStage(Stage):
                 prompt = WRITE_FUNCTION_PROMPT_TEMPLATE.format(
                     task_des=TASK_DES,
                     robot_api=robot_api.get_prompt(),
+                    env_des=ENV_DES,
                     function_content=function.content,
                     constraints=constraint_text,
                     other_functions='\n\n'.join(function_list)

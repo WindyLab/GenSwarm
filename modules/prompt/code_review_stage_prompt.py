@@ -57,6 +57,10 @@ These APIs can be directly called by you.
 {robot_api}
 ```
 
+## These are the environment description:
+These are the basic descriptions of the environment.
+{env_des}
+
 ## These are the existing functions that you can directly call:
 ```python
 {other_functions}
