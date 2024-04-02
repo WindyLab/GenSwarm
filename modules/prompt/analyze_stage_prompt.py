@@ -75,7 +75,7 @@ ANALYZE_CONSTRAINT_PROMPT_TEMPLATE: str = """
 ## Role setting:
 - You need to analyze what functional constraints are needed to meet the user's requirements.
 
-These APIs can be directly called by you.
+## These APIs can be directly called by you.
 ```python
 {robot_api}
 ```

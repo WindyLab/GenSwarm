@@ -6,6 +6,6 @@ Robot:
     radius: 0.2m (with a circular shape)
     max_speed: 1m/s
     Control Method: Omnidirectional speed control
-    Initial position: rando
+    Initial position: random
     Initial speed: np.array([0, 0])
 '''.strip()

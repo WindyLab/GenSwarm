@@ -8,6 +8,11 @@ WRITE_FUNCTION_PROMPT_TEMPLATE = """
 ```python
 {robot_api}
 ```
+
+## These are the environment description:
+These are the basic descriptions of the environment.
+{env_des}
+
 ## These are the functions you can call directly even if they are not implemented now:
 ```python
 {other_functions}

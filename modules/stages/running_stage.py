@@ -91,7 +91,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Run simulation with custom parameters.")
     parser.add_argument("--timeout", type=int, default=30, help="Total time for the simulation")
     args = parser.parse_args()
-    path = '/home/derrick/catkin_ws/src/code_llm/workspace/2024-04-01_13-33-50'
+    path = '/home/lufengxu/distributedArchitecture/src/code_llm/workspace/2024-04-02_15-55-41'
     # run_test.context.load_from_file(f'{path}/write_run_stage.pkl')
     run_test.context.args = args
     root_manager.update_root(path, set_data_path=False)
