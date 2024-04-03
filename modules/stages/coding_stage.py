@@ -93,6 +93,7 @@ class CodingStage(Stage):
         prompt = WRITE_RUN_PROMPT_TEMPLATE.format(
             task_des=TASK_DES,
             robot_api=ROBOT_API,
+            env_des=ENV_DES,
             functions=functions,
         )
         await self._action.run(prompt=prompt, function_name='run_loop')
