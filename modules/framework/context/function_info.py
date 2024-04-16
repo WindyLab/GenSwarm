@@ -107,26 +107,32 @@ class FunctionPool(FileInfo):
             if all(called_func not in self.functions for called_func in func.calls)
         ]
 
-        callers_of = defaultdict(list)
-        for func_name, func_info in self.functions.items():
-            for called_func in func_info.calls:
-                if called_func in self.functions:
-                    callers_of[called_func].append(func_name)
+        function_names = {func.name for func in self.functions.values()
+                          if func not in bottom_layer_functions}
+
+        calls_of = defaultdict(list)
+        for func in self.functions.values():
+            for called_func in func.calls:
+                calls_of[func.name].append(called_func)
 
         layers = [bottom_layer_functions]
-        visited = set(bottom_layer_functions)
-        current_layer = bottom_layer_functions
+        handled_functions = set({func.name for func in bottom_layer_functions})
 
-        while current_layer:
+        while function_names:
             next_layer = []
-            for func in current_layer:
-                for caller in callers_of[func.name]:
-                    if caller not in visited:
-                        visited.add(caller)
-                        next_layer.append(self.functions[caller])
+            for func in function_names:
+                flag = True
+                for calls_func in calls_of[func]:
+                    if calls_func not in handled_functions:
+                        flag = False
+                        break
+
+                if flag:
+                    next_layer.append(self.functions[func])
             if next_layer:
                 layers.append(next_layer)
-            current_layer = next_layer
+                for func in next_layer:
+                    function_names.remove(func.name)
+                handled_functions = handled_functions.union(set({func.name for func in next_layer}))
         logger.log(f"layers: {[[f.name for f in layer] for layer in layers]}", level='warning')
         return layers
-
