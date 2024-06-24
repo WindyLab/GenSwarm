@@ -153,6 +153,11 @@ def set_velocity(velocity):
 def get_surrounding_robots_info():
     return get_current_robot_node().get_surrounding_robots_info()
 
+def get_robots_count():
+    start_idx = rospy.get_param("robot_start_index")
+    end_idx = rospy.get_param("robot_end_index")
+    total_robots = end_idx - start_idx + 1
+    return total_robots
 
 def get_surrounding_obstacles_info():
     return get_current_robot_node().get_surrounding_obstacles_info()

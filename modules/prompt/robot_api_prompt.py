@@ -32,7 +32,7 @@ def get_radius():
     
 def get_surrounding_robots_info():
     '''
-    Get real-time information of the surrounding robots. The data provided by this function are all within the robot's sensory range.
+    Get real-time information of the surrounding robots. 
     Note: This API is provided by humans. There is no need to concern yourself with how it is implemented; you only need to call it.
     Returns:
     - list: A list of dictionaries, each containing the current position, velocity, and radius of a robot, reflecting real-time data.
@@ -44,7 +44,7 @@ def get_surrounding_robots_info():
 
 def get_surrounding_obstacles_info():
     '''
-    Get real-time information of the surrounding obstacles. The data provided by this function are all within the robot's sensory range.
+    Get real-time information of the surrounding obstacles. 
     Note: This API is provided by humans. There is no need to concern yourself with how it is implemented; you only need to call it.
     Returns:
     - list: A list of dictionaries, each containing the current position and radius of an obstacle, reflecting real-time data.
@@ -52,29 +52,24 @@ def get_surrounding_obstacles_info():
         - position (numpy.ndarray): The current position of the obstacle.
         - radius (float): The radius of the obstacle.
     '''
+
 def get_self_id():
     '''
     Description: Get the unique ID of the robot itself.
     Returns:
     - int: The unique ID of the robot itself.
     '''
-def get_target_position():
+    
+def get_robots_count():
     '''
-    Description: Get the target position for the robot to reach.
+    Get the total number of robots on the entire map.
     Returns:
-    - numpy.ndarray: The current position of the target.
+        - count (int): The number of robots.
     '''
-
 
 """.strip()
 
 add = """
-def get_target_position():
-    '''
-    Description: Get the target position for the robot to reach.
-    Returns:
-    - numpy.ndarray: The current position of the target.
-    '''
 
 def get_target_formation_points():
     '''
@@ -83,12 +78,12 @@ def get_target_formation_points():
     - list: A list of numpy.ndarray,all of which form the target formation,each representing a target point for one robot to reach.
         - position (numpy.ndarray): The position of the target formation point.
     '''
-
-def get_self_id():
+    
+def get_target_position():
     '''
-    Description: Get the unique ID of the robot itself.
+    Description: Get the target position for the robot to reach.
     Returns:
-    - int: The unique ID of the robot itself.
+    - numpy.ndarray: The current position of the target.
     '''
 
 def get_prey_position():
@@ -97,6 +92,14 @@ def get_prey_position():
     Returns:
     - numpy.ndarray: The position of the prey.
     '''
+
+def get_self_id():
+    '''
+    Description: Get the unique ID of the robot itself.
+    Returns:
+    - int: The unique ID of the robot itself.
+    '''
+
 
 def get_sheep_positions():
     '''
