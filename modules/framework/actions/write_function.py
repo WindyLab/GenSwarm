@@ -30,7 +30,6 @@ class WriteFunction(ActionNode):
             env_des=ENV_DES,
             robot_api=robot_api.get_prompt(),
             function_content=self._function._definition,
-            constraints=self._constraint_text,
             other_functions=self._other_functions_str,
         )
 

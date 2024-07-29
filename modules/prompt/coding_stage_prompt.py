@@ -17,8 +17,6 @@ These are the basic descriptions of the environment.
 ```python
 {other_functions}
 ```
-## These are the constraints that need to be satisfied in the implementation of the function:
-{constraints}
 
 ## Task
 Complete the following function. The output TEXT format is as follows:
@@ -40,7 +38,6 @@ import ...(if necessary)
 - If there are issues with the function definition or docstring in the task,and you need to modify them, please make sure the function name remains the same.
 - Import the required modules before the function name, and do not import them in the function body.
 - If the function outputs velocity, then this velocity must be normalized.
-- Make sure the functions you generate meet the constraints.
 
 """.strip()
 

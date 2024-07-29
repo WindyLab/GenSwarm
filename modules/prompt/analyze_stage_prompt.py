@@ -2,7 +2,7 @@ ANALYZE_FUNCTION_PROMPT_TEMPLATE: str = """
 ## Background:
 {task_des}
 ## Role setting:
-- You are a function designer. You need to design functions based on user commands and constraint information.
+- You are a function designer. You need to design functions based on user commands.
 - Your output will guide the generation of control code for the robots. Therefore, the functions you generate should be accurate and feasible, and based on existing conditions.
 ## These are the basic Robot APIs:
 These APIs can be directly called by you.
@@ -10,9 +10,6 @@ These APIs can be directly called by you.
 {robot_api}
 ```
 
-## Constraints information:
-The following are the constraints that the generated functions need to satisfy.
-{constraints}
 ## User commands:
 {instruction}
 ## The output TEXT format is as follows:
@@ -26,12 +23,8 @@ Your output should satisfy the following notes:
 - Each function should be as detailed as possible while also being clear, feasible, and based on existing conditions.
 - Each function only needs to implement a small functionality under the overall objective, and one function should not solve multiple problems.
 - You need to consider which constraints each function should satisfy or, in other words, implement.
-- One function can satisfy multiple constraints, and several functions can also implement a single constraint.
-- You only need to provide the names of the functions and their constraint and call relationships. The specific implementation of the functions is not required.
 - You need to determine the inter-call relationships among these functions.
 - These functions must not have functional redundancy among them, with each function bearing distinct responsibilities.
-- You only need to analyze the constraints that the current function itself must meet; the constraints of the functions it calls are beyond the consideration of the current function.
-- Each constraint in the Constraints information should be satisfied by one of the functions generated in your function list, without any omissions.
 - If the function outputs velocity, then this velocity must be normalized.
 - The output should strictly adhere to the specified format.
 
@@ -153,10 +146,6 @@ FUNCTION_TEMPLATE: str = """
     {
       "name": "Function name",
       "description": "Description of the function,contains the function's input and output parameters",
-      "constraints": [
-        "Name of the constraint that this function needs to satisfy"
-        // More constraints can be added as needed
-      ]
       "calls": [
         "Function name that this function calls(Robot API is also included)"
       ]

@@ -118,12 +118,7 @@ class FunctionTree:
             for function in eval(content)["functions"]:
                 name = function["name"]
                 new_node = self._obtain_node(name, description=function["description"])
-                [
-                    new_node.connect_to(constraint_pool[constraint_name])
-                    for constraint_name in function["constraints"]
-                ]
                 from modules.prompt.robot_api_prompt import robot_api
-
                 [
                     new_node.add_callee(self._obtain_node(name=call))
                     for call in function["calls"]

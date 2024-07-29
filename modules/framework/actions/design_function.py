@@ -44,9 +44,6 @@ class DesignFunction(ActionNode):
             env_des=ENV_DES,
             function_name=self._function.name,
             function_des=self._function.description,
-            constraints=constraint_pool.filtered_constraints(
-                related_constraints=self._function.connections
-            ),
             other_functions=other_functions_str,
         )
 

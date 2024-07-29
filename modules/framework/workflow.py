@@ -47,7 +47,7 @@ class Workflow:
 
     def build_up(self):
         # initialize actions
-        analyze_constraints = AnalyzeConstraints("constraint pool")
+        # analyze_constraints = AnalyzeConstraints("constraint pool")
         analyze_functions = AnalyzeFunctions("function pool")
         generate_functions = GenerateFunctions("function")
         write_functions = WriteFunctionsAsync("function.py")

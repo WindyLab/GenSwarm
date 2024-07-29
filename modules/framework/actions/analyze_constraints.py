@@ -79,8 +79,6 @@ if __name__ == "__main__":
     )
     context = WorkflowContext()
     context.command = "Integrate into a flock, adhering to cohesion by staying connected, alignment by moving together, and separation by maintaining at least 0.5 meters between robots."
-    args = parser.parse_args()
-    context.args = args
     constraint_analyser = AnalyzeConstraints("analyze constraints")
 
     asyncio.run(constraint_analyser.run())

@@ -24,23 +24,24 @@ class AnalyzeFunctions(ActionNode):
             instruction=self.context.command,
             robot_api=ROBOT_API,
             env_des=ENV_DES,
-            constraints=str(self._constraint_pool),
             output_template=FUNCTION_TEMPLATE,
         )
 
     async def _process_response(self, response: str) -> str:
         content = parse_text(response, "json")
         self._function_pool.init_functions(content)
-        self._constraint_pool.check_constraints_satisfaction()
         logger.log(f"Analyze Functions Success", "success")
         return response
 
 
 if __name__ == "__main__":
     import asyncio
+    from modules.framework.context.workflow_context import WorkflowContext
 
+    context = WorkflowContext()
+    context.command = "Integrate into a flock, adhering to cohesion by staying connected, alignment by moving together, and separation by maintaining at least 0.5 meters between robots."
     function_analyser = AnalyzeFunctions("analyze constraints")
+    function_analyser.context = context
     path = "../../../workspace/test"
-    function_analyser.context.load_from_file(f"{path}/constraint.pkl")
     asyncio.run(function_analyser.run())
     function_analyser.context.save_to_file(f"{path}/analyze_functions.pkl")
