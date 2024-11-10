@@ -28,13 +28,11 @@ class WriteFunction(ActionNode):
     def __init__(self, skill_tree, next_text: str = "", node_name: str = ""):
         super().__init__(next_text, node_name)
         self._function = None
-        self._constraint_text = ""
         self._other_functions_str = ""
         self._skill_tree = skill_tree
 
-    def setup(self, function, constraint_text, other_functions_str):
+    def setup(self, function,  other_functions_str):
         self._function: FunctionNode = function
-        self._constraint_text = constraint_text
         self._other_functions_str = other_functions_str
 
     def _build_prompt(self):
@@ -54,7 +52,6 @@ class WriteFunction(ActionNode):
             robot_api=robot_api,
             instruction=self.context.command,
             function_content=self._function.definition,
-            constraints=self._constraint_text,
             other_functions=self._other_functions_str,
         )
 
@@ -90,9 +87,6 @@ class WriteFunctionsAsync(AsyncNode):
         action.setup(
             function=function,
             other_functions_str=other_functions_str,
-            constraint_text=self.constraint_pool.filtered_constraints(
-                function.connections
-            ),
         )
         return await action.run()
 

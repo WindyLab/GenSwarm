@@ -41,8 +41,6 @@ These are the basic descriptions of the environment.
 {function_content}
 ```
 
-## These are the constraints that the function should satisfy:
-{constraints}
 
 
 ## The output TEXT format is as follows:
@@ -58,7 +56,6 @@ def {function_name}(...):
 ## Notes:
 Your output should satisfy the following notes:
 - Carefully check if there are any bugs or logical inconsistencies in this function.
-- Check if the constraints are met.
 - Ensure the call to each sub-function is correct.
 - Check that all defined variables are used.
 - Strictly adhere to the specified format.
@@ -107,9 +104,6 @@ These are the basic descriptions of the environment.
 {function_content}
 ```
 
-## These are the constraints that the function should satisfy:
-{constraints}
-
 
 ## The output TEXT format is as follows:
 
@@ -124,7 +118,6 @@ def {function_name}(...):
 
 ## Notes:
 - Carefully check if there are any bugs in this function, or if there are any logical inconsistencies.
-- Check if the constraints are met.
 - Check if the call to each sub-function is correct.
 - Check that all defined variables are used.
 - Strictly adhere to the specified format.

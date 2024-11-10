@@ -72,7 +72,7 @@ class Workflow:
 
     def build_up(self):
         # initialize actions
-        analyze_constraints = AnalyzeConstraints("constraint pool")
+        # analyze_constraints = AnalyzeConstraints("constraint pool")
         analyze_functions = AnalyzeSkills("function pool")
         generate_mode = "layer"
         if hasattr(self._context.args, "generate_mode"):
@@ -97,8 +97,8 @@ class Workflow:
         video_critic.error_handler = self._chain_of_handler
         # link actions
         # stage 1
-        analysis_stage = ActionLinkedList("Analysis", analyze_constraints)
-        analysis_stage.add(analyze_functions)
+        analysis_stage = ActionLinkedList("Analysis", analyze_functions)
+        # analysis_stage.add(analyze_functions)
         # stage 2
         coding_stage = ActionLinkedList("Coding", generate_functions)
         coding_stage.add(generate_functions)

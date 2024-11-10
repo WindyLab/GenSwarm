@@ -16,7 +16,6 @@ software or the use or other dealings in the software.
 from modules.file import logger
 from modules.framework.action import ActionNode, AsyncNode
 from modules.framework.code import FunctionNode, FunctionTree, State
-from modules.framework.constraint import ConstraintPool
 from modules.framework.error import CodeParseError
 from modules.framework.parser import SingleFunctionParser, parse_text
 from modules.prompt import (
@@ -36,7 +35,6 @@ class CodeReview(ActionNode):
         self._skill_tree = skill_tree
 
     def _build_prompt(self):
-        constraint_pool: ConstraintPool = ConstraintPool()
 
         other_functions: list[FunctionNode] = self._skill_tree.filtered_functions(
             self._function
@@ -57,9 +55,7 @@ class CodeReview(ActionNode):
             robot_api=robot_api,
             env_des=ENV_DES,
             function_name=self._function.name,
-            constraints=constraint_pool.filtered_constraints(
-                related_constraints=self._function.connections
-            ),
+
             other_functions=other_functions_str,
             function_content=self._function.content,
         )

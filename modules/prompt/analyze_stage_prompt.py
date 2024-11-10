@@ -15,7 +15,7 @@ ANALYZE_SKILL_PROMPT_TEMPLATE: str = """
 ## Background:
 {task_des}
 ## Role setting:
-- You are a function designer. You need to design functions based on user commands and constraint information.
+- You are a function designer. You need to design functions based on user commands.
 
 ## These are the environment description:
 These are the basic descriptions of the environment.
@@ -38,10 +38,6 @@ where local APIs can only be called by the robot itself, and global APIs can be 
 {global_api}
 ```
 
-## Constraints information:
-The following are the constraints that the generated functions need to satisfy.
-{constraints}
-
 
 ## The output TEXT format is as follows:
 {output_template}
@@ -51,20 +47,15 @@ The following are the constraints that the generated functions need to satisfy.
 - Each function should be decoupled from others but able to cooperate, collaborate, and call each other when necessary.
 - Each function should be as detailed as possible while remaining clear, feasible, and based on existing conditions.
 - Each function should implement a small part of the overall objective; no single function should solve multiple problems.
-- Each function must satisfy the relevant constraints, meaning it implements that constraint.
-- One function can satisfy multiple constraints, and multiple functions can be designed to implement a single constraint.
-- Only the names of the functions, their constraints, and their call relationships are required; specific implementation details are not needed.
+- Only the names of the functions and their call relationships are required; specific implementation details are not needed.
 - The inter-call relationships among these functions must be determined.
 - There should be no functional redundancy among these functions, with each function having a distinct responsibility.
-- Analyze only the constraints that the current function itself must meet; constraints related to functions it calls are beyond the scope of the current function.
-- Each constraint must be fulfilled by one of the functions listed, without any omissions.
 - Distinguish which skills should run on a centralized allocator and which should run on individual robots.
 - The skill design in tasks should be divided into two categories, and the appropriate skill type should be selected based on the specific requirements of the task.
 - The current task does not necessarily require a global allocator. If needed, please use the corresponding API to obtain the assigned task. If there is no corresponding API, then the current task does not require a global allocator.
 - The allocation method for robots should ensure that the total movement distance for each robot is minimized while completing all tasks, and that no task conflicts occur (i.e., each robot is assigned a distinct task, with no overlap between tasks).
 - The task allocation can include various types such as positions, lists of positions, or specific angles, based on the requirements of the task.
 - The output should strictly adhere to the specified format.
-
 """.strip()
 
 ANALYZE_CONSTRAINT_PROMPT_TEMPLATE: str = """
@@ -136,10 +127,6 @@ FUNCTION_TEMPLATE: str = """
     {
       "name": "Function name",//Function names use snake case.
       "description": "Description of the function,contains the function's input and output parameters",
-      "constraints": [
-        "Name of the constraint that this function needs to satisfy"
-        // More constraints can be added as needed
-      ]
       "calls": [
         "Function name that this function calls(Robot API is also included)"
       ]

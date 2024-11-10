@@ -14,7 +14,6 @@ software or the use or other dealings in the software.
 from modules.file import logger
 from modules.framework.action import ActionNode, AsyncNode
 from modules.framework.code import FunctionNode, FunctionTree, State
-from modules.framework.constraint import ConstraintPool
 from modules.framework.parser import SingleFunctionParser, parse_text
 from modules.prompt import (
     GLOBAL_ROBOT_API,
@@ -42,7 +41,6 @@ class DesignFunction(ActionNode):
 
         logger.log(f"Function: {self._function.name}", "warning")
 
-        constraint_pool: ConstraintPool = ConstraintPool()
         other_functions: list[FunctionNode] = self.skill_tree.filtered_functions(
             self._function
         )
@@ -66,9 +64,6 @@ class DesignFunction(ActionNode):
             instruction=self.context.command,
             function_name=self._function.name,
             function_des=self._function.description,
-            constraints=constraint_pool.filtered_constraints(
-                related_constraints=self._function.connections
-            ),
             other_functions=other_functions_str,
         )
 

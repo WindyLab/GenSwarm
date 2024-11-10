@@ -31,8 +31,6 @@ DESIGN_LOCAL_FUNCTION_PROMPT_TEMPLATE = """
 ## These are the existing functions' descriptions and names:
 {other_functions}
 
-## These are the constraints that this function should satisfy.
-{constraints}
 
 ## The output TEXT format is as follows:
 ### Reasoning: (reason step by step about how to design this function)
@@ -81,9 +79,6 @@ DESIGN_GLOBAL_FUNCTION_PROMPT_TEMPLATE = """
 
 ## These are the existing functions' descriptions and names:
 {other_functions}
-
-## These are the constraints that this function should satisfy.
-{constraints}
 
 
 ## The output TEXT format is as follows:

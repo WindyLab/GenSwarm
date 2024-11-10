@@ -13,7 +13,6 @@ software or the use or other dealings in the software.
 
 from modules.file import logger
 from modules.framework.action import ActionNode
-from modules.framework.constraint import ConstraintPool
 from modules.framework.code import FunctionTree
 from modules.framework.parser import *
 from modules.prompt import (
@@ -31,7 +30,6 @@ from modules.utils import root_manager
 class AnalyzeSkills(ActionNode):
     def __init__(self, next_text, node_name=""):
         super().__init__(next_text, node_name)
-        self._constraint_pool: ConstraintPool = self.context.constraint_pool
 
     def _build_prompt(self):
         self.prompt = self.prompt.format(
@@ -41,7 +39,6 @@ class AnalyzeSkills(ActionNode):
             + ALLOCATOR_TEMPLATE.format(template="Temporarily unknown"),
             global_api=GLOBAL_ROBOT_API,
             env_des=ENV_DES,
-            constraints=str(self._constraint_pool),
             output_template=FUNCTION_TEMPLATE,
         )
 
@@ -64,7 +61,6 @@ class AnalyzeSkills(ActionNode):
 
             self._next = GenerateFunctions()
 
-        self._constraint_pool.check_constraints_satisfaction()
         logger.log(f"Analyze Functions Success", "success")
         return response
 
@@ -76,6 +72,6 @@ if __name__ == "__main__":
     path = "../../../workspace/test"
     root_manager.update_root("../../../workspace/test")
 
-    function_analyser.context.load_from_file(f"{path}/constraint.pkl")
+    # function_analyser.context.load_from_file(f"{path}/constraint.pkl")
     asyncio.run(function_analyser.run())
     function_analyser.context.save_to_file(f"{path}/analyze_functions.pkl")

@@ -133,20 +133,11 @@ class FunctionTree:
                 logger.log(f"function {function_node.name} reset", level="warning")
 
     def init_functions(self, functions: list[dict]):
-        constraint_pool = ConstraintPool()
         try:
             functions_name = [func["name"] for func in functions]
             for function in functions:
                 name = function["name"]
                 new_node = self._obtain_node(name, description=function["description"])
-                for constraint_name in function["constraints"]:
-                    if constraint_name in constraint_pool.get_constraint_names():
-                        new_node.connect_to(constraint_pool[constraint_name])
-                    else:
-                        logger.log(
-                            f"Constraint '{constraint_name}' not found in the constraint pool for function '{name}', skipping.",
-                            level="warning",
-                        )
 
                 from modules.prompt.robot_api_prompt import robot_api
 
