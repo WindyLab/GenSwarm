@@ -36,7 +36,7 @@ if __name__ == "__main__":
     task = get_user_commands(experiment_name)[0]
 
     args = parameter_service.args
-    root_manager.update_root(args=args)
+    root_manager.update_root(args=args, ablation_path='ablation')
     logger.log(f"\n{parameter_service.format_arguments_as_table(args)}", "warning")
 
     asyncio.run(run_task(task, parameter_service.args))
