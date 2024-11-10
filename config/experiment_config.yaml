@@ -9,7 +9,7 @@ arguments:
     default: 1
     help: special for generate_code mode to specify the experiment nums
   --run_experiment_name:
-    default: [ 'flocking' ]
+    default: [ 'covering' ]
     help: for run_experiment mode and generate_code mode to specify the experiment name
   --run_times:
     default: 60

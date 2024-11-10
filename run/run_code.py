@@ -56,12 +56,12 @@ def main():
     args = parser.parse_args()
     task_name = args.task_name
 
-    workspace_path = 'comparative/cap/' + task_name
-    # workspace_path = task_name
+    # workspace_path = 'comparative/cap/' + task_name
+    workspace_path = task_name
     runner_class = task_mapping(task_name)
     config_file = config_mapping(task_name)
     # test_mode = 'improve'
-    test_mode = 'cap'
+    test_mode = 'real'
     if test_mode == 'real':
         env_config_path = f"../config/real_env/{config_file}"
         experiment_duration = 100
@@ -85,7 +85,7 @@ def main():
     #             '2024-10-28_01-49-19', '2024-10-28_01-49-27', '2024-10-28_01-51-49']
     exp_list = None
     # exp_list = ['2024-10-28_01-24-56']
-    # exp_list = ['2024-10-28_01-19-35']
+    exp_list = ['2024-10-28_01-19-35']
 
     runner.run(exp_list=exp_list)
 
