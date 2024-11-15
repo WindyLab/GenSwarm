@@ -121,7 +121,7 @@ class RunCodeReal(ActionNode):
         colon_index = path.find("workspace/")
 
         if colon_index != -1:
-            substring = path[colon_index + len("workspace/") :]
+            substring = path[colon_index + len("workspace/"):]
             print(substring)
             self.path = substring
         self.set_logging_text("Running code.py")
@@ -209,7 +209,7 @@ class RunCodeAsync(ActionNode):
     from run.auto_runner.core import EnvironmentManager
 
     def __init__(
-        self, next_text: str = "", node_name: str = "", env: EnvironmentManager = None
+            self, next_text: str = "", node_name: str = "", env: EnvironmentManager = None
     ):
         self.call_times = 0
         self.env = env
@@ -226,7 +226,7 @@ class RunCodeAsync(ActionNode):
 
         robot_ids = list(range(start_idx, end_idx + 1))
         robot_id_chunks = [
-            robot_ids[i : i + robots_per_process]
+            robot_ids[i: i + robots_per_process]
             for i in range(0, total_robots, robots_per_process)
         ]
         tasks = []
@@ -396,15 +396,15 @@ def init_workflow(args, env=None) -> ActionNode:
 
 
 def runcode(
-    timeout=20,
-    feedback="None",
-    experiment_path="clustering/2024-10-21_03-04-33",
-    target_pkl="WriteRun.pkl",
-    script="run.py",
-    human_feedback=False,
-    env_manager=None,
-    debug=False,
-    test_mode="wo_vlm",
+        timeout=20,
+        feedback="None",
+        experiment_path="clustering/2024-10-21_03-04-33",
+        target_pkl="WriteRun.pkl",
+        script="run.py",
+        human_feedback=False,
+        env_manager=None,
+        debug=False,
+        test_mode="wo_vlm",
 ):
     """
     Run the simulation with custom parameters (synchronously).

@@ -19,9 +19,7 @@
       "shape": "circle",
       "perceptual_range": 1,
       "id_list": [
-        5,
-        1,
-        2
+6,7,8
       ]
     },
     "leader": {

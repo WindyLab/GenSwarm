@@ -48,7 +48,7 @@ def main():
     parser.add_argument(
         "--task_name",
         type=str,
-        default="crossing",
+        default="exploration",
         help="The name of the task to run",
     )
 
@@ -64,7 +64,7 @@ def main():
     # test_mode = 'improve'
     test_mode = "real"
     if test_mode == "real":
-        env_config_path = f"../config/real_env/{config_file}"
+        env_config_path = f"./config/real_env/{config_file}"
         experiment_duration = 50
     else:
         env_config_path = f"../config/env/{config_file}"
@@ -86,7 +86,7 @@ def main():
     #             '2024-10-28_01-49-19', '2024-10-28_01-49-27', '2024-10-28_01-51-49']
     exp_list = None
     # exp_list = ['2024-10-28_01-24-56']
-    exp_list = ["2024-10-29_17-31-57"]
+    exp_list = ["2024-10-28_01-19-06"]
 
     runner.run(exp_list=exp_list)
 

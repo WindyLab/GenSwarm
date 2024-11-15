@@ -21,7 +21,7 @@ from modules.framework.action import *
 from modules.framework.actions import *
 from modules.framework.context import WorkflowContext
 from modules.framework.handler import *
-from modules.utils import root_manager, setup_logger
+from modules.utils import root_manager, setup_logger, rich_print
 
 
 class Workflow:
@@ -135,13 +135,7 @@ class Workflow:
         self._pipeline = code_llm
 
     async def run(self):
-        panel = Panel(
-            self._context.command,
-            title="[bold cyan]User Command[/bold cyan]",
-            border_style="cyan",  # Border color
-        )
-        rich_print(panel)
-
+        rich_print(title="User Command", content=self._context.command)
         text = display_all(self._pipeline, self._chain_of_handler)
         flow = File(name="flow.md")
         flow.message = text
