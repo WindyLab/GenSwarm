@@ -13,6 +13,7 @@ software or the use or other dealings in the software.
 import os.path
 
 from click import prompt
+from numpy.version import full_version
 
 from modules.file import logger
 from modules.framework.action import ActionNode
@@ -25,7 +26,7 @@ from modules.utils import (
     root_manager,
     process_video,
     create_video_from_frames,
-    save_dict_to_json,
+    save_dict_to_json, rich_print,
 )
 from modules.prompt import (
     VIDEO_PROMPT_TEMPLATE,
@@ -36,10 +37,10 @@ from modules.prompt import (
 
 class VideoCriticize(ActionNode):
     def __init__(
-        self,
-        skill_tree,
-        next_text: str = "",
-        node_name: str = "",
+            self,
+            skill_tree,
+            next_text: str = "",
+            node_name: str = "",
     ):
         self.result_dict = None
         self.__llm = GPT(memorize=True, model="VLM")
@@ -48,6 +49,10 @@ class VideoCriticize(ActionNode):
         self._frames: list
         self._skill_tree = skill_tree
         self._constraint_pool = ConstraintPool()
+        self.set_logging_text(f"Providing feedback on the simulation video")
+
+    def _display(self):
+        rich_print(title='Feedback', content=self.result_dict["feedback"])
 
     def _build_prompt(self):
         self.setup()
@@ -80,11 +85,14 @@ class VideoCriticize(ActionNode):
         self.context.vlm = True
         wo_vlm_path = f"{root_manager.workspace_root}/wo_vlm.mp4"
         debug_path = f"{root_manager.workspace_root}/debug.mp4"
+        full_version_path = f"{root_manager.workspace_root}/full_version.mp4"
         # 判断是否有wo_vlm.mp4，debug.mp4 两个文件
         if os.path.exists(debug_path):
             video_path = debug_path
         elif os.path.exists(wo_vlm_path):
             video_path = wo_vlm_path
+        elif os.path.exists(full_version_path):
+            video_path = full_version_path
         else:
             video_path = None
         self.result_dict = {"video_path": video_path, "success": None, "feedback": None}
@@ -95,9 +103,9 @@ class VideoCriticize(ActionNode):
             logger.log("No video file found", "error")
             raise SystemExit("No video file found")
 
-        self._frames = process_video(video_path, start_time=0, seconds_per_frame=0.5)
+        self._frames = process_video(video_path, start_time=0, seconds_per_frame=1)
         create_video_from_frames(
-            self._frames, output_path=f"{root_manager.data_root}/extra.mp4", fps=0.5
+            self._frames, output_path=f"{root_manager.data_root}/extra.mp4", fps=1
         )
 
     async def _process_response(self, response: str) -> str | Feedback:

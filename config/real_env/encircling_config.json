@@ -22,10 +22,7 @@
         0,
         1,
         2,
-        3,
-        8,
         6,
-        5,
         7
       ]
     },
@@ -40,8 +37,7 @@
       "shape": "circle",
       "color": "green",
       "id_list": [
-        4,
-        9
+        10
       ]
     },
     "sheep": {
@@ -52,7 +48,7 @@
       "count": 1,
       "specified": [],
       "id_list": [
-        10
+        8
       ]
     },
     "landmark": {
@@ -65,7 +61,7 @@
     }
   },
   "engine_type": "OmniEngine",
-  "render_mode": "human",
+  "render_mode": "",
   "output_file": "output.json",
   "dt": 0.1
 }

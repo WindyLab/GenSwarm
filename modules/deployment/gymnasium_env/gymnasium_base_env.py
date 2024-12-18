@@ -171,8 +171,12 @@ class GymnasiumEnvironmentBase(gymnasium.Env, ABC):
             None
         """
         if self.screen is not None:
-            if pygame.get_init():  # Check if Pygame is initialized
-                pygame.quit()
+            # Ensure all pending events are handled
+            if pygame.get_init():
+                for event in pygame.event.get():
+                    pass  # Drain all events to prevent blocking
+            pygame.display.quit()  # Cloe the display
+            # pygame.quit()  # Quit Pygame fully
             self.screen = None
 
     def get_spaces(self):
@@ -256,7 +260,7 @@ class GymnasiumEnvironmentBase(gymnasium.Env, ABC):
         return obs
 
     def step(
-        self, action: ActType
+            self, action: ActType
     ) -> tuple[ObsType, SupportsFloat, bool, bool, dict[str, Any]]:
         """
         Perform one step of the environment using the given actions.
@@ -304,14 +308,31 @@ class GymnasiumEnvironmentBase(gymnasium.Env, ABC):
         return reward
 
     def render(self):
+        """
+        Render the current frame to the screen or return the pixel data.
+
+        This method checks if the render mode is set and whether the screen exists.
+        If the screen is not initialized, it warns the user and skips rendering.
+
+        Returns:
+            np.ndarray: Transposed RGB array of the screen if render_mode is not "human".
+            None: If render_mode is "human" or the screen is not initialized.
+        """
+        if self.screen is None:
+            gymnasium.logger.warn("Render method called but the screen is not initialized.")
+            return
+
         if self.render_mode is None:
+            print("You are calling render method without specifying any render mode.")
             gymnasium.logger.warn(
                 "You are calling render method without specifying any render mode."
             )
             return
 
+        # Call draw logic (user-defined)
         self.draw()
 
+        # Capture the screen data
         rgb_array = pygame.surfarray.pixels3d(self.screen)
         new_rgb_array = np.copy(rgb_array)
         del rgb_array
@@ -319,6 +340,8 @@ class GymnasiumEnvironmentBase(gymnasium.Env, ABC):
         if self.render_mode == "human":
             pygame.event.pump()
             pygame.display.update()
+
+        # Return the frame if render_mode is not "human"
         return np.transpose(new_rgb_array, axes=(1, 0, 2))
 
     def draw(self):
@@ -349,11 +372,11 @@ class GymnasiumEnvironmentBase(gymnasium.Env, ABC):
                 pygame.draw.rect(self.screen, color, rect)
 
     def reset(
-        self,
-        *,
-        seed: int | None = None,
-        options: dict[str, Any] | None = None,
-        keep_entity=False,
+            self,
+            *,
+            seed: int | None = None,
+            options: dict[str, Any] | None = None,
+            keep_entity=False,
     ) -> tuple[ObsType, dict[str, Any]]:
         super().reset(seed=seed)
         if not keep_entity:
@@ -390,21 +413,11 @@ class GymnasiumEnvironmentBase(gymnasium.Env, ABC):
 
     def init_omni_entities(self):
         robot_id_list = self.robot_id_list
-        target_positions = [
-            (2.0, 0.0),
-            (1.7320508075688774, 0.9999999999999999),
-            (1.0000000000000002, 1.7320508075688772),
-            (1.2246467991473532e-16, 2.0),
-            (-0.9999999999999996, 1.7320508075688774),
-            (-1.732050807568877, 1.0000000000000007),
-        ]
-
         for count, i in enumerate(robot_id_list):
             robot = Robot(
                 robot_id=i,
                 initial_position=(0, 0),
                 size=0.15,
-                target_position=target_positions[count],
             )
             self.add_entity(robot)
         obstacle_id_list = self.obstacle_id_list

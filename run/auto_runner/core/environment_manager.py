@@ -1,4 +1,7 @@
 import os
+import threading
+import time
+
 import cv2
 import imageio
 import rospy
@@ -7,14 +10,15 @@ from code_llm.srv import StopEnvironment, StopEnvironmentResponse
 
 from modules.deployment.utils.manager import Manager
 from modules.deployment.gymnasium_env import GymnasiumEnvironmentBase
+from modules.utils import rich_print
 
 
 class EnvironmentManager:
     def __init__(
-        self,
-        env: GymnasiumEnvironmentBase,
-        default_fps: int = 100,
-        max_speed: float = 1.0,
+            self,
+            env: GymnasiumEnvironmentBase,
+            default_fps: int = 100,
+            max_speed: float = 1.0,
     ):
         """
         Initialize the environment manager, no longer requiring experiment path and ID in the constructor.
@@ -24,6 +28,7 @@ class EnvironmentManager:
             default_fps (int): Default frame rate (frames per second).
             max_speed (float): Maximum speed for the manager.
         """
+        self.render_event = threading.Event()
         self.env = env
         self.env.reset()
         self.experiment_path = None
@@ -32,6 +37,16 @@ class EnvironmentManager:
             real = True
             default_fps = 10
         self.fps = default_fps  # Default frame rate
+        # Register ROS services
+        try:
+            rospy.Service(
+                "/start_environment", StartEnvironment, self.handle_start_environment
+            )
+            rospy.Service(
+                "/stop_environment", StopEnvironment, self.handle_stop_environment
+            )
+        except Exception as e:
+            pass
         self.manager = Manager(self.env, max_speed=max_speed, real=real)
         self.frames = []
         self.frame_dir = None
@@ -40,13 +55,6 @@ class EnvironmentManager:
         self.timer = None
         _, infos = self.env.reset()
         self.result = self.init_result(infos)
-        # Register ROS services
-        rospy.Service(
-            "/start_environment", StartEnvironment, self.handle_start_environment
-        )
-        rospy.Service(
-            "/stop_environment", StopEnvironment, self.handle_stop_environment
-        )
 
     def init_result(self, infos: dict) -> dict:
         """
@@ -104,23 +112,22 @@ class EnvironmentManager:
             success=True, message="Environment stopped successfully."
         )
 
-    def start_environment(self, experiment_path: str, keep_entities=False):
+    def start_environment(self, experiment_path: str, render_mode='', keep_entities=False):
         """
         Start the environment and run the experiment periodically using a timer.
 
         Args:
+            render_mode (str): The mode for rendering the environment.
             experiment_path (str): The path where experiment data will be saved.
         """
+        self.render_event.clear()  # Clear any previous render event
+        self.env.render_mode = render_mode
         self.experiment_path = experiment_path
         self.reset_environment(keep_entities)
         fps_duration = 1.0 / self.fps
         secs = int(fps_duration)  # Whole seconds
         nsecs = int((fps_duration - secs) * 1e9)  # Nanoseconds
-
         self.timer = rospy.Timer(rospy.Duration(secs=secs, nsecs=nsecs), self.step)
-        print(
-            f"Environment started successfully with path: {self.experiment_path}, FPS: {self.fps}"
-        )
 
     def reset_environment(self, keep_entities):
         """
@@ -129,7 +136,6 @@ class EnvironmentManager:
         self.env.reset(keep_entity=keep_entities)
         self.manager.clear_velocity()
         self.frames.clear()
-        print("Environment reset successfully.")
 
     def stop_environment(self, file_name: str = None, save_result: bool = True):
         """
@@ -139,17 +145,25 @@ class EnvironmentManager:
             file_name (str): The name of the file to save the animations.
             save_result (bool): Whether to save the simulation data.
         """
+        # 设置事件，停止渲染
+        self.render_event.set()
+
+        # 关闭定时器
         if self.timer:
             self.timer.shutdown()
+
         if save_result:
             self.save_frames_as_animations(file_name)
             self.save_simulation_data(file_name)
-            print(f"Environment stopped and saved as {file_name} successfully.")
-        else:
-            _, infos = self.env.reset(keep_entity=True)
+
+        # 重置环境
+        _, infos = self.env.reset(keep_entity=True)
+        try:
             self.result = self.init_result(infos)
             self.frames.clear()
-            print("Environment stopped successfully without saving.")
+            self.env.close()  # 关闭环境
+        except Exception as e:
+            print(f"Error during stopping environment: {e}")
 
     def save_frames_as_animations(self, file_name: str):
         """
@@ -176,7 +190,7 @@ class EnvironmentManager:
             out.write(cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
 
         out.release()
-        print(f"Saved animation as MP4 at {mp4_path}")
+        rich_print(title="Save video", content=f'Saved the simulation video as mp4 at {mp4_path}')
         self.frames.clear()
 
     def save_simulation_data(self, file_name: str):
@@ -191,7 +205,7 @@ class EnvironmentManager:
         data_path = os.path.join(self.experiment_path, f"{file_name}.pkl")
         with open(data_path, "wb") as f:
             pickle.dump(self.result, f)
-        print(f"Saved simulation data as pickle at {data_path}")
+        rich_print(title="Save Data", content=f'Saved simulation data as pickle at {data_path}')
 
     def step(self, event):
         """
@@ -200,6 +214,10 @@ class EnvironmentManager:
         Args:
             event: ROS Timer event that triggers this function.
         """
+        # 检查渲染事件是否被触发
+        if self.render_event.is_set():
+            return  # 如果渲染已停止，则跳过渲染部分
+
         action = self.manager.robotID_velocity
         obs, reward, termination, truncation, infos = self.env.step(action=action)
         for entity_id in infos:
@@ -209,5 +227,12 @@ class EnvironmentManager:
                 )
             if infos[entity_id]["state"] is not None:
                 self.result[entity_id]["states"].append(infos[entity_id]["state"])
-        self.frames.append(self.env.render())
+
+        # 渲染操作，只有在渲染允许时才会执行
+        try:
+            if not self.render_event.is_set() and self.env.screen:
+                self.frames.append(self.env.render())
+        except Exception as e:
+            print(f"Error during rendering: {e}")
+
         self.manager.publish_observations(infos)

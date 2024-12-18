@@ -20,9 +20,11 @@ import traceback
 
 import rospy
 
+# import rospy
+
 from modules.file import logger
 from modules.framework.action import ActionNode
-from modules.framework.code_error import Bug
+from modules.framework.code_error import Bug, Feedback
 from modules.framework.context import WorkflowContext
 from modules.utils import (
     root_manager,
@@ -31,6 +33,7 @@ from modules.utils import (
     save_dict_to_json,
     rich_print,
 )
+from modules.utils.rich_print import rich_input
 
 
 class RunAllocateRun(ActionNode):
@@ -54,7 +57,8 @@ class RunAllocateRun(ActionNode):
                 result = await run_script(
                     working_directory=root_manager.workspace_root,
                     command=command,
-                    timeout=10,
+                    print_output=False,
+                    timeout=20,
                 )
         finally:
             os.system("pgrep -f allocate_run.py | xargs kill -9")
@@ -77,6 +81,7 @@ class RunAllocateRun(ActionNode):
                 logger.log(
                     content=f"Run allocate failed, result: {result}", level="error"
                 )
+                print(f"Run allocate failed, result: {result}")
 
                 if self.call_times >= 3:
                     logger.log(
@@ -121,8 +126,7 @@ class RunCodeReal(ActionNode):
         colon_index = path.find("workspace/")
 
         if colon_index != -1:
-            substring = path[colon_index + len("workspace/") :]
-            print(substring)
+            substring = path[colon_index + len("workspace/"):]
             self.path = substring
         self.set_logging_text("Running code.py")
 
@@ -142,7 +146,8 @@ class RunCodeReal(ActionNode):
         # os.environ["STAGE"] = self.stage
         if self.stage == "1":
             self.env.start_environment(
-                experiment_path=self.context.args.experiment_path
+                experiment_path=self.context.args.experiment_path,
+                render_mode="human",
             )
         working_directory = os.path.join(root_manager.project_root, "docker")
         # command = ["docker-compose", "up", "deploy"]
@@ -160,19 +165,43 @@ class RunCodeReal(ActionNode):
         # 调用 docker-compose 命令并显示输出
         result = await run_script(
             working_directory=working_directory,
+            print_output=True,
             command=command,
             timeout=70,
             env=env,
         )
         rich_print(content="Code is deployed.", title="Deploy Code")
         if self.stage == "1":
+            pub_mqtt = rich_input(
+                "Code deployment completed.Robots are ready to run the experiment.Start the experiment? (y/n)")
+            if pub_mqtt == "y":
+                rospy.set_param("pub_mqtt", True)
             time.sleep(self.context.args.timeout)
             self.env.stop_environment(file_name="real", save_result=True)
+            rospy.set_param('pub_mqtt', False)
         logger.log(content=result, level="info")
-        rich_print(content=result, title="Deploy Code")
-        return result
 
-    def _process_response(self, response: str) -> str:
+        # rich_print(content=result, title="Deploy Code")
+        return self._process_response(result)
+
+    def _process_response(self, response: str):
+        if self.stage == "1":
+            # 定义颜色代码
+            RED = "\033[31m"
+            GREEN = "\033[32m"
+            YELLOW = "\033[33m"
+            RESET = "\033[0m"
+
+            if_feedback = input(f"{GREEN}If task is done? Press y/n: {RESET}")
+            if if_feedback.lower() == "y":
+                logger.log("run code: success", "warning")
+                return "NONE"
+            else:
+                rich_print(content="Task is not done.", title="Task Status")
+                feedback = input(f"{YELLOW}Please provide feedback: {RESET}")
+                rich_print(content=f"Feedback received:{feedback}", title="Feedback")
+                self.context.feedbacks.append(feedback)
+                return Feedback(feedback)
         return response
 
 
@@ -209,7 +238,7 @@ class RunCodeAsync(ActionNode):
     from run.auto_runner.core import EnvironmentManager
 
     def __init__(
-        self, next_text: str = "", node_name: str = "", env: EnvironmentManager = None
+            self, next_text: str = "", node_name: str = "", env: EnvironmentManager = None
     ):
         self.call_times = 0
         self.env = env
@@ -218,15 +247,15 @@ class RunCodeAsync(ActionNode):
     async def _run(self):
         self.call_times += 1
         self.context.scoop = "local"
-        start_idx = rospy.get_param("robot_start_index")
-        end_idx = rospy.get_param("robot_end_index")
+        start_idx = 4
+        end_idx = 9
         total_robots = end_idx - start_idx + 1
         num_processes = min(10, total_robots)  # 并行进程数
         robots_per_process = total_robots // num_processes
 
         robot_ids = list(range(start_idx, end_idx + 1))
         robot_id_chunks = [
-            robot_ids[i : i + robots_per_process]
+            robot_ids[i: i + robots_per_process]
             for i in range(0, total_robots, robots_per_process)
         ]
         tasks = []
@@ -237,7 +266,8 @@ class RunCodeAsync(ActionNode):
             else:
                 keep_entities = True
             self.env.start_environment(
-                experiment_path=root_manager.workspace_root, keep_entities=keep_entities
+                experiment_path=root_manager.workspace_root, keep_entities=keep_entities,
+                render_mode="human",
             )
             for chunk in robot_id_chunks:
                 action = RunCode()
@@ -263,15 +293,15 @@ class RunCodeAsync(ActionNode):
             self.context.save_to_file(
                 root_manager.workspace_root / f"{self.context.args.test_mode}.pkl"
             )
-            self.env.stop_environment(file_name=self.context.args.test_mode)
 
             if all(item in ["NONE", "Timeout"] for item in result):
                 logger.log(content="Run code success", level="success")
+                self.env.stop_environment(file_name=self.context.args.test_mode, save_result=True)
                 return "NONE"
 
             result = [item for item in result if item not in ["NONE", "Timeout"]]
             logger.log(content=f"Run code failed, result: {result}", level="error")
-            self.env.stop_environment(save_result=False)
+            self.env.stop_environment(file_name=self.context.args.test_mode, save_result=False)
 
             result_content = result[0]
 
@@ -332,9 +362,10 @@ def init_workflow(args, env=None) -> ActionNode:
         stop_docker.setup(stage=2, path=args.experiment_path)
         video_critic = VideoCriticize("")
         if args.test_mode == "real":
-            run_allocate._next = run_real
+            run_allocate._next = copy_file
             # stop_docker._next = run_real
-            # copy_file._next = run_real
+            copy_file._next = run_real
+            code_improver._next = run_allocate
             # run_real._next = stop_docker
         else:
             run_allocate._next = run_code
@@ -345,14 +376,15 @@ def init_workflow(args, env=None) -> ActionNode:
 
         hf_handler = FeedbackHandler()
         hf_handler.next_action = code_improver
-        code_improver._next = run_allocate
+        # code_improver._next = run_allocate
 
         # link error handlers
         chain_of_handler = bug_handler
         bug_handler.successor = hf_handler
         run_allocate.error_handler = chain_of_handler
         run_code.error_handler = chain_of_handler
-        if args.feedback != "None":
+        run_real.error_handler = chain_of_handler
+        if args.test_mode == "full_version":
             run_code._next = video_critic
             video_critic.error_handler = chain_of_handler
         target_pkl = None
@@ -396,15 +428,15 @@ def init_workflow(args, env=None) -> ActionNode:
 
 
 def runcode(
-    timeout=20,
-    feedback="None",
-    experiment_path="clustering/2024-10-21_03-04-33",
-    target_pkl="WriteRun.pkl",
-    script="run.py",
-    human_feedback=False,
-    env_manager=None,
-    debug=False,
-    test_mode="wo_vlm",
+        timeout=20,
+        feedback="None",
+        experiment_path="clustering/2024-10-21_03-04-33",
+        target_pkl="WriteRun.pkl",
+        script="run.py",
+        human_feedback=False,
+        env_manager=None,
+        debug=False,
+        test_mode="wo_vlm",
 ):
     """
     Run the simulation with custom parameters (synchronously).

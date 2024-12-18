@@ -59,16 +59,17 @@ class Manager:
                 queue_size=1,
             )
         rospy.Subscriber("/leader/velocity", Twist, self.leader_velocity_callback)
-
-        self._target_positions_service = rospy.Service(
-            "/get_target_positions",
-            GetTargetPositions,
-            self.get_target_positions_callback,
-        )
-        self._char_points_service = rospy.Service(
-            "/get_char_points", GetCharPoints, self.get_char_points_callback
-        )
-
+        try:
+            self._target_positions_service = rospy.Service(
+                "/get_target_positions",
+                GetTargetPositions,
+                self.get_target_positions_callback,
+            )
+            self._char_points_service = rospy.Service(
+                "/get_char_points", GetCharPoints, self.get_char_points_callback
+            )
+        except Exception as e:
+            pass
         self.observation_publisher = rospy.Publisher(
             f"observation", Observations, queue_size=1
         )

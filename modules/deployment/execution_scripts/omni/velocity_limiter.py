@@ -77,7 +77,7 @@ class VelocityLimiterNode:
         self.last_angular_vel = angular_vel
 
     def timer_callback(self, event):
-        rospy.loginfo(f"Closing node after {self.time} seconds timeout.")
+        # rospy.loginfo(f"Closing node after {self.time} seconds timeout.")
         rospy.signal_shutdown("Timeout reached.")
 
 

@@ -13,7 +13,6 @@ software or the use or other dealings in the software.
 
 import asyncio
 import os
-
 os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "1"
 
 from modules.file import File, logger
@@ -21,7 +20,7 @@ from modules.framework.action import *
 from modules.framework.actions import *
 from modules.framework.context import WorkflowContext
 from modules.framework.handler import *
-from modules.utils import root_manager, setup_logger
+from modules.utils import root_manager, setup_logger, rich_print
 
 
 class Workflow:
@@ -135,12 +134,12 @@ class Workflow:
         self._pipeline = code_llm
 
     async def run(self):
-        panel = Panel(
-            self._context.command,
-            title="[bold cyan]User Command[/bold cyan]",
-            border_style="cyan",  # Border color
-        )
-        rich_print(panel)
+        # panel = Panel(
+        #     self._context.command,
+        #     title="[bold cyan]User Command[/bold cyan]",
+        #     border_style="cyan",  # Border color
+        # )
+        rich_print("User Command", self._context.command)
 
         text = display_all(self._pipeline, self._chain_of_handler)
         flow = File(name="flow.md")

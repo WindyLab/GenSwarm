@@ -10,7 +10,7 @@ claim, damages, or other liability, whether in an action of contract,
 tort, or otherwise, arising from, out of, or in connection with the
 software or the use or other dealings in the software.
 """
-
+from modules.utils import rich_print
 from run.auto_runner import *
 import argparse
 
@@ -48,8 +48,20 @@ def main():
     parser.add_argument(
         "--task_name",
         type=str,
-        default="crossing",
+        default="encircling",
         help="The name of the task to run",
+    )
+    parser.add_argument(
+        "--test_mode",
+        type=str,
+        default="real",
+        help="The mode of the test, can be 'real' or 'improve'",
+    )
+    parser.add_argument(
+        "--exp_name",
+        type=str,
+        default="",
+        help="The list of experiments to rerun",
     )
 
     # 解析参数
@@ -62,7 +74,7 @@ def main():
     runner_class = task_mapping(task_name)
     config_file = config_mapping(task_name)
     # test_mode = 'improve'
-    test_mode = "real"
+    test_mode = args.test_mode
     if test_mode == "real":
         env_config_path = f"../config/real_env/{config_file}"
         experiment_duration = 50
@@ -86,7 +98,8 @@ def main():
     #             '2024-10-28_01-49-19', '2024-10-28_01-49-27', '2024-10-28_01-51-49']
     exp_list = None
     # exp_list = ['2024-10-28_01-24-56']
-    exp_list = ["2024-10-29_17-31-57"]
+    # exp_list=[args.exp_name]
+    exp_list = ["2024-12-17_11-56-41"]
 
     runner.run(exp_list=exp_list)
 

@@ -44,7 +44,7 @@
     }
   },
   "engine_type": "QuadTreeEngine",
-  "render_mode": "",
+  "render_mode": "human",
   "output_file": "output.json",
   "dt": 0.01
 }

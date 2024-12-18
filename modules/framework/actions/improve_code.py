@@ -22,6 +22,8 @@ class CodeImprove(ActionNode):
         super().__init__(next_text, node_name)
         self.feedback = None
         self._call_times = 0
+        self.set_logging_text(f"Improve code via feedback")
+        self.code = None
 
     def _build_prompt(self):
         # if self._call_times == 0:
@@ -84,13 +86,14 @@ class CodeImprove(ActionNode):
                     parser.imports, {func_name: func_body}
                 )
 
-        rich_code_print("Improve Code", code, f"New Code")
-
         # 保存函数到文件
         self.context.global_skill_tree.save_functions_to_file()
         self.context.local_skill_tree.save_functions_to_file()
-
+        self.code = code
         return str(code)
+
+    def _display(self):
+        rich_code_print("Improve Code", self.code, f"New Code")
 
 
 if __name__ == "__main__":

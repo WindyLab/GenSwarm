@@ -19,11 +19,7 @@
       "shape": "circle",
       "perceptual_range": 1,
       "id_list": [
-        1,
-        2,
-        3,
-        6,
-        8
+        6
       ]
     },
     "leader": {
@@ -37,9 +33,6 @@
       "shape": "circle",
       "color": "green",
       "id_list": [
-        4,
-        9,
-        10
       ]
     },
     "sheep": {

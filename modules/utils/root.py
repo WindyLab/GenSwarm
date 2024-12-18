@@ -21,9 +21,9 @@ def get_project_root():
     current_path = Path.cwd()
     while True:
         if (
-            (current_path / ".git").exists()
-            or (current_path / ".project_root").exists()
-            or (current_path / ".gitignore").exists()
+                (current_path / ".git").exists()
+                or (current_path / ".project_root").exists()
+                or (current_path / ".gitignore").exists()
         ):
             # use metagpt with git clone will land here
             return current_path
@@ -48,8 +48,9 @@ class _RootManager:
         return cls._instance
 
     def update_root(
-        self, workspace_root: str = None, args: argparse.Namespace = None
-    ) -> None:
+            self, workspace_root: str = None, args: argparse.Namespace = None
+    ):
+        formatted_date = None
         if workspace_root is None or args is not None:
             self.project_root = get_project_root()
             current_datetime = datetime.datetime.now()
@@ -62,12 +63,14 @@ class _RootManager:
                 if hasattr(args, "run_experiment_name"):
                     task_name = "_".join(args.run_experiment_name)
             self.workspace_root = (
-                self.project_root
-                / f"workspace/{generate_mode}/{task_name}/{formatted_date}"
+                    self.project_root
+                    / f"workspace/{generate_mode}/{task_name}/{formatted_date}"
             )
         else:
             self.workspace_root = Path(workspace_root)
         self.data_root = self.workspace_root / "data"
+        if formatted_date:
+            return formatted_date
 
 
 root_manager = _RootManager()

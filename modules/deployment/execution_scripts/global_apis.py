@@ -16,9 +16,6 @@ import rospy
 from code_llm.msg import Observations
 import numpy as np
 from code_llm.srv import GetCharPoints, GetCharPointsRequest
-from sympy.stats.sampling.sample_numpy import numpy
-
-from tests.intrgration.workspace.apis import timer
 
 initial_robot_positions = {}
 initial_prey_position = []

@@ -9,9 +9,11 @@
 "api_key": {
   #      "GPT": "sk-5mU8poYeiI4bydH492B59125206344598312600438205f65",
 #    "GPT": "sk-tT8XYVZUo5PZZsg1ppMNHOcJt0hZL59HSxI8B79VQSw6Wh7t",
-  "GPT": "sk-r9qfdF2lYiKx46j9d0UCzhrsDchgOcmq885KKr71pppkcxdm",
+#  "GPT": "sk-r9qfdF2lYiKx46j9d0UCzhrsDchgOcmq885KKr71pppkcxdm",
+  "GPT": "sk-JVDiyrvh5BRPinBhEU40yYia87BdQVKrwDqH7PDRYERSL8rK",
 
-    "VLM": "sk-r9qfdF2lYiKx46j9d0UCzhrsDchgOcmq885KKr71pppkcxdm",
+#    "VLM": "sk-r9qfdF2lYiKx46j9d0UCzhrsDchgOcmq885KKr71pppkcxdm",
+    "VLM": "sk-JVDiyrvh5BRPinBhEU40yYia87BdQVKrwDqH7PDRYERSL8rK",
 #  "VLM": "sk-5mU8poYeiI4bydH492B59125206344598312600438205f65",
 
   "QWEN": "sk-99f55920b8834f6f8c1e78f8d3691c26",

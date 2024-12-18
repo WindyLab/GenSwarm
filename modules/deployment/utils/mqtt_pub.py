@@ -27,6 +27,7 @@ class MqttClientThread:
         self.broker = broker  # MQTT代理服务器地址
         self.port = port
         self.keepalive = keepalive
+        self.reconnect_interval = 1
         self.client_id = client_id
         self.client = self.connect_mqtt()
         self.client.loop_start()
@@ -37,10 +38,8 @@ class MqttClientThread:
         def on_connect(client, userdata, flags, rc):
             """连接回调函数"""
             if rc == 0:
-                # print("Connected to MQTT OK!")
                 rich_print(title="Connect to MQTT", content="Connected to MQTT OK!")
             else:
-                # print(f"Failed to connect, return code {rc}")
                 rich_print(
                     title="Connect to MQTT",
                     content=f"Failed to connect, return code {rc}",
@@ -48,7 +47,10 @@ class MqttClientThread:
 
         client = mqtt_client.Client(self.client_id)
         client.on_connect = on_connect
-        client.connect(self.broker, self.port, self.keepalive)
+        try:
+            client.connect(self.broker, self.port, self.keepalive)
+        except Exception as e:
+            rich_print(title="Connect to MQTT", content=f"Connection error: {e}")
         return client
 
     def publish(self, topic, msg):
@@ -67,6 +69,14 @@ class MqttClientThread:
             self.client.loop_forever()
         except Exception as e:
             print(f"Error in MQTT loop: {e}")
+            time.sleep(self.reconnect_interval)
+            try:
+                self.client.loop_forever()
+            except Exception as reconnect_error:
+                print(f"Failed to reconnect: {reconnect_error}")
+                # 再次等待一段时间后继续循环尝试
+                time.sleep(self.reconnect_interval)
+            # 继续循环，如果仍无法连接，继续捕获异常并处理
 
 
 def obs_callback(client, msg: Observations):

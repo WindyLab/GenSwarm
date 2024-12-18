@@ -161,12 +161,8 @@ class RobotNode:
                 f"/robot_{self.robot_id}/velocity", Twist, queue_size=10
             )
 
-            print(
-                f"Waiting for position message from /robot_{self.robot_id}/observation..."
-            )
             msg = rospy.wait_for_message(f"/observation", Observations)
             self.process_initial_observations(msg)
-            print(f"Initial observations processed successfully")
             self.observation_callback(msg)
             # self.timer = rospy.Timer(rospy.Duration(0.01), self.publish_velocities)
 
@@ -176,7 +172,6 @@ class RobotNode:
         velocity_msg.linear.y = self.robot_info["velocity"][1]
 
         self.velocity_publisher.publish(velocity_msg)
-        print(f"Published velocity: {self.robot_info['velocity']}")
 
     def get_all_target_areas(self):
         return self.unexplored_area

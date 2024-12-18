@@ -6,7 +6,7 @@ import sys
 async def run_script(
     working_directory,
     command=[],
-    print_output=True,
+    print_output=False,
     timeout=30,
     env=None,
 ) -> str:

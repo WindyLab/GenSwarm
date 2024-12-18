@@ -15,7 +15,7 @@
     <node name="velocity_limiter_node" pkg="code_llm" type="velocity_limiter.py" output="screen">
       <param name="max_linear_speed" value="0.30"/>
       <param name="publish_rate" value="30.0"/>
-      <param name="time" value="30.0"/>
+      <param name="time" value="60.0"/>
       <param name="damping_factor" value="0.0"/>
 
     </node>

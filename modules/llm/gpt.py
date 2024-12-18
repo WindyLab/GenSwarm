@@ -37,7 +37,7 @@ class GPT(BaseLLM):
     """
 
     def __init__(
-        self, memorize: bool = False, stream_output: bool = False, model: str = "GPT"
+            self, memorize: bool = False, stream_output: bool = False, model: str = "GPT"
     ) -> None:
         """
         Initializes the GPT class by allocating a model, obtaining the necessary API

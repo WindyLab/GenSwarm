@@ -14,9 +14,34 @@ software or the use or other dealings in the software.
 import asyncio
 import argparse
 
+import rospy
+
 from modules.file import logger
 from modules.framework.workflow import Workflow
 from modules.prompt import get_user_commands
+from modules.utils.rich_print import rich_input, rich_print
+from run.auto_runner import *
+import argparse
+
+
+def task_mapping(task_name: str) -> type(AutoRunnerBase):
+    task_dict = {
+        "exploration": AutoRunnerExplore,
+        "crossing": AutoRunnerCross,
+        "flocking": AutoRunnerFlocking,
+        "shaping": AutoRunnerShaping,
+        "bridging": AutoRunnerBridging,
+        "circling": AutoRunnerCircling,
+        "encircling": AutoRunnerEncircling,
+        "covering": AutoRunnerCovering,
+        "clustering": AutoRunnerClustering,
+        "pursuing": AutoRunnerPursuing,
+    }
+    return task_dict[task_name]
+
+
+def config_mapping(task_name: str) -> str:
+    return task_name + "_config.json"
 
 
 async def run_task(task: str, args: argparse.Namespace):
@@ -26,17 +51,66 @@ async def run_task(task: str, args: argparse.Namespace):
 
 if __name__ == "__main__":
     from modules.utils import root_manager
-    from parser import ParameterService
+    from run.parser import ParameterService
+
+    user_instruction = """
+The robots need to be evenly distributed along a circle with a one-unit radius, centered on the prey.
+Each robot is assigned a specific angle.
+As the prey moves, the robots must continuously adjust their positions in real-time, responding to the prey's dynamic changes.
+This ensures a sustained and coordinated encirclement."""
 
     parameter_service = ParameterService()
     config_file = "experiment_config.yaml"
-    parameter_service.add_arguments_from_yaml(f"../config/{config_file}")
-
+    parameter_service.add_arguments_from_yaml(f"./config/{config_file}")
     experiment_name = parameter_service.args.run_experiment_name[0]
-    task = get_user_commands(experiment_name)[0]
-
+    # task = get_user_commands(experiment_name)[0]
+    env_config_file = config_mapping(experiment_name)
     args = parameter_service.args
-    root_manager.update_root(args=args)
+    file_name = root_manager.update_root(args=args)
     logger.log(f"\n{parameter_service.format_arguments_as_table(args)}", "warning")
 
-    asyncio.run(run_task(task, parameter_service.args))
+    asyncio.run(run_task(user_instruction, parameter_service.args))
+
+    rich_print(title="Code Generation", content="All code has been generated, ready to be deployed.")
+    # experiment_name = "encircling"
+    # file_name = "2024-12-17_11-56-41"
+    test_mode = "full_version"
+    rospy.set_param('pub_mqtt', False)
+    if test_mode == "real":
+        env_config_path = f"./config/real_env/{env_config_file}"
+        experiment_duration = 60
+    else:
+        env_config_path = f"./config/env/{env_config_file}"
+        experiment_duration = 10
+    runner_class = task_mapping(experiment_name)
+    runner = runner_class(
+        env_config_path=env_config_path,
+        workspace_path=experiment_name,
+        experiment_duration=experiment_duration,
+        exp_batch=0,
+        run_mode="rerun",
+        test_mode=test_mode,
+        max_speed=4.5,
+        tolerance=0.15,
+    )
+    runner.run(exp_list=[file_name])
+
+    test_mode = "real"
+    if test_mode == "real":
+        env_config_path = f"./config/real_env/{env_config_file}"
+        experiment_duration = 50
+    else:
+        env_config_path = f"./config/env/{env_config_file}"
+        experiment_duration = 10
+    runner_class = task_mapping(experiment_name)
+    runner = runner_class(
+        env_config_path=env_config_path,
+        workspace_path=experiment_name,
+        experiment_duration=experiment_duration,
+        exp_batch=0,
+        run_mode="rerun",
+        test_mode=test_mode,
+        max_speed=4.5,
+        tolerance=0.15,
+    )
+    runner.run(exp_list=[file_name])
