@@ -52,7 +52,10 @@ class VideoCriticize(ActionNode):
         self.set_logging_text(f"Providing feedback on the simulation video")
 
     def _display(self):
-        rich_print(title='Feedback', content=self.result_dict["feedback"])
+        if self.result_dict["feedback"] == '':
+            rich_print(title='Feedback', content='Task is done successfully, no feedback is provided')
+        else:
+            rich_print(title='Feedback', content=self.result_dict["feedback"])
 
     def _build_prompt(self):
         self.setup()

@@ -32,13 +32,12 @@ from modules.deployment.utils.mqtt_pub import MqttClientThread
 class OmniEngine(Engine):
     def __init__(self):
         super().__init__()
-        try:
-            rospy.init_node("omni_engine", anonymous=True)
-        except rospy.exceptions.ROSException:
-            pass
+        # try:
+        #     rospy.init_node("omni_engine", anonymous=True)
+        # except rospy.exceptions.ROSException:
+        #     pass
         # 模式设置：是否启用彩色LED
         self.enable_color = rospy.get_param("~enable_color", True)  # 从ROS参数服务器获取，默认启用
-
         self.type_mapping = {"robot": "VSWARM", "obstacle": "OBSTACLE", "prey": "PREY"}
         self.subscribers = []
         self.mqtt_client = self.start_up_mqtt_thread()
@@ -156,10 +155,10 @@ class OmniEngine(Engine):
         # 应用遥控器的输入数据
         self.apply_joy_control()
 
-        # 第一次step时自动调整朝向
-        while self.adjust_yaw:
-            for entity_id, entity in self._entities.items():
-                self.control_yaw(entity_id, desired_yaw=self.desired_yaw)
+        # # 第一次step时自动调整朝向
+        # while self.adjust_yaw:
+        # for entity_id, entity in self._entities.items():
+        #     self.control_yaw(entity_id, desired_yaw=self.desired_yaw)
 
         self.update_led_color()
         rospy.sleep(delta_time)
@@ -197,10 +196,10 @@ class OmniEngine(Engine):
         if yaw_error < -np.pi:
             yaw_error += 2 * np.pi
 
-        if abs(yaw_error) < self.yaw_tolerance:
-            if self.adjust_yaw:
-                self.adjust_yaw = False  # 取消调整标志
-            return
+        # if abs(yaw_error) < self.yaw_tolerance:
+        #     if self.adjust_yaw:
+        #         self.adjust_yaw = False  # 取消调整标志
+        #     return
 
         kp = 0.8
         angular_velocity = yaw_error * kp

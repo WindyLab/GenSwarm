@@ -99,7 +99,7 @@ def main():
     exp_list = None
     # exp_list = ['2024-10-28_01-24-56']
     # exp_list=[args.exp_name]
-    exp_list = ["2024-12-17_11-56-41"]
+    exp_list = ["2024-12-19_16-34-37"]
 
     runner.run(exp_list=exp_list)
 

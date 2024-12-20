@@ -53,11 +53,12 @@ if __name__ == "__main__":
     from modules.utils import root_manager
     from run.parser import ParameterService
 
-    user_instruction = """
+    user_instruction = """  
 The robots need to be evenly distributed along a circle with a one-unit radius, centered on the prey.
 Each robot is assigned a specific angle.
 As the prey moves, the robots must continuously adjust their positions in real-time, responding to the prey's dynamic changes.
-This ensures a sustained and coordinated encirclement."""
+This ensures a sustained and coordinated encirclement.
+"""
 
     parameter_service = ParameterService()
     config_file = "experiment_config.yaml"
