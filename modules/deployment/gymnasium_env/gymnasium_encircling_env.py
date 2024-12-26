@@ -87,38 +87,11 @@ if __name__ == "__main__":
     import rospy
 
     from modules.deployment.utils.manager import Manager
+    from run.auto_runner.core import EnvironmentManager
 
-    env = GymnasiumEncirclingEnvironment("../../../config/env/encircling_config.json")
+    env = GymnasiumEncirclingEnvironment("../../../config/real_env/encircling_config.json")
 
-    obs, infos = env.reset()
-    manager = Manager(env)
-    manager.publish_observations(infos)
-    rate = rospy.Rate(env.FPS)
-    frames = []
+    env_manager = EnvironmentManager(env)
+    env_manager.start_environment(experiment_path=".", render_mode='human')
 
-    start_time = time.time()  # 记录起始时间
-    frame_count = 0  # 初始化帧数计数器
-    try:
-        while not rospy.is_shutdown():
-            action = manager.robotID_velocity
-            # action = {}
-            # manager.clear_velocity()
-            obs, reward, termination, truncation, infos = env.step(action=action)
-            manager.publish_observations(infos)
-            rate.sleep()
-            frames.append(env.render())
-            frame_count += 1  # 增加帧数计数器
-            current_time = time.time()  # 获取当前时间
-            elapsed_time = current_time - start_time  # 计算已过去的时间
-
-            # 当达到1秒时，计算并打印FPS，然后重置计数器和时间
-            if elapsed_time >= 1.0:
-                fps = frame_count / elapsed_time
-                print(f"FPS: {fps:.2f}")  # 打印FPS，保留两位小数
-                frame_count = 0  # 重置帧数计数器
-                start_time = current_time  # 重置起始时间戳
-        print("Simulation completed successfully.")
-    except Exception as e:
-        print(f"Error occurred: {e}")
-    finally:
-        save_frames_as_animations(0, "../../../workspace/encircling/pic", frames)
+    rospy.spin()

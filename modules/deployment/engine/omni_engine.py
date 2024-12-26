@@ -15,6 +15,7 @@ import json
 import rospy
 from geometry_msgs.msg import PoseStamped, TwistStamped
 from sensor_msgs.msg import Joy
+from std_msgs.msg import Bool
 import numpy as np
 import socket
 import os
@@ -32,38 +33,48 @@ from modules.deployment.utils.mqtt_pub import MqttClientThread
 class OmniEngine(Engine):
     def __init__(self):
         super().__init__()
-        # try:
-        #     rospy.init_node("omni_engine", anonymous=True)
-        # except rospy.exceptions.ROSException:
-        #     pass
-        # 模式设置：是否启用彩色LED
-        self.enable_color = rospy.get_param("~enable_color", True)  # 从ROS参数服务器获取，默认启用
+        self.previous_state = None
+        try:
+            rospy.init_node("omni_engine", anonymous=True)
+        except rospy.exceptions.ROSException:
+            pass
+
         self.type_mapping = {"robot": "VSWARM", "obstacle": "OBSTACLE", "prey": "PREY"}
         self.subscribers = []
         self.mqtt_client = self.start_up_mqtt_thread()
-        self.led_init = False
         self.joy_input = {"x": 0.0, "y": 0.0, "theta": 0.0}
         self.joy_timeout = 0.1
         self.last_joy_input_time = rospy.Time.now()
+        self.control_id = 0
+        self.is_locked = False  # 小车移动锁定状态
+        self.led_enabled = False  # LED是否开启
+        self.debug_mode = False  # 调试模式状态
+        self.controlled_entity_ids = [eid for eid, e in self._entities.items()]
+        self.current_control_index = 0  # 当前控制对象在控制列表中的下标
+        self.current_controlled_entity_id = None
+        self.color_mapping = {
+            "red": 0xFF0000,
+            "green": 0x00FF00,
+            "blue": 0x0000FF,
+            "yellow": 0xFFFF00,
+            "purple": 0xFF00FF,
+            "cyan": 0x00FFFF,
+            "white": 0xFFFFFF,
+            "black": 0x000000,
+            "gray": 0xFF0000,
+        }
+        # 上一帧的按钮与轴状态，用于检测按下事件边沿
+        self.last_buttons = []
+        self.last_axes = []
 
         self.joy_subscriber = rospy.Subscriber("/joy", Joy, self.joy_callback)
-
-        self.obs_subscriber = rospy.Subscriber(
-            "/observation",
-            Observations,
-            self.obs_callback,
-        )
-
-        # 朝向控制相关
-        self.adjust_yaw = True  # 是否需要调整朝向
-        self.desired_yaw = 0.0  # 期望的朝向（弧度）
-        self.yaw_tolerance = 0.1  # 允许的朝向误差（弧度）
+        self.obs_subscriber = rospy.Subscriber("/observation", Observations, self.obs_callback)
 
     def start_up_mqtt_thread(self):
         broker_ip = "10.0.2.66"
         port = 1883
-        keepalive = 60  # 与代理通信之间允许的最长时间（秒）
-        client_id = f"{self.__class__.__name__}"  # 客户端ID需要唯一
+        keepalive = 60
+        client_id = f"{self.__class__.__name__}"
 
         try:
             broker = os.environ["REMOTE_SERVER"]
@@ -75,7 +86,6 @@ class OmniEngine(Engine):
             net_status = os.system(f"ping -c 4 {broker}")
             time.sleep(2)
 
-        # 启动MQTT客户端线程
         mqtt_client_instance = MqttClientThread(
             broker=broker, port=port, keepalive=keepalive, client_id=client_id
         )
@@ -84,9 +94,7 @@ class OmniEngine(Engine):
     def obs_callback(self, msg: Observations):
         try:
             json_str = json_message_converter.convert_ros_message_to_json(msg)
-            pub_mqtt = rospy.get_param("pub_mqtt", False)
-            if pub_mqtt:
-                self.mqtt_client.publish("/observation", json_str.encode("utf-8"))
+            self.mqtt_client.publish("/observation", json_str.encode("utf-8"))
         except Exception as e:
             rospy.logerr(f"Error in obs_callback: {e}")
 
@@ -115,10 +123,67 @@ class OmniEngine(Engine):
         self.set_velocity(entity_id, velocity)
 
     def joy_callback(self, joy_msg):
-        self.joy_input["x"] = joy_msg.axes[1] * -0.25  # 前后平移（线速度X轴）
-        self.joy_input["y"] = joy_msg.axes[0] * -0.25  # 左右平移（线速度Y轴）
-        self.joy_input["theta"] = joy_msg.axes[3] * 2  # 左右旋转（角速度Z轴）
+        # 检测按键上升沿
+        if not self.last_buttons:
+            self.last_buttons = joy_msg.buttons
+        if not self.last_axes:
+            self.last_axes = joy_msg.axes
+
+        current_buttons = joy_msg.buttons
+        current_axes = joy_msg.axes
+
+        def button_pressed(btn_idx):
+            return (current_buttons[btn_idx] == 1 and (
+                    len(self.last_buttons) > btn_idx and self.last_buttons[btn_idx] == 0))
+
+        # A 按键：切换锁定和解锁
+        if button_pressed(0):  # A按钮
+            self.is_locked = not self.is_locked
+            msg = Bool(data=self.is_locked)
+            json_str = json_message_converter.convert_ros_message_to_json(msg)
+            self.mqtt_client.publish("/lock", json_str.encode("utf-8"))
+        # B 按键：调整朝向
+        if button_pressed(1):  # B按钮
+            for entity_id, entity in self._entities.items():
+                while True:
+                    current_yaw = entity.yaw
+                    yaw_error = 0 - current_yaw
+                    if yaw_error > np.pi:
+                        yaw_error -= 2 * np.pi
+                    if yaw_error < -np.pi:
+                        yaw_error += 2 * np.pi
+
+                    if abs(yaw_error) < 0.1:
+                        break
+                    # 调用control_yaw使小车慢慢转正
+                    self.control_yaw(entity_id, 0)
+                    rospy.sleep(0.05)
+        # X 按键：切换Debug模式
+        if button_pressed(2):  # X按钮
+            self.debug_mode = not self.debug_mode
+        # Y 按键：切换LED显示
+        if button_pressed(3):  # Y按钮
+            self.led_enabled = not self.led_enabled
+
+        def rt_pressed():
+            return (self.last_axes and len(self.last_axes) > 5 and current_axes[5] < 0.5 and self.last_axes[5] > 0.5)
+
+        if rt_pressed() and self.debug_mode:
+            entity_ids = list(self._entities.keys())
+            if entity_ids:
+                self.current_control_index = (self.current_control_index + 1) % len(entity_ids)
+                self.current_controlled_entity_id = entity_ids[self.current_control_index]
+
+        # 使用手柄的轴控制小车速度（若未锁定则发送控制信号）
+        # 左摇杆Y轴：axes[1], 左摇杆X轴：axes[0]
+        # 右摇杆X轴：axes[3]控制转向
+        self.joy_input["x"] = joy_msg.axes[1] * -0.25
+        self.joy_input["y"] = joy_msg.axes[0] * -0.25
+        self.joy_input["theta"] = joy_msg.axes[3] * 2
         self.last_joy_input_time = rospy.Time.now()
+
+        self.last_buttons = current_buttons
+        self.last_axes = current_axes
 
     def generate_subscribers(self, entity_id, entity_type):
         pose_topic = f"/vrpn_client_node/{entity_type.upper()}{entity_id}/pose"
@@ -149,18 +214,28 @@ class OmniEngine(Engine):
             )
 
     def step(self, delta_time: float):
+        current_state = {
+            "led_enabled": self.led_enabled,
+            "is_locked": self.is_locked,
+            "debug_mode": self.debug_mode,
+            "controlled_entity_id": self.current_controlled_entity_id
+        }
+
         if len(self.subscribers) == 0:
             self.generate_all_subscribers()
 
-        # 应用遥控器的输入数据
-        self.apply_joy_control()
+        if not self.is_locked:
+            self.apply_joy_control()
 
-        # # 第一次step时自动调整朝向
-        # while self.adjust_yaw:
-        # for entity_id, entity in self._entities.items():
-        #     self.control_yaw(entity_id, desired_yaw=self.desired_yaw)
+        if current_state != self.previous_state:
+            if not self.debug_mode:
+                self.update_led_color()
+            else:
+                self.set_all_led_off()
+                if self.current_controlled_entity_id is not None:
+                    self.set_entity_led_on(self.current_controlled_entity_id)
+        self.previous_state = current_state
 
-        self.update_led_color()
         rospy.sleep(delta_time)
 
     def apply_force(self, entity_id: int, force: np.ndarray):
@@ -176,17 +251,20 @@ class OmniEngine(Engine):
         self.mqtt_client.publish(
             f"/VSWARM{entity_id}_robot/motion", json_str.encode("utf-8")
         )
-        # rospy.loginfo(f"Controlling velocity of entity {entity_id} to {json_msg} via MQTT")
 
     def apply_joy_control(self):
-        # 若超过指定时间未更新，则将joy_input重置为0，可根据实际需要取消注释
-        # current_time = rospy.Time.now()
-        # if (current_time - self.last_joy_input_time).to_sec() > self.joy_timeout:
-        #     self.joy_input = {"x": 0.0, "y": 0.0, "theta": 0.0}
-        #     rospy.loginfo(f"Joy input timeout, resetting input to: {self.joy_input}")
-        for entity in self._entities.values():
-            if entity.__class__.__name__.lower() == "prey":
-                self.control_velocity(entity.id, self.joy_input)
+        target_id = None
+        if self.current_controlled_entity_id is not None and self.debug_mode:
+            target_id = self.current_controlled_entity_id
+        else:
+            # 若无指定控制对象，则寻找一个prey
+            for entity_id, entity in self._entities.items():
+                if entity.__class__.__name__.lower() == "prey":
+                    target_id = entity_id
+                    break
+
+        if target_id is not None:
+            self.control_velocity(target_id, self.joy_input)
 
     def control_yaw(self, entity_id, desired_yaw, dt=None):
         current_yaw = self._entities[entity_id].yaw
@@ -196,11 +274,6 @@ class OmniEngine(Engine):
         if yaw_error < -np.pi:
             yaw_error += 2 * np.pi
 
-        # if abs(yaw_error) < self.yaw_tolerance:
-        #     if self.adjust_yaw:
-        #         self.adjust_yaw = False  # 取消调整标志
-        #     return
-
         kp = 0.8
         angular_velocity = yaw_error * kp
         json_msg = {"x": 0, "y": 0, "theta": angular_velocity}
@@ -209,31 +282,30 @@ class OmniEngine(Engine):
             f"/VSWARM{entity_id}_robot/motion", json_str.encode("utf-8")
         )
 
-    def update_led_color(self):
-        if self.led_init:
-            return
-        self.led_init = True
+    # ---------------------- Led ----------------------
+    def set_all_led_off(self):
+        for entity_id in self._entities:
+            self.set_ledup(entity_id, 0x000000)
+            self.set_leddown(entity_id, 0x000000)
 
-        color_mapping = {
-            "red": 0xFF0000,
-            "green": 0x00FF00,
-            "blue": 0x0000FF,
-            "yellow": 0xFFFF00,
-            "purple": 0xFF00FF,
-            "cyan": 0x00FFFF,
-            "white": 0xFFFFFF,
-            "black": 0x000000,
-            "gray": 0xFF0000,
-        }
+    def set_entity_led_on(self, entity_id, color=None):
+        if color is None:
+            color = self.color_mapping[self._entities[entity_id].color]
+        self.set_ledup(entity_id, color)
+        self.set_leddown(entity_id, color)
+
+    def update_led_color(self):
+
+        if self.debug_mode:
+            return
 
         try:
             for entity_id in self._entities:
-                if self.enable_color:
-                    color = color_mapping.get(self._entities[entity_id].color, 0x000000)
+                if self.led_enabled:
+                    color = self.color_mapping.get(self._entities[entity_id].color, 0x000000)
                 else:
-                    color = color_mapping["black"]
-                self.set_ledup(entity_id, color)
-                self.set_leddown(entity_id, color)
+                    color = self.color_mapping["black"]
+                self.set_entity_led_on(entity_id, color)
         except KeyError as e:
             rospy.logerr("Color not found in color mapping")
             raise SyntaxError(e)

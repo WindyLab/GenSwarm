@@ -149,6 +149,7 @@ class RunCodeReal(ActionNode):
                 experiment_path=self.context.args.experiment_path,
                 render_mode="human",
             )
+
         working_directory = os.path.join(root_manager.project_root, "docker")
         # command = ["docker-compose", "up", "deploy"]
         command = [
@@ -177,8 +178,6 @@ class RunCodeReal(ActionNode):
             if pub_mqtt == "y":
                 rospy.set_param("pub_mqtt", True)
             time.sleep(self.context.args.timeout)
-            self.env.stop_environment(file_name="real", save_result=True)
-            rospy.set_param('pub_mqtt', False)
         logger.log(content=result, level="info")
 
         # rich_print(content=result, title="Deploy Code")
@@ -195,12 +194,14 @@ class RunCodeReal(ActionNode):
             if_feedback = input(f"{GREEN}If task is done? Press y/n: {RESET}")
             if if_feedback.lower() == "y":
                 logger.log("run code: success", "warning")
+                self.env.stop_environment(file_name="real", save_result=True)
                 return "NONE"
             else:
                 rich_print(content="Task is not done.", title="Task Status")
                 feedback = input(f"{YELLOW}Please provide feedback: {RESET}")
                 rich_print(content=f"Feedback received:{feedback}", title="Feedback")
                 self.context.feedbacks.append(feedback)
+                self.env.stop_environment(file_name="real", save_result=True)
                 return Feedback(feedback)
         return response
 

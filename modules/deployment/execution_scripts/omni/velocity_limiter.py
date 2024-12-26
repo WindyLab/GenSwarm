@@ -16,10 +16,12 @@ import time
 import rospy
 import numpy as np
 from geometry_msgs.msg import Twist
+from std_msgs.msg import Bool
 
 
 class VelocityLimiterNode:
     def __init__(self):
+        self.lock = True
         rospy.init_node("velocity_limiter_node", anonymous=True)
 
         # Parameters from roslaunch or default values
@@ -30,11 +32,11 @@ class VelocityLimiterNode:
         self.damping_factor = rospy.get_param(
             "~damping_factor", 0.5
         )  # Damping factor (0 < factor < 1)
-        self.time = rospy.get_param("~time", 60.0)
+        self.time = rospy.get_param("~time", 100.0)
 
-        self.vel_cmd_pub = rospy.Publisher("/robot/velcmd", Twist, queue_size=10)
+        self.vel_cmd_pub = rospy.Publisher("/robot/velcmd", Twist, queue_size=1)
         self.cmd_vel_sub = rospy.Subscriber("/cmd_vel", Twist, self.cmd_vel_callback)
-
+        self.lock_sub = rospy.Subscriber("/lock", Bool, self.lock_callback)
         self.timer = rospy.Timer(rospy.Duration(self.time), self.timer_callback)
         self.rate = rospy.Rate(self.publish_rate)
 
@@ -45,6 +47,8 @@ class VelocityLimiterNode:
         rospy.spin()
 
     def cmd_vel_callback(self, msg):
+        if self.lock:
+            return
         # time.sleep(2)
         # Convert Twist message to numpy array
         linear_vel = np.array([msg.linear.x, msg.linear.y, msg.linear.z])
@@ -52,12 +56,12 @@ class VelocityLimiterNode:
 
         # Apply damping to the velocities
         linear_vel = (
-            self.damping_factor * self.last_linear_vel
-            + (1 - self.damping_factor) * linear_vel
+                self.damping_factor * self.last_linear_vel
+                + (1 - self.damping_factor) * linear_vel
         )
         angular_vel = (
-            self.damping_factor * self.last_angular_vel
-            + (1 - self.damping_factor) * angular_vel
+                self.damping_factor * self.last_angular_vel
+                + (1 - self.damping_factor) * angular_vel
         )
 
         # Normalize linear velocity
@@ -75,6 +79,10 @@ class VelocityLimiterNode:
         # Store the current velocities as the last velocities
         self.last_linear_vel = linear_vel
         self.last_angular_vel = angular_vel
+
+    def lock_callback(self, msg):
+        print(f"Locking velocity commands: {msg.data}")
+        self.lock = msg.data
 
     def timer_callback(self, event):
         # rospy.loginfo(f"Closing node after {self.time} seconds timeout.")

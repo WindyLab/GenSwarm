@@ -135,7 +135,9 @@ class ActionNode(BaseNode):
         try:
             if self.prompt is None:
                 raise SystemExit("Prompt is required")
+            # print('action node prompt:')
             code = await self.__llm.ask(self.prompt)
+
             print_to_terminal = True
             if hasattr(self.context.args, "print_to_terminal"):
                 print_to_terminal = self.context.args.print_to_terminal
@@ -166,11 +168,11 @@ class ActionNode(BaseNode):
 
 class AsyncNode(ActionNode):
     def __init__(
-        self,
-        skill_tree: FunctionTree,
-        run_mode="layer",
-        start_state=None,
-        end_state=None,
+            self,
+            skill_tree: FunctionTree,
+            run_mode="layer",
+            start_state=None,
+            end_state=None,
     ):
         super().__init__("")
         self._run_mode = run_mode
@@ -207,8 +209,8 @@ class AsyncNode(ActionNode):
             raise SystemExit
 
         if not all(
-            function_node.state == self._start_state
-            for function_node in self.skill_tree.layers[layer_index].functions
+                function_node.state == self._start_state
+                for function_node in self.skill_tree.layers[layer_index].functions
         ):
             logger.log(
                 "All functions in the layer are not in NOT_STARTED state", "error"

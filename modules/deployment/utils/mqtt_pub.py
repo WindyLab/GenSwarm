@@ -59,7 +59,6 @@ class MqttClientThread:
         status = result[0]
         if status == 0:
             pass
-            # print(f"Sent `{msg}` to topic `{topic}`")
         else:
             print(f"Failed to send message to topic {topic}")
 

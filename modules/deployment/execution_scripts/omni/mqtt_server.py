@@ -19,6 +19,7 @@ import numpy as np
 import rospy
 from code_llm.msg import Observations
 import os
+from std_msgs.msg import Bool
 
 from geometry_msgs.msg import Twist
 from paho.mqtt import client as mqtt_client
@@ -37,11 +38,14 @@ class MqttClientThread:
         self.client.on_message = self.mqtt_callback
         self.client.subscribe("/observation")
         self.client.subscribe("/" + self.hostname + "_robot/motion")
+        self.client.subscribe("/lock")
         rospy.init_node("mqtt_server")
         self.observation_pub = rospy.Publisher(
             "/observation", Observations, queue_size=1
         )
+
         self.vel_pub = rospy.Publisher("robot/velcmd", Twist, queue_size=10)
+        self.lock_pub = rospy.Publisher("/lock", Bool, queue_size=1)
 
     def connect_mqtt(self):
         """连接MQTT代理服务器"""
@@ -65,14 +69,19 @@ class MqttClientThread:
             message = json_message_converter.convert_json_to_ros_message(
                 "code_llm/Observations", obs_msg
             )
-            print(f"Received message from topic {msg.topic}")
             self.observation_pub.publish(message)
-        elif msg.topic == ("/" + self.hostname + "_robot/motion"):
-            vel_msg = msg.payload.decode()
-            vel_msg = json_message_converter.convert_json_to_ros_message(
-                "geometry_msgs/Twist", vel_msg
+        # elif msg.topic == ("/" + self.hostname + "_robot/motion"):
+        #     vel_msg = msg.payload.decode()
+        #     vel_msg = json_message_converter.convert_json_to_ros_message(
+        #         "geometry_msgs/Twist", vel_msg
+        #     )
+        #     self.vel_pub.publish(vel_msg)
+        elif msg.topic == "/lock":
+            lock_msg = msg.payload.decode()
+            lock_msg = json_message_converter.convert_json_to_ros_message(
+                "std_msgs/Bool", lock_msg
             )
-            self.vel_pub.publish(vel_msg)
+            self.lock_pub.publish(lock_msg)
         else:
             print(f"Unknown topic {msg.topic}")
 

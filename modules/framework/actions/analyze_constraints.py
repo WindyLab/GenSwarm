@@ -36,8 +36,8 @@ class AnalyzeConstraints(ActionNode):
         super().__init__(next_text, node_name)
         self._interaction_mode = False
         if (
-            hasattr(self.context.args, "interaction_mode")
-            and self.context.args.interaction_mode is True
+                hasattr(self.context.args, "interaction_mode")
+                and self.context.args.interaction_mode is True
         ):
             self.__llm = GPT(memorize=True)
             self._interaction_mode = True
@@ -53,7 +53,7 @@ class AnalyzeConstraints(ActionNode):
             instruction=self.context.command,
             global_api=GLOBAL_ROBOT_API,
             local_api=LOCAL_ROBOT_API
-            + ALLOCATOR_TEMPLATE.format(template="Temporarily unknown"),
+                      + ALLOCATOR_TEMPLATE.format(template="Temporarily unknown"),
             env_des=ENV_DES,
             output_template=CONSTRAIN_TEMPLATE,
             user_constraints=json.dumps(user_constraints, indent=4),
@@ -71,7 +71,7 @@ class AnalyzeConstraints(ActionNode):
         constraints = [self._constraint_pool[name] for name in constraint_names]
         content = ""
         for index, constraint in enumerate(constraints):
-            content += f"[bold yellow]{index+1}. {constraint.name}[/bold yellow]\n"
+            content += f"[bold yellow]{index + 1}. {constraint.name}[/bold yellow]\n"
             content += f"[white]{constraint.description}[/white]\n"
 
         rich_print("Step 1: Analyze Constraints", content)
