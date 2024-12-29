@@ -64,16 +64,19 @@ def rich_code_print(
         subtitle="",
         streaming=True,  # 是否流式输出
         refresh_per_second=10,  # Live区域的刷新频率
-        line_delay=0.1  # 逐行输出延迟
+        line_delay=0.1,  # 逐行输出延迟
+        max_lines_in_panel=30  # 面板中最多显示的行数
 ):
     """
     直接输出或流式输出一个带有标题、子标题、代码高亮的面板。
+    当 streaming=True 时，会逐行将代码“滚动”输出，以模拟多行输出在屏幕上自然向上滚动的效果。
     :param title: 标题
     :param code: 代码字符串
     :param subtitle: 子标题
     :param streaming: 是否以流式（逐行）方式输出
     :param refresh_per_second: 当 streaming=True 时, Live 的刷新频率
     :param line_delay: 当 streaming=True 时, 每一行输出之间的等待时间(秒)
+    :param max_lines_in_panel: 当 streaming=True 时, 面板中最多显示的行数（用于模拟滚屏效果）
     """
     # 如果不需要流式输出，直接一次性打印面板即可
     if not streaming:
@@ -89,12 +92,12 @@ def rich_code_print(
         print(panel)
         return
 
-    # 需要流式输出时，拆分代码为多行
+    # 流式输出：将代码拆分为多行
     code_lines = code.split("\n")
     if subtitle:
         subtitle = f"[bold cyan]{subtitle}.py[/bold cyan]"
 
-    # 初始化面板为空或初始内容
+    # 初始化面板为空
     syntax_initial = Syntax("", "python", theme="monokai", line_numbers=True)
     panel = Panel(
         syntax_initial,
@@ -102,11 +105,24 @@ def rich_code_print(
         border_style="cyan",
         subtitle=subtitle,
     )
+
+    # 利用 Live 对面板进行“逐行更新”
     with Live(panel, refresh_per_second=refresh_per_second) as live:
         for i in range(1, len(code_lines) + 1):
-            # 取前 i 行组合
-            partial_code = "\n".join(code_lines[:i])
-            syntax_new = Syntax(partial_code, "python", theme="monokai", line_numbers=True)
+            # 计算「可见区域」的起始行
+            start_line = max(0, i - max_lines_in_panel)
+            # 仅取最新的 max_lines_in_panel 行
+            visible_lines = code_lines[start_line:i]
+
+            # 重新创建 Syntax 对象
+            # 注意这里加上 line_numbers_start 用于让行号与原始代码对应
+            syntax_new = Syntax(
+                "\n".join(visible_lines),
+                "python",
+                theme="monokai",
+                line_numbers=True,
+                start_line=start_line + 1,
+            )
             panel = Panel(
                 syntax_new,
                 title=f"[bold cyan]{title}[/bold cyan]",

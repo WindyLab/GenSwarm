@@ -173,10 +173,6 @@ class RunCodeReal(ActionNode):
         )
         rich_print(content="Code is deployed.", title="Deploy Code")
         if self.stage == "1":
-            pub_mqtt = rich_input(
-                "Code deployment completed.Robots are ready to run the experiment.Start the experiment? (y/n)")
-            if pub_mqtt == "y":
-                rospy.set_param("pub_mqtt", True)
             time.sleep(self.context.args.timeout)
         logger.log(content=result, level="info")
 
