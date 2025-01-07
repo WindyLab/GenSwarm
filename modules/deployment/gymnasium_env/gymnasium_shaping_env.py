@@ -14,7 +14,7 @@ software or the use or other dealings in the software.
 from typing import Optional, TypeVar
 
 from modules.deployment.engine import QuadTreeEngine
-from modules.deployment.entity import Robot
+from modules.deployment.entity import Robot, Obstacle
 from modules.deployment.utils.sample_point import *
 from modules.deployment.gymnasium_env.gymnasium_base_env import GymnasiumEnvironmentBase
 
@@ -36,7 +36,11 @@ class GymnasiumShapingEnvironment(GymnasiumEnvironmentBase):
         robot_size = self.data["entities"]["robot"]["size"]
         shape = self.data["entities"]["robot"]["shape"]
         color = self.data["entities"]["robot"]["color"]
-
+        obstacle_list = [(0, 1.5), (0, -1.5), (1.5, 0), (-1.5, 0)]
+        for pos in obstacle_list:
+            obstacle = Obstacle(entity_id, pos, 0.15)
+            self.add_entity(obstacle)
+            entity_id += 1
         for i in range(self.num_robots):
             position = sample_point(
                 zone_center=[0, 0],
@@ -47,7 +51,6 @@ class GymnasiumShapingEnvironment(GymnasiumEnvironmentBase):
                 min_distance=0.15,
                 entities=self.entities,
             )
-            print(f"Robot_{entity_id} position: {position}")
             robot = Robot(
                 robot_id=entity_id,
                 initial_position=position,

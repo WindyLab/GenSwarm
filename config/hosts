@@ -2,7 +2,7 @@
 192.168.50.200 ansible_user=nvidia ansible_password=123
 192.168.50.201 ansible_user=nvidia ansible_password=123
 #192.168.50.203 ansible_user=nvidia ansible_password=123
-192.168.50.202 ansible_user=nvidia ansible_password=123
+#192.168.50.202 ansible_user=nvidia ansible_password=123
 
 192.168.50.207 ansible_user=nvidia ansible_password=123
 #192.168.50.209 ansible_user=nvidia ansible_password=123
@@ -10,7 +10,7 @@
 #192.168.50.204 ansible_user=nvidia ansible_password=123
 #192.168.50.205 ansible_user=nvidia ansible_password=123
 192.168.50.206 ansible_user=nvidia ansible_password=123
-#192.168.50.208 ansible_user=nvidia ansible_password=123
+192.168.50.208 ansible_user=nvidia ansible_password=123
 
 # new_IP ansible_user=username ansible_password=password
 # 0 3 4 2

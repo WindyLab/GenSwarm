@@ -13,26 +13,26 @@ software or the use or other dealings in the software.
 
 import operator
 
-from modules.deployment.gymnasium_env import GymnasiumCirclingEnvironment
+from modules.deployment.gymnasium_env import GymnasiumAggregationEnvironment
 from run.auto_runner import AutoRunnerBase
 from run.utils import evaluate_robot_circle_similarity
 
 
-class AutoRunnerCircling(AutoRunnerBase):
+class AutoRunnerAggregation(AutoRunnerBase):
     def __init__(
-        self,
-        env_config_path,
-        workspace_path,
-        experiment_duration,
-        run_mode="rerun",
-        target_pkl="WriteRun.pkl",
-        script_name="run.py",
-        test_mode=None,
-        exp_batch=1,
-        max_speed=1.0,
-        tolerance=0.05,
+            self,
+            env_config_path,
+            workspace_path,
+            experiment_duration,
+            run_mode="rerun",
+            target_pkl="WriteRun.pkl",
+            script_name="run.py",
+            test_mode=None,
+            exp_batch=1,
+            max_speed=1.0,
+            tolerance=0.05,
     ):
-        env = GymnasiumCirclingEnvironment(env_config_path)
+        env = GymnasiumAggregationEnvironment(env_config_path)
         super().__init__(
             env_config_path=env_config_path,
             workspace_path=workspace_path,

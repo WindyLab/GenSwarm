@@ -24,7 +24,7 @@ thread_local = threading.local()
 
 class RobotNode:
     def __init__(
-        self, robot_id, target_position=None, formation_points=None, assigned_task=None
+            self, robot_id, target_position=None, formation_points=None, assigned_task=None
     ):
         self.robot_id = robot_id
         self.assigned_task = assigned_task
@@ -46,6 +46,7 @@ class RobotNode:
         self.target_position = None
         self.obstacles_info = []
         self.other_robots_info = []
+        formation_points = [(0, -1), (0, 1), (-1, 0), (0, 0), (1, 0)]
         self.formation_points = np.array(formation_points)
         self.target_position = np.array(target_position)
         self.prey_position = None

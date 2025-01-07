@@ -217,7 +217,6 @@ class EnvironmentManager:
         # 检查渲染事件是否被触发
         if self.render_event.is_set():
             return  # 如果渲染已停止，则跳过渲染部分
-
         action = self.manager.robotID_velocity
         obs, reward, termination, truncation, infos = self.env.step(action=action)
         for entity_id in infos:

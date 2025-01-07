@@ -21,9 +21,9 @@
       "id_list": [
         0,
         1,
-        2,
         6,
-        7
+        7,
+        8
       ]
     },
     "leader": {
@@ -48,7 +48,7 @@
       "count": 1,
       "specified": [],
       "id_list": [
-        8
+
       ]
     },
     "landmark": {

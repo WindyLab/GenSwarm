@@ -22,7 +22,7 @@ ActType = TypeVar("ActType")
 RenderFrame = TypeVar("RenderFrame")
 
 
-class GymnasiumCirclingEnvironment(GymnasiumEnvironmentBase):
+class GymnasiumAggregationEnvironment(GymnasiumEnvironmentBase):
     def __init__(self, data_file: str):
         super().__init__(data_file)
 

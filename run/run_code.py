@@ -22,7 +22,7 @@ def task_mapping(task_name: str) -> type(AutoRunnerBase):
         "flocking": AutoRunnerFlocking,
         "shaping": AutoRunnerShaping,
         "bridging": AutoRunnerBridging,
-        "circling": AutoRunnerCircling,
+        "aggregation": AutoRunnerAggregation,
         "encircling": AutoRunnerEncircling,
         "covering": AutoRunnerCovering,
         "clustering": AutoRunnerClustering,
@@ -48,13 +48,13 @@ def main():
     parser.add_argument(
         "--task_name",
         type=str,
-        default="encircling",
+        default="shaping",
         help="The name of the task to run",
     )
     parser.add_argument(
         "--test_mode",
         type=str,
-        default="real",
+        default="wo_vlm",
         help="The mode of the test, can be 'real' or 'improve'",
     )
     parser.add_argument(
@@ -99,7 +99,7 @@ def main():
     exp_list = None
     # exp_list = ['2024-10-28_01-24-56']
     # exp_list=[args.exp_name]
-    exp_list = ["2024-12-19_16-34-37"]
+    exp_list = ["2025-01-07_17-12-26"]
 
     runner.run(exp_list=exp_list)
 

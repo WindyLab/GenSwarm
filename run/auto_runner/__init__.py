@@ -17,7 +17,7 @@ from .auto_runner_cross import AutoRunnerCross
 from .auto_runner_flocking import AutoRunnerFlocking
 from .auto_runner_shaping import AutoRunnerShaping
 from .auto_runner_bridging import AutoRunnerBridging
-from .auto_runner_circling import AutoRunnerCircling
+from .auto_runner_aggregation import AutoRunnerAggregation
 from .auto_runner_encircling import AutoRunnerEncircling
 from .auto_runner_formation import AutoRunnerFormation
 from .auto_runner_herding import AutoRunnerHerding
@@ -33,7 +33,7 @@ __all__ = [
     "AutoRunnerFlocking",
     "AutoRunnerShaping",
     "AutoRunnerBridging",
-    "AutoRunnerCircling",
+    "AutoRunnerAggregation",
     "AutoRunnerEncircling",
     "AutoRunnerFormation",
     "AutoRunnerHerding",

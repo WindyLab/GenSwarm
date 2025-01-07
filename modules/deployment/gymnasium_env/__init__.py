@@ -13,7 +13,7 @@ software or the use or other dealings in the software.
 
 from .gymnasium_base_env import GymnasiumEnvironmentBase
 from .gymnasium_bridging_env import GymnasiumBridgingEnvironment
-from .gymnasium_circling_env import GymnasiumCirclingEnvironment
+from .gymnasium_aggregation_env import GymnasiumAggregationEnvironment
 from .gymnasium_collecting_env import GymnasiumCollectingEnvironment
 from .gymnasium_covering_env import GymnasiumCoveringEnvironment
 from .gymnasium_crossing_env import GymnasiumCrossingEnvironment
@@ -30,7 +30,7 @@ from .gymnasium_pursuing_env import GymnasiumPursuingEnvironment
 __all__ = [
     "GymnasiumEnvironmentBase",
     "GymnasiumBridgingEnvironment",
-    "GymnasiumCirclingEnvironment",
+    "GymnasiumAggregationEnvironment",
     "GymnasiumCollectingEnvironment",
     "GymnasiumCoveringEnvironment",
     "GymnasiumCrossingEnvironment",

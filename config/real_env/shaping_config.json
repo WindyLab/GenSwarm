@@ -6,25 +6,24 @@
     "#scale_factor_note": "1 meter = 100 pixel",
     "scale_factor": 100
   },
-  "task_name": "shaping",
+  "task_name": "encircling",
   "#entity note": "position/size/perceptual_range unit: meter",
   "#size note": "the radium of the circle # | the side length of the square robot",
   "#agent number note": "sum of robot + leader",
   "entities": {
     "robot": {
-      "count": 5,
+      "count": 10,
       "specified": [],
-      "size": 0.12,
+      "size": 0.15,
       "color": "green",
       "shape": "circle",
       "perceptual_range": 1,
       "id_list": [
-        5,
-        6,
-        7,
+        0,
+        1,
         8,
-        9,
-        10
+        6,
+        7
       ]
     },
     "leader": {
@@ -32,15 +31,24 @@
       "specified": []
     },
     "obstacle": {
-      "count": 0,
+      "count": 2,
       "specified": [],
       "size": 0.15,
       "shape": "circle",
-      "color": "green"
+      "color": "green",
+      "id_list": [
+        10
+      ]
     },
     "sheep": {
       "count": 0,
       "specified": []
+    },
+    "prey": {
+      "count": 1,
+      "specified": [],
+      "id_list": [
+      ]
     },
     "landmark": {
       "count": 0,
@@ -52,7 +60,7 @@
     }
   },
   "engine_type": "OmniEngine",
-  "render_mode": "human",
+  "render_mode": "",
   "output_file": "output.json",
   "dt": 0.1
 }
