@@ -19,16 +19,17 @@
       "shape": "circle",
       "perceptual_range": 1,
       "id_list": [
-        0,
         1,
         6,
         7,
-        8
+        8,
+        0
       ]
     },
     "leader": {
-      "count": 0,
-      "specified": []
+      "id_list": [
+        10
+      ]
     },
     "obstacle": {
       "count": 2,
@@ -37,7 +38,6 @@
       "shape": "circle",
       "color": "green",
       "id_list": [
-        10
       ]
     },
     "sheep": {

@@ -26,7 +26,7 @@ class VelocityLimiterNode:
 
         # Parameters from roslaunch or default values
         self.max_linear_speed = rospy.get_param(
-            "~max_linear_speed", 0.2
+            "~max_linear_speed", 0.5
         )  # Default max linear speed
         self.publish_rate = rospy.get_param("~publish_rate", 10.0)  # Publish rate in Hz
         self.damping_factor = rospy.get_param(

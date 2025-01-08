@@ -93,7 +93,7 @@ class RobotNode:
         for obj in msg.observations:
             # Robot's perception distance limit
             DISTANCE_LIMIT = 1.0
-            if obj.type == "Robot":
+            if obj.type == "Robot" or obj.type == "Leader":
                 if obj.id == self.robot_id:
                     self.robot_info["position"] = np.array(
                         [obj.position.x, obj.position.y]

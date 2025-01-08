@@ -1,1 +1,1 @@
-The robots need to form a specific shape, with each robot assigned a unique point on that shape to move to while avoiding collisions during the movement.
+Integrate into a flock by collaborating with all robots within the map, ensuring cohesion by staying connected, alignment by moving together, and separation by keeping a safe distance.

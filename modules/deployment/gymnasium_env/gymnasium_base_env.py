@@ -24,7 +24,7 @@ from gymnasium.utils import seeding
 from modules.deployment.engine import Box2DEngine, QuadTreeEngine, OmniEngine
 from abc import ABC, abstractmethod
 
-from modules.deployment.entity import Landmark, Robot, Obstacle, Prey
+from modules.deployment.entity import Landmark, Robot, Obstacle, Prey, Leader
 from modules.deployment.execution_scripts.omni.apis_old import target_position
 
 ObsType = TypeVar("ObsType")
@@ -102,6 +102,9 @@ class GymnasiumEnvironmentBase(gymnasium.Env, ABC):
         )
         self.num_leaders = (
             self.data.get("entities", {}).get("leader", {}).get("count", 0)
+        )
+        self.leader_id_list = (
+            self.data.get("entities", {}).get("leader", {}).get("id_list", [])
         )
         self.num_obstacles = (
             self.data.get("entities", {}).get("obstacle", {}).get("count", 0)
@@ -441,6 +444,14 @@ class GymnasiumEnvironmentBase(gymnasium.Env, ABC):
                 size=0.15,
             )
             self.add_entity(prey)
+        lead_id_list = self.leader_id_list
+        for i in lead_id_list:
+            leader = Leader(
+                leader_id=i,
+                initial_position=(0, 0),
+                size=0.15,
+            )
+            self.add_entity(leader)
 
     def add_entity(self, entity):
         self.entities.append(entity)

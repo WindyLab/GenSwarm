@@ -15,7 +15,7 @@ tasks = {
     "bridging": "The robots need to evenly form a straight line bridge at the position where x is equal to zero within the range of y between minus two and two.",
     "flocking": "Integrate into a flock by collaborating with all robots within the map, ensuring cohesion by staying connected, alignment by moving together, and separation by keeping a safe distance.",
     "covering": "Divide the environment into sections equal to the number of robots. Each robot needs to move to the center of its assigned section to achieve full coverage of the environment.",
-    "circling": "The robots need to be evenly distributed on a circle with a one-unit radius centered at the origin point.",
+    "aggregation": "The robots need to aggregate as quickly as possible and avoid colliding with each other.",
     "crossing": "Each robot must maintain a distance of at least fifteen centimeters from other robots and obstacles to avoid collisions while moving to the target point, which is the position of the robot that was farthest from it at the initial moment.",
     "shaping": "The robots need to form a specific shape, with each robot assigned a unique point on that shape to move to while avoiding collisions during the movement.",
     "encircling": "The robots need to be evenly distributed along a circle with a one-unit radius, centered on the prey. Each robot is assigned a specific angle. As the prey moves, the robots must continuously adjust their positions in real-time, responding to the prey's dynamic changes. This ensures a sustained and coordinated encirclement.",

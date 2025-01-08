@@ -15,6 +15,8 @@ import os
 import pickle
 import sys
 import json
+import time
+
 from global_skill import allocate_run
 import rospy
 import numpy as np
@@ -31,5 +33,5 @@ def main():
 if __name__ == "__main__":
     print(sys.argv)
     rospy.init_node("allocate_run_node", anonymous=True)
-
+    time.sleep(3)
     main()

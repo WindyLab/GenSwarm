@@ -48,13 +48,13 @@ def main():
     parser.add_argument(
         "--task_name",
         type=str,
-        default="shaping",
+        default="flocking",
         help="The name of the task to run",
     )
     parser.add_argument(
         "--test_mode",
         type=str,
-        default="wo_vlm",
+        default="real",
         help="The mode of the test, can be 'real' or 'improve'",
     )
     parser.add_argument(
@@ -99,7 +99,7 @@ def main():
     exp_list = None
     # exp_list = ['2024-10-28_01-24-56']
     # exp_list=[args.exp_name]
-    exp_list = ["2025-01-07_17-12-26"]
+    exp_list = ["2025-01-08_18-15-54"]
 
     runner.run(exp_list=exp_list)
 

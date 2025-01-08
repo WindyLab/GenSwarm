@@ -54,7 +54,7 @@ if __name__ == "__main__":
     from run.parser import ParameterService
 
     user_instruction = """
-
+Integrate into a flock by collaborating with all robots within the map, ensuring cohesion by staying connected, alignment by moving together, and separation by keeping a safe distance.
 """
 
     parameter_service = ParameterService()

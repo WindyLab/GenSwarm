@@ -22,6 +22,8 @@ import os
 import time
 import threading
 from scipy.spatial.transform import Rotation as R
+from sympy import euler
+
 from .base_engine import Engine
 
 from code_llm.msg import Observations
@@ -39,7 +41,7 @@ class OmniEngine(Engine):
         except rospy.exceptions.ROSException:
             pass
 
-        self.type_mapping = {"robot": "VSWARM", "obstacle": "OBSTACLE", "prey": "PREY"}
+        self.type_mapping = {"robot": "VSWARM", "obstacle": "OBSTACLE", "prey": "PREY", 'leader': 'LEADER'}
         self.subscribers = []
         self.mqtt_client = self.start_up_mqtt_thread()
         self.joy_input = {"x": 0.0, "y": 0.0, "theta": 0.0}
@@ -102,7 +104,7 @@ class OmniEngine(Engine):
         entity_id, entity_type = args
         position = np.array([msg.pose.position.x, msg.pose.position.y])
         self.set_position(entity_id, position)
-
+        # print(f"Entity {entity_id} position: {position}")
         quaternion = np.array(
             [
                 msg.pose.orientation.x,
@@ -257,9 +259,12 @@ class OmniEngine(Engine):
         if self.current_controlled_entity_id is not None and self.debug_mode:
             target_id = self.current_controlled_entity_id
         else:
-            # 若无指定控制对象，则寻找一个prey
+            # 若无指定控制对象，则寻找一个prey, lead
             for entity_id, entity in self._entities.items():
                 if entity.__class__.__name__.lower() == "prey":
+                    target_id = entity_id
+                    break
+                if entity.__class__.__name__.lower() == "leader":
                     target_id = entity_id
                     break
 
