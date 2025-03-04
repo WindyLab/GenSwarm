@@ -101,5 +101,5 @@ class ConstraintPool:
         logger.log("All constraints have satisfying functions", "success")
 
     def get_constraint_names(self):
-        """Returns a list of all constraint names."""
-        return list(self._constraint_nodes.keys())
+        """Returns a set of all constraint names."""
+        return set(self._constraint_nodes.keys())
