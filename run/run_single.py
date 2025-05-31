@@ -53,52 +53,54 @@ if __name__ == "__main__":
     from modules.utils import root_manager
     from run.parser import ParameterService
 
-    user_instruction = """
-Integrate into a flock by collaborating with all robots within the map, ensuring cohesion by staying connected, alignment by moving together, and separation by keeping a safe distance.
-"""
-
-    parameter_service = ParameterService()
-    config_file = "experiment_config.yaml"
-    parameter_service.add_arguments_from_yaml(f"./config/{config_file}")
-    experiment_name = parameter_service.args.run_experiment_name[0]
-    # task = get_user_commands(experiment_name)[0]
+    #     user_instruction = """
+    # Integrate into a flock by collaborating with all robots within the map, ensuring cohesion by staying connected, alignment by moving together, and separation by keeping a safe distance.
+    # """
+    #
+    #     parameter_service = ParameterService()
+    #     config_file = "experiment_config.yaml"
+    #     parameter_service.add_arguments_from_yaml(f"./config/{config_file}")
+    #     experiment_name = parameter_service.args.run_experiment_name[0]
+    #     # task = get_user_commands(experiment_name)[0]
+    #     env_config_file = config_mapping(experiment_name)
+    #     args = parameter_service.args
+    #     file_name = root_manager.update_root(args=args)
+    #     logger.log(f"\n{parameter_service.format_arguments_as_table(args)}", "warning")
+    #
+    #     asyncio.run(run_task(user_instruction, parameter_service.args))
+    #
+    #     rich_print(title="Code Generation", content="All code has been generated, ready to be deployed.")
+    experiment_name = "encircling"
+    file_name = "2025-05-11_17-04-20"
+    test_mode = "real"
     env_config_file = config_mapping(experiment_name)
-    args = parameter_service.args
-    file_name = root_manager.update_root(args=args)
-    logger.log(f"\n{parameter_service.format_arguments_as_table(args)}", "warning")
 
-    asyncio.run(run_task(user_instruction, parameter_service.args))
-
-    rich_print(title="Code Generation", content="All code has been generated, ready to be deployed.")
-    # experiment_name = "encircling"
-    # file_name = "2024-12-17_11-56-41"
-    test_mode = "full_version"
-    rospy.set_param('pub_mqtt', False)
+    #     rospy.set_param('pub_mqtt', False)
     if test_mode == "real":
         env_config_path = f"./config/real_env/{env_config_file}"
         experiment_duration = 60
-    else:
-        env_config_path = f"./config/env/{env_config_file}"
-        experiment_duration = 10
-    runner_class = task_mapping(experiment_name)
-    runner = runner_class(
-        env_config_path=env_config_path,
-        workspace_path=experiment_name,
-        experiment_duration=experiment_duration,
-        exp_batch=0,
-        run_mode="rerun",
-        test_mode=test_mode,
-        max_speed=4.5,
-        tolerance=0.15,
-    )
-    runner.run(exp_list=[file_name])
+    #     else:
+    #         env_config_path = f"./config/env/{env_config_file}"
+    #         experiment_duration = 10
+    #     runner_class = task_mapping(experiment_name)
+    #     runner = runner_class(
+    #         env_config_path=env_config_path,
+    #         workspace_path=experiment_name,
+    #         experiment_duration=experiment_duration,
+    #         exp_batch=0,
+    #         run_mode="rerun",
+    #         test_mode=test_mode,
+    #         max_speed=4.5,
+    #         tolerance=0.15,
+    #     )
+    #     runner.run(exp_list=[file_name])
 
     test_mode = "real"
     if test_mode == "real":
-        env_config_path = f"./config/real_env/{env_config_file}"
+        env_config_path = f"../config/real_env/{env_config_file}"
         experiment_duration = 50
     else:
-        env_config_path = f"./config/env/{env_config_file}"
+        env_config_path = f"../config/env/{env_config_file}"
         experiment_duration = 10
     runner_class = task_mapping(experiment_name)
     runner = runner_class(
