@@ -120,6 +120,7 @@ class EnvironmentManager:
             render_mode (str): The mode for rendering the environment.
             experiment_path (str): The path where experiment data will be saved.
         """
+        print('Starting environment...')
         self.render_event.clear()  # Clear any previous render event
         self.env.render_mode = render_mode
         self.experiment_path = experiment_path

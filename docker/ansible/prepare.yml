@@ -19,7 +19,7 @@
     - "../../modules/deployment/execution_scripts/omni/mqtt_server.py"
     - "../../modules/deployment/execution_scripts/omni/velocity_limiter.py"
     - "../../workspace/{{DATA_PATH}}/local_skill.py"  # Use environment variable PATH
-#    - "../../workspace/{{DATA_PATH}}/allocate_result.pkl"  # Use environment variable PATH
+    - "../../workspace/{{DATA_PATH}}/allocate_result.pkl"  # Use environment variable PATH
     - "../../requirements.txt"
     - "../../msg"
     - "../../srv"

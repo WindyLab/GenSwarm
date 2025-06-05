@@ -10,6 +10,8 @@ claim, damages, or other liability, whether in an action of contract,
 tort, or otherwise, arising from, out of, or in connection with the
 software or the use or other dealings in the software.
 """
+import os
+from datetime import datetime
 
 import numpy as np
 import rospy
@@ -46,7 +48,6 @@ class RobotNode:
         self.target_position = None
         self.obstacles_info = []
         self.other_robots_info = []
-        formation_points = [(0, -1), (0, 1), (-1, 0), (0, 0), (1, 0)]
         self.formation_points = np.array(formation_points)
         self.target_position = np.array(target_position)
         self.prey_position = None
@@ -56,6 +57,12 @@ class RobotNode:
         self.initial_prey_positions = []
         self.initial_unexplored_area = []
         self.all_robots_id = []
+        self.recording = False
+        self.recorded_data = []
+        self.record_timer = None
+        self.flush_timer = None
+        self.output_filename = None
+        self.last_observation_msg = None
 
     def process_initial_observations(self, msg: Observations):
         self.initial_robot_positions = {}
@@ -84,7 +91,16 @@ class RobotNode:
                     }
                 )
 
+    def add_distance_dependent_noise(self, true_value: np.ndarray, distance: float,
+                                     sigma0: float = 0.1, alpha: float = 1.0) -> np.ndarray:
+        sigma = sigma0 * (1 + alpha * distance)
+        noise = np.random.normal(0, sigma, size=true_value.shape)
+        return true_value + noise
+
     def observation_callback(self, msg: Observations):
+        self.last_observation_msg = msg
+        SIGMA0 = 0.05
+        ALPHA = 0.5
         self.obstacles_info = []
         self.other_robots_info = []
         self.prey_positions = []
@@ -93,7 +109,7 @@ class RobotNode:
         for obj in msg.observations:
             # Robot's perception distance limit
             DISTANCE_LIMIT = 1.0
-            if obj.type == "Robot" or obj.type == "Leader":
+            if obj.type == "Robot":
                 if obj.id == self.robot_id:
                     self.robot_info["position"] = np.array(
                         [obj.position.x, obj.position.y]
@@ -103,42 +119,44 @@ class RobotNode:
                     self.robot_info["radius"] = obj.radius
                     continue
 
-                # Calculate distance to the current robot
-                distance = np.linalg.norm(
-                    self.robot_info["position"]
-                    - np.array([obj.position.x, obj.position.y])
-                )
+                pos = np.array([obj.position.x, obj.position.y])
+                vel = np.array([obj.velocity.linear.x, obj.velocity.linear.y])
+                distance = np.linalg.norm(self.robot_info["position"] - pos)
                 if distance > DISTANCE_LIMIT:
                     continue
+
+                noisy_pos = self.add_distance_dependent_noise(pos, distance, SIGMA0, ALPHA)
+                noisy_vel = self.add_distance_dependent_noise(vel, distance, SIGMA0, ALPHA)
 
                 self.other_robots_info.append(
                     {
                         "id": obj.id,
-                        "position": np.array([obj.position.x, obj.position.y]),
-                        "velocity": np.array(
-                            [obj.velocity.linear.x, obj.velocity.linear.y]
-                        ),
+                        "position": noisy_pos,
+                        "velocity": noisy_vel,
                         "radius": obj.radius,
                     }
                 )
             elif obj.type == "Obstacle":
-                # Calculate distance to the current robot
-                distance = np.linalg.norm(
-                    self.robot_info["position"]
-                    - np.array([obj.position.x, obj.position.y])
-                )
+                pos = np.array([obj.position.x, obj.position.y])
+                distance = np.linalg.norm(self.robot_info["position"] - pos)
                 if distance > DISTANCE_LIMIT:
                     continue
+
+                noisy_pos = self.add_distance_dependent_noise(pos, distance, SIGMA0, ALPHA)
 
                 self.obstacles_info.append(
                     {
                         "id": obj.id,
-                        "position": np.array([obj.position.x, obj.position.y]),
+                        "position": noisy_pos,
                         "radius": obj.radius,
                     }
                 )
             elif obj.type == "Prey":
-                self.prey_position = np.array([obj.position.x, obj.position.y])
+                pos = np.array([obj.position.x, obj.position.y])
+                distance = np.linalg.norm(self.robot_info["position"] - pos)
+                noisy_pos = self.add_distance_dependent_noise(pos, distance, SIGMA0, ALPHA)
+                self.prey_position = noisy_pos
+
             elif obj.type == "Landmark":
                 if obj.color == "gray":
                     distance = np.linalg.norm(
@@ -153,6 +171,72 @@ class RobotNode:
                             "position": np.array([obj.position.x, obj.position.y]),
                         }
                     )
+        # ✅ 写入记录：每次 observation 时保存一条数据
+        if self.recording and self.output_filename:
+            import json
+            try:
+                ts = rospy.Time.now().to_sec()
+                raw_obs = []
+                for obj in msg.observations:
+                    obs_item = {
+                        'type': obj.type,
+                        'id': obj.id,
+                        'position': {'x': obj.position.x, 'y': obj.position.y},
+                        'velocity': {
+                            'x': obj.velocity.linear.x,
+                            'y': obj.velocity.linear.y
+                        },
+                        'radius': obj.radius
+                    }
+                    if hasattr(obj, 'color'):
+                        obs_item['color'] = obj.color
+                    raw_obs.append(obs_item)
+
+                entry = {
+                    'timestamp': ts,
+                    'self_position': self.robot_info['position'].tolist(),
+                    'self_velocity': self.robot_info['velocity'].tolist(),
+                    'other_robots': [
+                        {
+                            'id': r['id'],
+                            'pos': r['position'].tolist(),
+                            'vel': r['velocity'].tolist(),
+                            'rad': r['radius']
+                        } for r in self.other_robots_info
+                    ],
+                    'obstacles': [
+                        {
+                            'id': o['id'],
+                            'pos': o['position'].tolist(),
+                            'rad': o['radius']
+                        } for o in self.obstacles_info
+                    ],
+                    'prey_position': self.prey_position.tolist(),
+                    'observations': raw_obs
+                }
+
+                os.makedirs(os.path.dirname(self.output_filename), exist_ok=True)
+                with open(self.output_filename, 'a') as f:
+                    print('Writing observation entry to file:', self.output_filename)
+                    f.write(json.dumps(entry) + '\n')
+
+            except Exception as e:
+                rospy.logerr(f"[Robot {self.robot_id}] Failed to write observation: {e}")
+
+    # 开始录制：启动 10 Hz 定时器
+    def start_recording(self, filename):
+        print(f"Starting recording at filename: {filename}")
+        if not self.recording:
+            self.recording = True
+            self.recorded_data = []
+            self.output_filename = filename
+
+    # 停止录制：关闭定时器，可选保存到 JSON 文件
+    def stop_recording(self, filename=None):
+        self.record_timer.shutdown()
+        self.flush_timer.shutdown()
+        self.recording = False
+        rospy.loginfo(f"[Robot {self.robot_id}] recording stopped")
 
     def initialize_ros_node(self):
         if not self.ros_initialized:
@@ -165,6 +249,9 @@ class RobotNode:
             )
             msg = rospy.wait_for_message(f"/observation", Observations)
             self.process_initial_observations(msg)
+            timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S-%f")
+            log_file_path = f"/catkin_ws/src/code_llm/logs/run_log_{timestamp}.txt"
+            self.start_recording(log_file_path)
             print(f"Initial observations processed successfully")
             self.observation_callback(msg)
             # self.timer = rospy.Timer(rospy.Duration(0.01), self.publish_velocities)
@@ -174,6 +261,7 @@ class RobotNode:
         velocity_msg.linear.x = self.robot_info["velocity"][0]
         velocity_msg.linear.y = self.robot_info["velocity"][1]
         self.velocity_publisher.publish(velocity_msg)
+        # print(f"Published velocity: {self.robot_info['velocity']}")
 
     def get_all_target_areas(self):
         return self.unexplored_area
@@ -355,3 +443,11 @@ def get_quadrant_target_position():
 
 def get_assigned_task():
     return get_current_robot_node().get_assigned_task()
+
+
+def start_data_recording(filename=None):
+    get_current_robot_node().start_recording(filename=None)
+
+
+def stop_data_recording():
+    get_current_robot_node().stop_recording()

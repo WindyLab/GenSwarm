@@ -12,18 +12,18 @@
   "#agent number note": "sum of robot + leader",
   "entities": {
     "robot": {
-      "count": 10,
+      "count": 5,
       "specified": [],
       "size": 0.15,
       "color": "green",
       "shape": "circle",
       "perceptual_range": 1,
       "id_list": [
-        0,
-        1,
-        6,
-        7,
-        8
+        108,
+        109,
+        107,
+        105,
+        106
       ]
     },
     "leader": {
@@ -37,7 +37,6 @@
       "shape": "circle",
       "color": "green",
       "id_list": [
-        10
       ]
     },
     "sheep": {
@@ -48,7 +47,7 @@
       "count": 1,
       "specified": [],
       "id_list": [
-
+        110
       ]
     },
     "landmark": {
@@ -61,7 +60,7 @@
     }
   },
   "engine_type": "OmniEngine",
-  "render_mode": "",
+  "render_mode": "human",
   "output_file": "output.json",
   "dt": 0.1
 }

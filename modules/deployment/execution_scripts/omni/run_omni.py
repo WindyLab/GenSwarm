@@ -11,6 +11,7 @@ claim, damages, or other liability, whether in an action of contract,
 tort, or otherwise, arising from, out of, or in connection with the
 software or the use or other dealings in the software.
 """
+import datetime
 import os
 import pickle
 
@@ -35,6 +36,8 @@ class RobotRunner:
             robot_id=self.robot_id,
             assigned_task=task,
         )
+
+
         while not self.stop_event.is_set():
             run_loop()
 
@@ -46,10 +49,9 @@ def run_robot_in_thread(robot_id):
     assigned = False
     robot_runner = RobotRunner(robot_id)
     try:
-        with open(
-            os.path.join("/catkin_ws/src/code_llm/allocate_result.pkl"), "rb"
-        ) as f:
+        with open(os.path.join("/catkin_ws/src/code_llm/allocate_result.pkl"), "rb") as f:
             task = pickle.load(f)
+            print(f"Loaded tasks: {task}")
             assigned = True
     except (FileNotFoundError, EOFError, pickle.UnpicklingError) as e:
         print(f"Error loading file: {e}. Initializing a default task.")
@@ -64,6 +66,7 @@ def run_robot_in_thread(robot_id):
 def signal_handler(signum, frame, robot_runner):
     print("Signal handler called with signal", signum)
     robot_runner.stop()
+
     sys.exit(0)
 
 

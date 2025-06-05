@@ -91,5 +91,5 @@ class _MuteLogger(_Logger):
         super(_MuteLogger, self).log(content, level, print_to_terminal=False)
 
 
-# logger = _Logger()
-logger = _MuteLogger()
+logger = _Logger()
+# logger = _MuteLogger()

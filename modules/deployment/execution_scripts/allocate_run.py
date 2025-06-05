@@ -24,6 +24,7 @@ import numpy as np
 
 def main():
     result = allocate_run()
+    print(result)
     # 将返回值（字典）保存为 JSON 文件
     with open("allocate_result.pkl", "wb") as f:
         pickle.dump(result, f)
