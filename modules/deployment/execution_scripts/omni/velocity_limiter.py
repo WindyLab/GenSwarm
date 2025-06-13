@@ -60,7 +60,6 @@ class VelocityLimiterNode:
                 + (1 - self.damping_factor) * angular_vel
         )
 
-        # Normalize linear velocity
         linear_norm = np.linalg.norm(linear_vel)
         if linear_norm > self.max_linear_speed:
             linear_vel = (
