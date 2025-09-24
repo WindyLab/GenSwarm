@@ -1,0 +1,8 @@
+include README.md
+include requirements.txt
+include CMakeLists.txt
+include example.py
+recursive-include src *.pyx *.py
+include ../vr-orca/src/*.h
+include ../vr-orca/src/*.cpp
+include ../vr-orca/CMakeLists.txt
