@@ -27,6 +27,7 @@ tasks = {
 task_prompts = {
     "encircling": {
         "default": "The robots need to be evenly distributed along a circle with a one-unit radius, centered on the prey. Each robot is assigned a specific angle. As the prey moves, the robots must continuously adjust their positions in real-time, responding to the prey's dynamic changes. This ensures a sustained and coordinated encirclement.",
+        "compound": "Robots maintain a coordinated circular formation around the moving prey, evenly spaced at a one-unit radius with real-time position adjustments. Each robot is assigned a predefined angle and continuously tracks the corresponding point on a unit circle centered at the prey's moving position.",
         "simple": "Robots maintain a coordinated circular formation around the moving prey, evenly spaced at a one-unit radius with real-time position adjustments.",
         "simple_strategy": "Each robot is assigned a predefined angle and continuously tracks the corresponding point on a unit circle centered at the prey's moving position.",
         "narrative": (
@@ -43,7 +44,7 @@ task_prompts = {
             "• Minimize the overall formation error while maintaining real-time encirclement of the moving target\n"
             "[Constraints]:\n"
             "1. Strictly maintain a 1-meter encirclement radius\n"
-            "2. Even angular spacing between robots\n"
+            "2. Even angular spacing betn robots\n"
             "3. Dynamically move based on the target's position\n"
         ),
         "structured_default": (
@@ -58,11 +59,12 @@ task_prompts = {
     },
     "shaping": {
         "default": "The robots need to form a specific shape, with each robot assigned a unique point on that shape to move to while avoiding collisions during the movement.",
+        "compound": "Robots move to form a specific shape, with real-time collision avoidance during the process.Each robot is assigned a unique target position and moves to it while avoiding collisions.",
         "simple": "Robots move to form a specific shape, with real-time collision avoidance during the process.",
         "simple_strategy": "Each robot is assigned a unique target position and moves to it while avoiding collisions.",
         "narrative": (
             "Like a drone light show in the night sky, each robot follows a predefined path to reach its precise position within the formation. "
-            "Together, they assemble a clearly recognizable geometric pattern. "
+            "Together, they assemble a cleaweerly recognizable geometric pattern. "
             "Throughout the movement, they maintain safe distances and avoid collisions, "
             "ultimately forming a stable and orderly spatial configuration."
         ),
@@ -88,6 +90,7 @@ task_prompts = {
     "covering": {
         "default": "Divide the environment into sections equal to the number of robots. Each robot needs to move to the center of its assigned section to achieve full coverage of the environment.",
         "simple": "Robots should be evenly distributed across the environment to achieve full coverage.",
+        "compound": "Robots should be evenly distributed across the environment to achieve full coverage. Divide the environment into equal-sized grid cells based on the number of robots. Assign each robot to a grid cell and have it move to the center.",
         "narrative": (
             "Like sentinels stationed at fixed posts, robots are evenly deployed to their designated regions. "
             "They move to the center of each area and remain in position, "

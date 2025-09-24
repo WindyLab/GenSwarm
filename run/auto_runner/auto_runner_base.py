@@ -111,7 +111,10 @@ class AutoRunnerBase(ABC):
                                     global_results = [analysis["run_result"].get("global", []).get('result', '')]
                                 else:
                                     global_results = []
-                                local_results = analysis["run_result"].get("local", []).get('result', '')
+                                if analysis["run_result"].get("local", []) is not None:
+                                    local_results = analysis["run_result"].get("local", []).get('result', '')
+                                else:
+                                    local_results = []
                                 results = global_results + local_results
                                 for result in results:
                                     if result not in ['Timeout', 'None', 'NONE', 'No task to run']:

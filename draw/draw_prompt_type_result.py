@@ -5,9 +5,9 @@ import re
 
 # 模拟文件系统遍历结构，实际运行时请替换为真实根路径
 # root_dir = '../workspace/comparative/llm2swarm/DMXAPI-HuoShan-DeepSeek-V3'  # 根目录
-# model_name = 'o1-mini'
+model_name = 'o1-mini'
 # model_name= 'gpt-4o-2024-11-20'
-model_name = 'DMXAPI-HuoShan-DeepSeek-V3'
+# model_name = 'DMXAPI-HuoShan-DeepSeek-V3'
 root_dir = f'../workspace/{model_name}'  # 根目录
 summary_data = []
 

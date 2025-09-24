@@ -10,7 +10,7 @@ task_keys = [
     # "exploration"
     # "crossing",
     "encircling",
-    # "shaping",
+    "shaping",
     # "bridging",
     # "aggregation",
     # "flocking",
@@ -20,14 +20,15 @@ task_keys = [
 # llm_model_list = ["gpt-4o-2024-11-20"]
 # llm_model_list = ["DMXAPI-HuoShan-DeepSeek-V3"]
 # llm_model_list = ["o1-mini"]
-llm_model_list = ["o1-mini", "gpt-4o-2024-11-20", "DMXAPI-HuoShan-DeepSeek-V3"]
+llm_model_list = ["o1-mini", "gpt-4o-2024-11-20"]
 
 prompt_type_list = [
     # "default",
+    "compound"
     # "simple",
     # "simple_strategy",
     # "narrative",
-    "structured_default",
+    # "structured_default",
     # "structured_strategy"
 ]
 # prompt_type_list.reverse()
@@ -47,7 +48,7 @@ run_modes = [
     # 'rerun',
     # 'continue',
     # 'fail_rerun',
-    # 'rerun',
+    #  'rerun',
     # 'fail_rerun',
     'analyze',
 ]

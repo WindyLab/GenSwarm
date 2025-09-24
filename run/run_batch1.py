@@ -61,7 +61,7 @@ def main():
     parser.add_argument(
         "--task_name",
         type=str,
-        default="flocking",
+        default="crossing",
         help="The name of the task to run",
     )
     parser.add_argument(
@@ -73,7 +73,7 @@ def main():
     parser.add_argument(
         "--run_mode",
         type=str,
-        default="analyze",
+        default="rerun",
         help="The mode of the run",
     )
     # 解析参数
@@ -89,7 +89,7 @@ def main():
     if test_mode in ['cap', 'meta', 'llm2swarm']:
         workspace_path = 'comparative/' + test_mode + "/" + task_name
     else:
-        workspace_path = 'different_model/claude-3.7/' + task_name
+        workspace_path = 'Human expert/' + task_name
 
     if test_mode == 'real':
         env_config_path = f"config/real_env/{config_file}"
@@ -119,7 +119,7 @@ def main():
     #     '2025-01-14_23-43-31', '2025-01-14_23-41-27',
     #
     # ]
-    # exp_list = ['shaping_20250116_143843_984_3533656']
+    exp_list = ['2025-09-12']
 
     runner.run(exp_list=exp_list)
 
