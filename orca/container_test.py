@@ -62,7 +62,7 @@ def simple_container_test():
     try:
         from config import ExperimentConfig
         config = ExperimentConfig()
-        print(f"✅ 配置 OK - {config.num_agents} 智能体")
+        print(f"✅ 配置 OK - {config.NUM_AGENTS} 智能体")
     except Exception as e:
         print(f"❌ 配置失败: {e}")
         return False
