@@ -1,0 +1,52 @@
+# Python编译文件
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# 分发 / 打包
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 实验结果
+results_*/
+simple_test_*/
+*.png
+*.gif
+*.mp4
+*.pdf
+
+# 临时文件
+.DS_Store
+.vscode/
+.idea/
+
+# Cython编译文件
+*.c
+*.cpp
+*.html
+
+# CMake编译文件
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# 系统临时文件
+*.tmp
+*.log
+.cache/

@@ -18,7 +18,7 @@
             "RVO"
         ],
         "library_dirs": [
-            "build/vr-orca/src"
+            "../vr-orca/build/src"
         ],
         "name": "vrorca",
         "sources": [

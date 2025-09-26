@@ -1,0 +1,27 @@
+# Docker 忽略文件 - 避免复制构建缓存和临时文件
+
+# 构建目录
+**/build/
+**/dist/
+**/*.egg-info/
+
+# Python 缓存
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+
+# 系统文件
+.DS_Store
+.git/
+.idea/
+
+# 日志文件
+logs/
+*.log
+
+# 结果目录
+results*/
+
+# 临时文件
+*.tmp
+*.temp

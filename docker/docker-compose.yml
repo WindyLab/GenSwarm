@@ -51,3 +51,22 @@ services:
     deploy:
       restart_policy:
         condition: none
+
+  vr-orca:
+    extends:
+      service: runtime-base
+    build:
+      context: ..
+      dockerfile: ./docker/vr-orca.Dockerfile
+    image: huabench/code-llm:vr-orca
+    working_dir: /catkin_ws/src/code_llm/orca
+    environment:
+      - MPLBACKEND=Agg
+      - PYTHONPATH=/catkin_ws/src/code_llm/orca:/catkin_ws/src/code_llm:$PYTHONPATH
+    volumes:
+      - ..:/catkin_ws/src/code_llm
+      - ../orca/results:/catkin_ws/src/code_llm/orca/results
+    network_mode: host
+    stdin_open: true
+    tty: true
+    command: /bin/bash

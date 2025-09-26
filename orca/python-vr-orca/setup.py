@@ -7,18 +7,7 @@ class BuildVrOrcaExt(_build_ext):
     """Builds VR-ORCA before our module."""
 
     def run(self):
-        # Build VR-ORCA
-        import os
-        import os.path
-        import subprocess
-
-        build_dir = os.path.abspath('build/vr-orca')
-        if not os.path.exists(build_dir):
-            os.makedirs(build_dir)
-            subprocess.check_call(['cmake', '../../vr-orca', '-DCMAKE_CXX_FLAGS=-fPIC'],
-                                  cwd=build_dir)
-        subprocess.check_call(['cmake', '--build', '.'], cwd=build_dir)
-
+        # VR-ORCA already built - just proceed with extension build
         _build_ext.run(self)
 
 
@@ -26,7 +15,7 @@ extensions = [
     Extension('vrorca', ['src/*.pyx'],
               include_dirs=['../vr-orca/src'],
               libraries=['RVO'],
-              library_dirs=['build/vr-orca/src'],
+              library_dirs=['../vr-orca/build/src'],
               extra_compile_args=['-fPIC']),
 ]
 
