@@ -58,7 +58,7 @@ ENV PYTHONPATH=/catkin_ws/src/code_llm/orca:/catkin_ws/src/code_llm:$PYTHONPATH
 RUN mkdir -p /catkin_ws/src/code_llm/orca/results
 
 # 设置工作目录
-WORKDIR /catkin_ws/src/code_llm/orca
+WORKDIR /catkin_ws/src/code_llm
 
 # 默认命令
 CMD ["/bin/bash"]

@@ -13,8 +13,8 @@ task_keys = [
     # "shaping",
     # "bridging",
     # "aggregation",
-    "flocking",
-    # "covering",
+    # "flocking",
+    "covering",
     # "clustering",
     # "pursuing"
 ]
@@ -32,10 +32,10 @@ test_modes = [
 run_modes = [
     # 'rerun',
     # 'continue',
-    'fail_rerun',
+    # 'fail_rerun',
     # 'rerun',
     # 'fail_rerun',
-    # 'analyze',
+    'analyze',
 ]
 # run_modes = [
 #     'analyze',
@@ -46,14 +46,14 @@ MAX_THREADS = 1  # Set the maximum number of threads you want to run concurrentl
 def run_batch(batch_num, task_name, run_mode, test_mode, task_path):
     print(f"Running batch {batch_num} for task {task_name}...")
     result = subprocess.run(["python", "run/run_code.py", "--exp_batch", str(batch_num), "--task_name", task_name,
-                             '--run_mode', run_mode, '--test_mode', test_mode, '--task_path', 'different_model/claude-3.7'], )
+                             '--run_mode', run_mode, '--test_mode', test_mode, '--task_path', 'Human expert'], )
     if result.returncode != 0:
         print(f"Batch {batch_num} encountered an error.")
     return result.returncode
 
 
 def run_batches(task_name, run_mode, test_mode):
-    batch_numbers = range(1, 101)  # Adjust range as needed
+    batch_numbers = range(1, 2)  # Adjust range as needed
     with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
         # Submit all batches to the executor and create progress bar
         future_to_batch = {executor.submit(run_batch, batch_num, task_name, run_mode, test_mode,

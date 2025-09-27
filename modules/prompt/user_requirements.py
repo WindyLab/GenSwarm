@@ -16,7 +16,7 @@ tasks = {
     "flocking": "Integrate into a flock by collaborating with all robots within the map, ensuring cohesion by staying connected, alignment by moving together, and separation by keeping a safe distance.",
     "covering": "Divide the environment into sections equal to the number of robots. Each robot needs to move to the center of its assigned section to achieve full coverage of the environment.",
     "aggregation": "The robots need to aggregate as quickly as possible and avoid colliding with each other.",
-    "crossing": "Each robot must maintain a distance of at least fifteen centimeters from other robots and obstacles to avoid collisions while moving to the target point, which is the position of the robot that was farthest from it at the initial moment.",
+    "crossing": "Each robot must maintain a distance of at least fifteen centimeters from other robots and obstacles to avoid collisions while moving to the target point, which is the position of the robot that was farthest from it at the initial moment.The local control law uses ORCA",
     "shaping": "The robots need to form a specific shape, with each robot assigned a unique point on that shape to move to while avoiding collisions during the movement.",
     "encircling": "The robots need to be evenly distributed along a circle with a one-unit radius, centered on the prey. Each robot is assigned a specific angle. As the prey moves, the robots must continuously adjust their positions in real-time, responding to the prey's dynamic changes. This ensures a sustained and coordinated encirclement.",
     "exploration": "The robots need to explore all the unknown areas. You are required to assign an optimal sequence of exploration areas to each robot based on the number of robots and the unexplored regions, and then the robots will gradually explore these areas.",
@@ -115,9 +115,11 @@ task_prompts = {
             "2. All regions combined must fully cover the environment\n"
             "3. Robots should be evenly distributed within the environment to ensure uniform coverage density\n"
         )
+    },
+    "crossing": {
+        "default": "Each robot must maintain a distance of at least fifteen centimeters from other robots and obstacles to avoid collisions while moving to the target point, which is the position of the robot that was farthest from it at the initial moment.The local control law uses ORCA implemented via the RVO2 library.",
     }
 
-    # TODO: Add narrative/structured/step prompts for other tasks in the same format
 }
 
 

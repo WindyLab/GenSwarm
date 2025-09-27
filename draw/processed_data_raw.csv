@@ -1,0 +1,2976 @@
+method,task,metric,value
+ours w/o vlm,flocking,spatial_variance,0.11450739219203193
+ours w/o vlm,flocking,mean_dtw_distance,365.74143519624084
+ours w/o vlm,flocking,spatial_variance,0.3012578027693595
+ours w/o vlm,flocking,mean_dtw_distance,575.9785731245104
+ours w/o vlm,flocking,spatial_variance,0.2905195893471565
+ours w/o vlm,flocking,mean_dtw_distance,595.7263310327857
+ours w/o vlm,flocking,spatial_variance,0.09956624991365642
+ours w/o vlm,flocking,mean_dtw_distance,425.50796026736026
+ours w/o vlm,flocking,spatial_variance,0.13250564242680218
+ours w/o vlm,flocking,mean_dtw_distance,604.5869864296836
+ours w/o vlm,flocking,spatial_variance,0.1458069304918302
+ours w/o vlm,flocking,mean_dtw_distance,423.0103356428895
+ours w/o vlm,flocking,spatial_variance,0.165267904961406
+ours w/o vlm,flocking,mean_dtw_distance,466.0166144102244
+ours w/o vlm,flocking,spatial_variance,0.3682194995645896
+ours w/o vlm,flocking,mean_dtw_distance,124.6128299806237
+ours w/o vlm,flocking,spatial_variance,0.1904609144478463
+ours w/o vlm,flocking,mean_dtw_distance,402.1684400016743
+ours w/o vlm,flocking,spatial_variance,0.09807839635727826
+ours w/o vlm,flocking,mean_dtw_distance,440.48543747293206
+ours w/o vlm,flocking,spatial_variance,0.2788353664338758
+ours w/o vlm,flocking,mean_dtw_distance,108.32583850799583
+ours w/o vlm,flocking,spatial_variance,0.33776731987326036
+ours w/o vlm,flocking,mean_dtw_distance,120.3648172006873
+ours w/o vlm,flocking,spatial_variance,0.11198358524471046
+ours w/o vlm,flocking,mean_dtw_distance,393.859973570852
+ours w/o vlm,flocking,spatial_variance,0.09541710080922694
+ours w/o vlm,flocking,mean_dtw_distance,423.35357386359493
+ours w/o vlm,flocking,spatial_variance,0.16502196457089763
+ours w/o vlm,flocking,mean_dtw_distance,493.4996664641197
+ours w/o vlm,flocking,spatial_variance,0.17266030378640695
+ours w/o vlm,flocking,mean_dtw_distance,378.0210148918669
+ours w/o vlm,flocking,spatial_variance,0.2552173754149847
+ours w/o vlm,flocking,mean_dtw_distance,1083.78432146742
+ours w/o vlm,flocking,spatial_variance,0.18939712575844941
+ours w/o vlm,flocking,mean_dtw_distance,623.9921231319432
+ours w/o vlm,flocking,spatial_variance,0.3106971298722466
+ours w/o vlm,flocking,mean_dtw_distance,1195.1110231162058
+ours w/o vlm,flocking,spatial_variance,0.09688266653657646
+ours w/o vlm,flocking,mean_dtw_distance,357.32553205003643
+ours w/o vlm,flocking,spatial_variance,0.12270321259807725
+ours w/o vlm,flocking,mean_dtw_distance,446.09221464548364
+ours w/o vlm,flocking,spatial_variance,0.283910752195451
+ours w/o vlm,flocking,mean_dtw_distance,527.9523682819945
+ours w/o vlm,flocking,spatial_variance,0.1644567285739209
+ours w/o vlm,flocking,mean_dtw_distance,439.75808917715045
+ours w/o vlm,flocking,spatial_variance,0.15931177256111606
+ours w/o vlm,flocking,mean_dtw_distance,450.95687186645955
+ours w/o vlm,flocking,spatial_variance,0.1838577160136832
+ours w/o vlm,flocking,mean_dtw_distance,400.3398459141025
+ours w/o vlm,flocking,spatial_variance,0.32008765708410203
+ours w/o vlm,flocking,mean_dtw_distance,579.9007499109807
+ours w/o vlm,flocking,spatial_variance,0.11371771682333282
+ours w/o vlm,flocking,mean_dtw_distance,407.1741698076102
+ours w/o vlm,flocking,spatial_variance,0.14251622099318836
+ours w/o vlm,flocking,mean_dtw_distance,650.6155507293969
+ours w/o vlm,flocking,spatial_variance,0.10818753594664046
+ours w/o vlm,flocking,mean_dtw_distance,390.35297182533526
+ours w/o vlm,flocking,spatial_variance,0.42297411865948475
+ours w/o vlm,flocking,mean_dtw_distance,565.655014888817
+ours w/o vlm,flocking,spatial_variance,0.13780230136802707
+ours w/o vlm,flocking,mean_dtw_distance,646.2339361713795
+ours w/o vlm,flocking,spatial_variance,0.10761924274970583
+ours w/o vlm,flocking,mean_dtw_distance,383.26270627817104
+ours w/o vlm,flocking,spatial_variance,0.5463525450780206
+ours w/o vlm,flocking,mean_dtw_distance,874.8203896925462
+ours w/o vlm,flocking,spatial_variance,0.3349940340547449
+ours w/o vlm,flocking,mean_dtw_distance,1245.1472056201656
+ours w/o vlm,flocking,spatial_variance,0.26191462785509045
+ours w/o vlm,flocking,mean_dtw_distance,1104.013428195328
+ours w/o vlm,flocking,spatial_variance,0.1062729838218901
+ours w/o vlm,flocking,mean_dtw_distance,364.8716394575876
+ours w/o vlm,flocking,spatial_variance,0.12868935824770242
+ours w/o vlm,flocking,mean_dtw_distance,405.3583486562117
+ours w/o vlm,flocking,spatial_variance,0.3327075233815024
+ours w/o vlm,flocking,mean_dtw_distance,116.83969422048473
+ours w/o vlm,flocking,spatial_variance,0.11243285048870275
+ours w/o vlm,flocking,mean_dtw_distance,405.17052000158435
+ours w/o vlm,flocking,spatial_variance,0.11316259214980243
+ours w/o vlm,flocking,mean_dtw_distance,372.85586198125577
+ours w/o vlm,flocking,spatial_variance,0.4880582553250687
+ours w/o vlm,flocking,mean_dtw_distance,792.2665183623385
+ours w/o vlm,flocking,spatial_variance,0.1004149740957124
+ours w/o vlm,flocking,mean_dtw_distance,393.7975777393728
+ours w/o vlm,flocking,spatial_variance,0.19490733759630674
+ours w/o vlm,flocking,mean_dtw_distance,456.01526497601475
+ours w/o vlm,flocking,spatial_variance,0.1789220700464514
+ours w/o vlm,flocking,mean_dtw_distance,446.1739310722972
+ours w/o vlm,flocking,spatial_variance,0.1719978103588689
+ours w/o vlm,flocking,mean_dtw_distance,466.8965643571402
+ours w/o vlm,flocking,spatial_variance,0.11730217591423395
+ours w/o vlm,flocking,mean_dtw_distance,395.2128027900912
+ours w/o vlm,flocking,spatial_variance,0.10461174403577853
+ours w/o vlm,flocking,mean_dtw_distance,387.03603453074805
+ours w/o vlm,flocking,spatial_variance,0.10980225601914677
+ours w/o vlm,flocking,mean_dtw_distance,368.3071347715334
+ours w/o vlm,flocking,spatial_variance,0.10560687944579597
+ours w/o vlm,flocking,mean_dtw_distance,411.0787952956948
+ours w/o vlm,flocking,spatial_variance,0.1317010302195642
+ours w/o vlm,flocking,mean_dtw_distance,412.0679337875482
+ours w/o vlm,flocking,spatial_variance,0.12521822811409472
+ours w/o vlm,flocking,mean_dtw_distance,391.4734377310697
+ours w/o vlm,flocking,spatial_variance,0.3420009424010402
+ours w/o vlm,flocking,mean_dtw_distance,119.00597411990611
+ours w/o vlm,flocking,spatial_variance,0.152887190980252
+ours w/o vlm,flocking,mean_dtw_distance,446.3150283856671
+ours w/o vlm,flocking,spatial_variance,0.14552330306270456
+ours w/o vlm,flocking,mean_dtw_distance,383.46520023172997
+ours w/o vlm,flocking,spatial_variance,0.1509505827544948
+ours w/o vlm,flocking,mean_dtw_distance,399.7166226039626
+ours w/o vlm,flocking,spatial_variance,0.1345818375544791
+ours w/o vlm,flocking,mean_dtw_distance,382.2908644257765
+ours w/o vlm,flocking,spatial_variance,0.27157102740173467
+ours w/o vlm,flocking,mean_dtw_distance,108.17612902294294
+ours w/o vlm,flocking,spatial_variance,0.16503937485610098
+ours w/o vlm,flocking,mean_dtw_distance,419.3728151833886
+ours w/o vlm,flocking,spatial_variance,0.11448148391652418
+ours w/o vlm,flocking,mean_dtw_distance,391.7323973873826
+ours w/o vlm,flocking,spatial_variance,0.11983736199611804
+ours w/o vlm,flocking,mean_dtw_distance,384.6239223039533
+ours w/o vlm,flocking,spatial_variance,0.10791738609376453
+ours w/o vlm,flocking,mean_dtw_distance,393.0495761658894
+ours w/o vlm,flocking,spatial_variance,0.20549876653350868
+ours w/o vlm,flocking,mean_dtw_distance,602.1291441269416
+ours w/o vlm,flocking,spatial_variance,0.11476941410821373
+ours w/o vlm,flocking,mean_dtw_distance,404.80055889143426
+ours w/o vlm,flocking,spatial_variance,0.11870279066629578
+ours w/o vlm,flocking,mean_dtw_distance,414.35203744152386
+ours w/o vlm,flocking,spatial_variance,0.11425576589386112
+ours w/o vlm,flocking,mean_dtw_distance,375.3976745748802
+ours w/o vlm,flocking,spatial_variance,0.10045095075443843
+ours w/o vlm,flocking,mean_dtw_distance,368.7581270956492
+ours w/o vlm,flocking,spatial_variance,0.1450943269449323
+ours w/o vlm,flocking,mean_dtw_distance,375.9263284430759
+ours w/o vlm,flocking,spatial_variance,0.2092289402474658
+ours w/o vlm,flocking,mean_dtw_distance,625.397103756828
+ours w/o vlm,flocking,spatial_variance,0.1169147804663232
+ours w/o vlm,flocking,mean_dtw_distance,436.420684800069
+ours w/o vlm,flocking,spatial_variance,0.14928915489817826
+ours w/o vlm,flocking,mean_dtw_distance,395.13194671242326
+ours w/o vlm,flocking,spatial_variance,0.13588244273467356
+ours w/o vlm,flocking,mean_dtw_distance,522.4810236098225
+ours w/o vlm,flocking,spatial_variance,0.12152431143555906
+ours w/o vlm,flocking,mean_dtw_distance,370.3806688834788
+ours w/o vlm,flocking,spatial_variance,0.09900854437471077
+ours w/o vlm,flocking,mean_dtw_distance,421.65440168693397
+ours w/o vlm,flocking,spatial_variance,0.11064482064218548
+ours w/o vlm,flocking,mean_dtw_distance,425.76953226926656
+ours w/o vlm,flocking,spatial_variance,0.10205029748263816
+ours w/o vlm,flocking,mean_dtw_distance,403.88889706109705
+ours w/o vlm,flocking,spatial_variance,0.14957630008250505
+ours w/o vlm,flocking,mean_dtw_distance,374.493864011928
+ours w/o vlm,flocking,spatial_variance,0.23931041886558552
+ours w/o vlm,flocking,mean_dtw_distance,587.5935206740259
+ours w/o vlm,flocking,spatial_variance,0.2869719227598136
+ours w/o vlm,flocking,mean_dtw_distance,112.63013383119554
+ours w/o vlm,flocking,spatial_variance,0.1335214004053003
+ours w/o vlm,flocking,mean_dtw_distance,375.06146001175375
+ours w/o vlm,flocking,spatial_variance,0.10453658096944057
+ours w/o vlm,flocking,mean_dtw_distance,374.95525444959156
+ours w/o vlm,flocking,spatial_variance,0.10323057805331504
+ours w/o vlm,flocking,mean_dtw_distance,382.8747549477225
+ours w/o vlm,flocking,spatial_variance,0.15249375231011914
+ours w/o vlm,flocking,mean_dtw_distance,406.29781550898537
+ours w/o vlm,flocking,spatial_variance,0.09456238894603251
+ours w/o vlm,flocking,mean_dtw_distance,399.90301442741327
+ours w/o vlm,flocking,spatial_variance,0.15158149951423872
+ours w/o vlm,flocking,mean_dtw_distance,443.1482865723932
+ours w/o vlm,flocking,spatial_variance,0.13602106931617966
+ours w/o vlm,flocking,mean_dtw_distance,408.4404579684792
+ours w/o vlm,flocking,spatial_variance,0.1487869804216777
+ours w/o vlm,flocking,mean_dtw_distance,442.19273885129604
+ours w/o vlm,flocking,spatial_variance,0.10533571931002828
+ours w/o vlm,flocking,mean_dtw_distance,355.5109860514505
+ours w/o vlm,flocking,spatial_variance,0.12991692385151601
+ours w/o vlm,flocking,mean_dtw_distance,513.1714774648328
+ours w/o vlm,flocking,spatial_variance,0.11042564922822154
+ours w/o vlm,flocking,mean_dtw_distance,385.3532160204894
+ours w/o vlm,flocking,spatial_variance,0.1212461645661281
+ours w/o vlm,flocking,mean_dtw_distance,404.7559675969909
+ours w/o vlm,flocking,spatial_variance,0.1986478472469958
+ours w/o vlm,flocking,mean_dtw_distance,411.53694746484786
+ours w/o vlm,flocking,spatial_variance,0.11497097276224054
+ours w/o vlm,flocking,mean_dtw_distance,377.4489143802593
+ours w/o vlm,flocking,spatial_variance,0.28697679176524604
+ours w/o vlm,flocking,mean_dtw_distance,112.43760099542125
+ours w/o vlm,flocking,spatial_variance,0.10157999430743583
+ours w/o vlm,flocking,mean_dtw_distance,475.503916299457
+ours w/o vlm,flocking,spatial_variance,0.10490064952870151
+ours w/o vlm,flocking,mean_dtw_distance,386.9211955554118
+ours w/o vlm,flocking,spatial_variance,0.33162610784298563
+ours w/o vlm,flocking,mean_dtw_distance,116.4473079238866
+ours w/o vlm,flocking,spatial_variance,0.291852473921032
+ours w/o vlm,flocking,mean_dtw_distance,1160.470492699699
+ours w/o vlm,flocking,spatial_variance,0.09688167169172394
+ours w/o vlm,flocking,mean_dtw_distance,453.7210147498401
+ours w/o vlm,flocking,spatial_variance,0.1037694026942596
+ours w/o vlm,flocking,mean_dtw_distance,374.93938880134993
+ours w/o vlm,flocking,spatial_variance,0.24332222694811909
+ours w/o vlm,flocking,mean_dtw_distance,507.848469808608
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,0.8333333333333334
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.6666666666666666
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,0.6666666666666666
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.6666666666666666
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,1.0
+ours w/o vlm,crossing,target_achievement_ratio,0.0
+ours w/o vlm,aggregation,max_min_distance,0.48763818233602446
+ours w/o vlm,aggregation,max_min_distance,0.13216386489680942
+ours w/o vlm,aggregation,max_min_distance,0.009007962318659885
+ours w/o vlm,aggregation,max_min_distance,0.7596955360870157
+ours w/o vlm,aggregation,max_min_distance,0.021916972762089065
+ours w/o vlm,aggregation,max_min_distance,2.808328542670753
+ours w/o vlm,aggregation,max_min_distance,0.027320921143127397
+ours w/o vlm,aggregation,max_min_distance,0.009767290895964426
+ours w/o vlm,aggregation,max_min_distance,0.13210015893158555
+ours w/o vlm,aggregation,max_min_distance,1.143846840630981
+ours w/o vlm,aggregation,max_min_distance,2.6724981598979145
+ours w/o vlm,aggregation,max_min_distance,3.432154264028796
+ours w/o vlm,aggregation,max_min_distance,0.012948533512174065
+ours w/o vlm,aggregation,max_min_distance,3.357060069135922
+ours w/o vlm,aggregation,max_min_distance,1.943828259169704
+ours w/o vlm,aggregation,max_min_distance,0.03621273255810262
+ours w/o vlm,aggregation,max_min_distance,0.08291947012495132
+ours w/o vlm,aggregation,max_min_distance,0.13026709673486736
+ours w/o vlm,aggregation,max_min_distance,2.0603618244792914
+ours w/o vlm,aggregation,max_min_distance,0.010121416743649775
+ours w/o vlm,aggregation,max_min_distance,1.6384606546687555
+ours w/o vlm,aggregation,max_min_distance,1.5926104048549998
+ours w/o vlm,aggregation,max_min_distance,0.032956552092785696
+ours w/o vlm,aggregation,max_min_distance,2.2132517339999485
+ours w/o vlm,aggregation,max_min_distance,0.03395274646350463
+ours w/o vlm,aggregation,max_min_distance,0.9175164226972357
+ours w/o vlm,aggregation,max_min_distance,0.03599676361352702
+ours w/o vlm,aggregation,max_min_distance,0.07105423667677768
+ours w/o vlm,aggregation,max_min_distance,1.3776803689389407
+ours w/o vlm,aggregation,max_min_distance,0.07306135200619723
+ours w/o vlm,aggregation,max_min_distance,0.023270104050945234
+ours w/o vlm,aggregation,max_min_distance,2.7928854971617505
+ours w/o vlm,aggregation,max_min_distance,0.13224674788839674
+ours w/o vlm,aggregation,max_min_distance,0.17090928686123885
+ours w/o vlm,aggregation,max_min_distance,1.6828795754591048
+ours w/o vlm,aggregation,max_min_distance,2.3634479879446952
+ours w/o vlm,aggregation,max_min_distance,0.15361098259456824
+ours w/o vlm,aggregation,max_min_distance,0.00017445800305632142
+ours w/o vlm,aggregation,max_min_distance,1.0983183661638083
+ours w/o vlm,aggregation,max_min_distance,0.13214509432851734
+ours w/o vlm,aggregation,max_min_distance,2.2799017022956183
+ours w/o vlm,aggregation,max_min_distance,2.6522414580158067
+ours w/o vlm,aggregation,max_min_distance,1.0645979384090338
+ours w/o vlm,aggregation,max_min_distance,0.00729537244083861
+ours w/o vlm,aggregation,max_min_distance,1.6025019206401032
+ours w/o vlm,aggregation,max_min_distance,1.477803507713326
+ours w/o vlm,aggregation,max_min_distance,0.0005534429779367467
+ours w/o vlm,aggregation,max_min_distance,0.0024008507086629716
+ours w/o vlm,aggregation,max_min_distance,0.3412445262256158
+ours w/o vlm,aggregation,max_min_distance,0.021515598637926098
+ours w/o vlm,aggregation,max_min_distance,4.770918383303994
+ours w/o vlm,aggregation,max_min_distance,0.01081258856434733
+ours w/o vlm,aggregation,max_min_distance,0.0066155362975585386
+ours w/o vlm,aggregation,max_min_distance,-0.0050004030559924195
+ours w/o vlm,aggregation,max_min_distance,0.1315685955305706
+ours w/o vlm,aggregation,max_min_distance,2.5039655265797864
+ours w/o vlm,aggregation,max_min_distance,0.009269304985374288
+ours w/o vlm,aggregation,max_min_distance,0.3649459850121531
+ours w/o vlm,aggregation,max_min_distance,2.267423738813509
+ours w/o vlm,aggregation,max_min_distance,2.216414812833764
+ours w/o vlm,aggregation,max_min_distance,0.005000365236966481
+ours w/o vlm,aggregation,max_min_distance,0.005184077711816282
+ours w/o vlm,aggregation,max_min_distance,1.3686991852599362
+ours w/o vlm,aggregation,max_min_distance,1.5915855887556039
+ours w/o vlm,aggregation,max_min_distance,2.711946697549973
+ours w/o vlm,aggregation,max_min_distance,0.027675168058060473
+ours w/o vlm,aggregation,max_min_distance,2.7483662919326357
+ours w/o vlm,aggregation,max_min_distance,0.04147415864148904
+ours w/o vlm,aggregation,max_min_distance,0.11793517077579396
+ours w/o vlm,aggregation,max_min_distance,0.05347848605420347
+ours w/o vlm,aggregation,max_min_distance,2.6267767183153437
+ours w/o vlm,aggregation,max_min_distance,0.08087382934426879
+ours w/o vlm,aggregation,max_min_distance,0.05209801571432304
+ours w/o vlm,aggregation,max_min_distance,0.014343637863038328
+ours w/o vlm,aggregation,max_min_distance,1.889858890052911
+ours w/o vlm,aggregation,max_min_distance,0.07463039063766563
+ours w/o vlm,aggregation,max_min_distance,-0.01132277860689726
+ours w/o vlm,aggregation,max_min_distance,0.003172226320603544
+ours w/o vlm,aggregation,max_min_distance,1.717150461608492
+ours w/o vlm,aggregation,max_min_distance,2.4476499513084895
+ours w/o vlm,aggregation,max_min_distance,1.7366264403803227
+ours w/o vlm,aggregation,max_min_distance,0.030907263341027114
+ours w/o vlm,aggregation,max_min_distance,2.3443864477215492
+ours w/o vlm,aggregation,max_min_distance,0.6382168737387655
+ours w/o vlm,aggregation,max_min_distance,0.4900583733705542
+ours w/o vlm,aggregation,max_min_distance,1.9972452310444198
+ours w/o vlm,aggregation,max_min_distance,2.110348038274598
+ours w/o vlm,aggregation,max_min_distance,0.07421168372831793
+ours w/o vlm,aggregation,max_min_distance,1.965210884400651
+ours w/o vlm,aggregation,max_min_distance,0.006020872442234149
+ours w/o vlm,aggregation,max_min_distance,0.5818068455287961
+ours w/o vlm,aggregation,max_min_distance,1.8469024614570866
+ours w/o vlm,aggregation,max_min_distance,1.5187017214465168
+ours w/o vlm,aggregation,max_min_distance,0.020634000457859875
+ours w/o vlm,aggregation,max_min_distance,0.5737358399037018
+ours w/o vlm,aggregation,max_min_distance,1.8351927350954178
+ours w/o vlm,aggregation,max_min_distance,0.019663002273440672
+ours w/o vlm,aggregation,max_min_distance,0.009952936823372172
+ours w/o vlm,aggregation,max_min_distance,0.031312099138752214
+ours w/o vlm,aggregation,max_min_distance,0.05255539758475275
+ours w/o vlm,shaping,procrustes_distance,0.00021325117332614214
+ours w/o vlm,shaping,procrustes_distance,0.0004471765888990499
+ours w/o vlm,shaping,procrustes_distance,0.00014813624559803585
+ours w/o vlm,shaping,procrustes_distance,0.00015505667442295782
+ours w/o vlm,shaping,procrustes_distance,0.3929747618316707
+ours w/o vlm,shaping,procrustes_distance,0.00014361825831833784
+ours w/o vlm,shaping,procrustes_distance,9.682506395485402e-05
+ours w/o vlm,shaping,procrustes_distance,0.05197323844831206
+ours w/o vlm,shaping,procrustes_distance,0.8405244862894279
+ours w/o vlm,shaping,procrustes_distance,0.0003984548375552518
+ours w/o vlm,shaping,procrustes_distance,0.0002971035719368998
+ours w/o vlm,shaping,procrustes_distance,0.8680827255748881
+ours w/o vlm,shaping,procrustes_distance,0.00011197707728486883
+ours w/o vlm,shaping,procrustes_distance,0.0001353478184666621
+ours w/o vlm,shaping,procrustes_distance,8.050875982936223e-05
+ours w/o vlm,shaping,procrustes_distance,0.7222806686772429
+ours w/o vlm,shaping,procrustes_distance,0.00011168503244454079
+ours w/o vlm,shaping,procrustes_distance,0.5088540265372624
+ours w/o vlm,shaping,procrustes_distance,0.0004927755166058909
+ours w/o vlm,shaping,procrustes_distance,0.00031655316469265314
+ours w/o vlm,shaping,procrustes_distance,0.00026846029834431246
+ours w/o vlm,shaping,procrustes_distance,0.000153607600085848
+ours w/o vlm,shaping,procrustes_distance,0.00013460649255238858
+ours w/o vlm,shaping,procrustes_distance,0.0008179038276849915
+ours w/o vlm,shaping,procrustes_distance,0.0002711671066476128
+ours w/o vlm,shaping,procrustes_distance,0.00021484469716513642
+ours w/o vlm,shaping,procrustes_distance,3.7192271635966445e-05
+ours w/o vlm,shaping,procrustes_distance,0.00018661051104462318
+ours w/o vlm,shaping,procrustes_distance,0.000184095049208108
+ours w/o vlm,shaping,procrustes_distance,0.00016359583152072458
+ours w/o vlm,shaping,procrustes_distance,0.6128059436388731
+ours w/o vlm,shaping,procrustes_distance,5.415044899060639e-05
+ours w/o vlm,shaping,procrustes_distance,0.00036152422997527526
+ours w/o vlm,shaping,procrustes_distance,0.0005011198701629311
+ours w/o vlm,shaping,procrustes_distance,0.0002737876634514465
+ours w/o vlm,shaping,procrustes_distance,0.0002553903452219129
+ours w/o vlm,shaping,procrustes_distance,6.733192425037908e-05
+ours w/o vlm,shaping,procrustes_distance,0.00024980750678969447
+ours w/o vlm,shaping,procrustes_distance,0.7042922538159986
+ours w/o vlm,shaping,procrustes_distance,0.00022731770291609834
+ours w/o vlm,shaping,procrustes_distance,0.8114827655302471
+ours w/o vlm,shaping,procrustes_distance,3.341159990807993e-05
+ours w/o vlm,shaping,procrustes_distance,0.6114539377342695
+ours w/o vlm,shaping,procrustes_distance,0.00028594341314980667
+ours w/o vlm,shaping,procrustes_distance,0.0005215612221194379
+ours w/o vlm,shaping,procrustes_distance,0.919372225680626
+ours w/o vlm,shaping,procrustes_distance,0.4685319336985155
+ours w/o vlm,shaping,procrustes_distance,0.7398100074996458
+ours w/o vlm,shaping,procrustes_distance,0.9498160835080485
+ours w/o vlm,shaping,procrustes_distance,0.00037221756779214885
+ours w/o vlm,shaping,procrustes_distance,0.00017771687043274974
+ours w/o vlm,shaping,procrustes_distance,0.0004795419923127677
+ours w/o vlm,shaping,procrustes_distance,0.0004901580737859132
+ours w/o vlm,shaping,procrustes_distance,0.00029207464099512424
+ours w/o vlm,shaping,procrustes_distance,0.00043342422593983175
+ours w/o vlm,shaping,procrustes_distance,0.00024355665864643424
+ours w/o vlm,shaping,procrustes_distance,0.00016169594067046617
+ours w/o vlm,shaping,procrustes_distance,0.0026524339798989854
+ours w/o vlm,shaping,procrustes_distance,0.00017373344014257617
+ours w/o vlm,shaping,procrustes_distance,0.0003716223578425175
+ours w/o vlm,shaping,procrustes_distance,0.00047734985933861493
+ours w/o vlm,shaping,procrustes_distance,0.0007838672340297182
+ours w/o vlm,shaping,procrustes_distance,0.03136349854669536
+ours w/o vlm,shaping,procrustes_distance,0.0003393811106968518
+ours w/o vlm,shaping,procrustes_distance,8.221372980306785e-05
+ours w/o vlm,shaping,procrustes_distance,0.01041562559317543
+ours w/o vlm,shaping,procrustes_distance,0.0002139019824931096
+ours w/o vlm,shaping,procrustes_distance,0.00026947039846774476
+ours w/o vlm,shaping,procrustes_distance,0.6014118479932556
+ours w/o vlm,shaping,procrustes_distance,0.00044304587997562214
+ours w/o vlm,shaping,procrustes_distance,0.0004396557695696474
+ours w/o vlm,shaping,procrustes_distance,0.00025573640882163074
+ours w/o vlm,shaping,procrustes_distance,4.301961223670171e-06
+ours w/o vlm,shaping,procrustes_distance,0.00033248060895981
+ours w/o vlm,shaping,procrustes_distance,0.5563886978657504
+ours w/o vlm,shaping,procrustes_distance,0.7772829763790378
+ours w/o vlm,shaping,procrustes_distance,0.0001414045252779482
+ours w/o vlm,shaping,procrustes_distance,5.109086751694989e-05
+ours w/o vlm,shaping,procrustes_distance,0.824091203239345
+ours w/o vlm,shaping,procrustes_distance,0.0005509990013834099
+ours w/o vlm,shaping,procrustes_distance,6.602877911277195e-05
+ours w/o vlm,shaping,procrustes_distance,9.103410909976286e-05
+ours w/o vlm,shaping,procrustes_distance,0.00018955110363369422
+ours w/o vlm,shaping,procrustes_distance,0.7872918225221277
+ours w/o vlm,shaping,procrustes_distance,0.00010631943903040724
+ours w/o vlm,shaping,procrustes_distance,0.00022119495558170502
+ours w/o vlm,shaping,procrustes_distance,0.0004637628222647699
+ours w/o vlm,shaping,procrustes_distance,0.0002668019103800667
+ours w/o vlm,shaping,procrustes_distance,9.629087500115672e-05
+ours w/o vlm,shaping,procrustes_distance,0.7760700508339206
+ours w/o vlm,shaping,procrustes_distance,0.37323503933167923
+ours w/o vlm,shaping,procrustes_distance,0.00013798425734872513
+ours w/o vlm,shaping,procrustes_distance,0.6442610948769157
+ours w/o vlm,shaping,procrustes_distance,0.011302931951955059
+ours w/o vlm,shaping,procrustes_distance,0.0001652861078251248
+ours w/o vlm,shaping,procrustes_distance,0.0001213340046511058
+ours w/o vlm,shaping,procrustes_distance,0.00019707766449826258
+ours w/o vlm,shaping,procrustes_distance,0.8127041429584745
+ours w/o vlm,shaping,procrustes_distance,0.00026087394593213157
+ours w/o vlm,shaping,procrustes_distance,0.0003003085810996609
+ours w/o vlm,encircling,mean_distance_error,0.06722622149141179
+ours w/o vlm,encircling,mean_distance_error,1.1105386467092344
+ours w/o vlm,encircling,mean_distance_error,0.03751734980259661
+ours w/o vlm,encircling,mean_distance_error,1.5437465106616797
+ours w/o vlm,encircling,mean_distance_error,0.016233799794267718
+ours w/o vlm,encircling,mean_distance_error,0.06796098996242106
+ours w/o vlm,encircling,mean_distance_error,0.8493233492495579
+ours w/o vlm,encircling,mean_distance_error,0.01759448998813688
+ours w/o vlm,encircling,mean_distance_error,0.0595178365017718
+ours w/o vlm,encircling,mean_distance_error,0.3035635383536621
+ours w/o vlm,encircling,mean_distance_error,0.1956395136757069
+ours w/o vlm,encircling,mean_distance_error,1.6948618130614148
+ours w/o vlm,encircling,mean_distance_error,0.8114818846686885
+ours w/o vlm,encircling,mean_distance_error,0.013179629456942973
+ours w/o vlm,encircling,mean_distance_error,0.03787271305950483
+ours w/o vlm,encircling,mean_distance_error,1.6807937082440647
+ours w/o vlm,encircling,mean_distance_error,0.05012815068633388
+ours w/o vlm,encircling,mean_distance_error,1.5947699155723953
+ours w/o vlm,encircling,mean_distance_error,0.297134085964821
+ours w/o vlm,encircling,mean_distance_error,1.4419487476373831
+ours w/o vlm,encircling,mean_distance_error,3.12538696576422
+ours w/o vlm,encircling,mean_distance_error,0.039084153677580426
+ours w/o vlm,encircling,mean_distance_error,1.9063487106251944
+ours w/o vlm,encircling,mean_distance_error,1.200735039057153
+ours w/o vlm,encircling,mean_distance_error,0.010454752924294486
+ours w/o vlm,encircling,mean_distance_error,0.037913866607293734
+ours w/o vlm,encircling,mean_distance_error,0.023304502460014715
+ours w/o vlm,encircling,mean_distance_error,0.04217588336979269
+ours w/o vlm,encircling,mean_distance_error,0.0455899919645576
+ours w/o vlm,encircling,mean_distance_error,0.17601240549974242
+ours w/o vlm,encircling,mean_distance_error,0.0715201437937389
+ours w/o vlm,encircling,mean_distance_error,0.021252954310829852
+ours w/o vlm,encircling,mean_distance_error,0.060406434395272136
+ours w/o vlm,encircling,mean_distance_error,1.9325088305050706
+ours w/o vlm,encircling,mean_distance_error,0.013440704464645828
+ours w/o vlm,encircling,mean_distance_error,0.05718072912767924
+ours w/o vlm,encircling,mean_distance_error,0.06832365346232468
+ours w/o vlm,encircling,mean_distance_error,0.022402490807873376
+ours w/o vlm,encircling,mean_distance_error,0.03076264098245089
+ours w/o vlm,encircling,mean_distance_error,0.08553647116366499
+ours w/o vlm,encircling,mean_distance_error,1.3482603192367388
+ours w/o vlm,encircling,mean_distance_error,0.02755692912737669
+ours w/o vlm,encircling,mean_distance_error,0.024204816878166724
+ours w/o vlm,encircling,mean_distance_error,0.16135004344205253
+ours w/o vlm,encircling,mean_distance_error,0.032547469447461674
+ours w/o vlm,encircling,mean_distance_error,0.7304230725496862
+ours w/o vlm,encircling,mean_distance_error,0.9167038142739011
+ours w/o vlm,encircling,mean_distance_error,0.044730210649714754
+ours w/o vlm,encircling,mean_distance_error,1.5001395112737648
+ours w/o vlm,encircling,mean_distance_error,2.4812759826756743
+ours w/o vlm,encircling,mean_distance_error,0.012591112679907646
+ours w/o vlm,encircling,mean_distance_error,0.02481257989720372
+ours w/o vlm,encircling,mean_distance_error,1.3848346965146108
+ours w/o vlm,encircling,mean_distance_error,0.040742789579762295
+ours w/o vlm,encircling,mean_distance_error,2.935547648451131
+ours w/o vlm,encircling,mean_distance_error,1.56499861023552
+ours w/o vlm,encircling,mean_distance_error,1.7572670557353918
+ours w/o vlm,encircling,mean_distance_error,1.214127242980399
+ours w/o vlm,encircling,mean_distance_error,0.9637003037876365
+ours w/o vlm,encircling,mean_distance_error,0.07872375663939467
+ours w/o vlm,encircling,mean_distance_error,0.03315015385461123
+ours w/o vlm,encircling,mean_distance_error,0.9304018860706114
+ours w/o vlm,encircling,mean_distance_error,0.8408638962254168
+ours w/o vlm,encircling,mean_distance_error,2.1260448306260136
+ours w/o vlm,encircling,mean_distance_error,0.029488714298993374
+ours w/o vlm,encircling,mean_distance_error,0.09215734746621318
+ours w/o vlm,encircling,mean_distance_error,0.7397153059297521
+ours w/o vlm,encircling,mean_distance_error,0.9649956167548233
+ours w/o vlm,encircling,mean_distance_error,0.1504280154724573
+ours w/o vlm,encircling,mean_distance_error,0.09728315797100708
+ours w/o vlm,encircling,mean_distance_error,1.4061502144254288
+ours w/o vlm,encircling,mean_distance_error,0.01906908557162527
+ours w/o vlm,encircling,mean_distance_error,1.6175024439355592
+ours w/o vlm,encircling,mean_distance_error,0.03210664213522737
+ours w/o vlm,encircling,mean_distance_error,0.9748069064506147
+ours w/o vlm,encircling,mean_distance_error,1.6763682184831723
+ours w/o vlm,encircling,mean_distance_error,0.15370864943524135
+ours w/o vlm,encircling,mean_distance_error,0.8722466437390449
+ours w/o vlm,encircling,mean_distance_error,2.002129196792142
+ours w/o vlm,encircling,mean_distance_error,1.4423939705849633
+ours w/o vlm,encircling,mean_distance_error,1.4594321748728207
+ours w/o vlm,encircling,mean_distance_error,0.09370074846806357
+ours w/o vlm,encircling,mean_distance_error,0.023630732639901397
+ours w/o vlm,encircling,mean_distance_error,1.401974716309214
+ours w/o vlm,encircling,mean_distance_error,0.03940696295599603
+ours w/o vlm,encircling,mean_distance_error,1.4721680630909983
+ours w/o vlm,encircling,mean_distance_error,0.013603209569264882
+ours w/o vlm,encircling,mean_distance_error,0.05864031761515435
+ours w/o vlm,encircling,mean_distance_error,0.03347928633696723
+ours w/o vlm,encircling,mean_distance_error,0.068637748440962
+ours w/o vlm,encircling,mean_distance_error,0.03683212755912272
+ours w/o vlm,encircling,mean_distance_error,0.03400741890022383
+ours w/o vlm,encircling,mean_distance_error,0.01767786482302149
+ours w/o vlm,encircling,mean_distance_error,1.764821944783848
+ours w/o vlm,encircling,mean_distance_error,1.880415042395545
+ours w/o vlm,encircling,mean_distance_error,0.022474956041435606
+ours w/o vlm,encircling,mean_distance_error,0.014528434908455401
+ours w/o vlm,encircling,mean_distance_error,0.4443213995290323
+ours w/o vlm,encircling,mean_distance_error,1.7901241381386928
+ours w/o vlm,covering,area_ratio,0.8962835955713621
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0021417658340653943
+ours w/o vlm,covering,area_ratio,0.9518567153311712
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.006881680266120878
+ours w/o vlm,covering,area_ratio,0.980325520701503
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0023582486038160274
+ours w/o vlm,covering,area_ratio,0.9014539060348737
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00012817336605329627
+ours w/o vlm,covering,area_ratio,0.9426108228822836
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.025802488428536698
+ours w/o vlm,covering,area_ratio,0.898902375269123
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00021153279105775956
+ours w/o vlm,covering,area_ratio,0.24832261586857823
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.008220070182175682
+ours w/o vlm,covering,area_ratio,0.23879598061050458
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.004585756425263477
+ours w/o vlm,covering,area_ratio,0.8934999672367487
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00018878345240154178
+ours w/o vlm,covering,area_ratio,1.061965342405905
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.001201719269136442
+ours w/o vlm,covering,area_ratio,0.023852797838321955
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0001058175401833537
+ours w/o vlm,covering,area_ratio,0.8835196990853363
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00013311975925641074
+ours w/o vlm,covering,area_ratio,0.24567155223267373
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0009908065559231798
+ours w/o vlm,covering,area_ratio,0.019316236988699213
+ours w/o vlm,covering,variance_nearest_neighbor_distance,1.6132244571306015e-05
+ours w/o vlm,covering,area_ratio,0.05909359920159452
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00014740030918366424
+ours w/o vlm,covering,area_ratio,1.6395262787895408
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.1492445336825858
+ours w/o vlm,covering,area_ratio,0.023856952879886192
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0003436418285694855
+ours w/o vlm,covering,area_ratio,0.005060251179354908
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00012435394666634615
+ours w/o vlm,covering,area_ratio,0.2739740564155486
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0033017750519179585
+ours w/o vlm,covering,area_ratio,0.889461242363985
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0001760496684015786
+ours w/o vlm,covering,area_ratio,0.9900723721731733
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0019458263630611373
+ours w/o vlm,covering,area_ratio,0.8952402788430437
+ours w/o vlm,covering,variance_nearest_neighbor_distance,7.767099778048002e-05
+ours w/o vlm,covering,area_ratio,0.43370493249787134
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.02336353681075251
+ours w/o vlm,covering,area_ratio,0.8984264744975285
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00046840792619147475
+ours w/o vlm,covering,area_ratio,1.6652195593980357
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.3396404478538038
+ours w/o vlm,covering,area_ratio,0.8945950330982906
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0006169299097501343
+ours w/o vlm,covering,area_ratio,0.9002883135976292
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00011721806677712836
+ours w/o vlm,covering,area_ratio,0.9113935215252295
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0008672099153096101
+ours w/o vlm,covering,area_ratio,0.8868504559620859
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00028965764786772385
+ours w/o vlm,covering,area_ratio,0.8976540258298074
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.009542369208372167
+ours w/o vlm,covering,area_ratio,0.9009266484660291
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0001900586454644432
+ours w/o vlm,covering,area_ratio,0.016621664452366968
+ours w/o vlm,covering,variance_nearest_neighbor_distance,3.833632023241557e-05
+ours w/o vlm,covering,area_ratio,0.8873979316100037
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00019375024568750346
+ours w/o vlm,covering,area_ratio,0.8867263324247728
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0003265058114937061
+ours w/o vlm,covering,area_ratio,0.26875519923919894
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.003848310183697086
+ours w/o vlm,covering,area_ratio,0.8918857043306411
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00033153051867827797
+ours w/o vlm,covering,area_ratio,0.899540459259116
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0002453432285278997
+ours w/o vlm,covering,area_ratio,0.891767835600824
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0003512862059192769
+ours w/o vlm,covering,area_ratio,0.2505072081461157
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.01400776856124991
+ours w/o vlm,covering,area_ratio,0.24121024495672516
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00656641785449762
+ours w/o vlm,covering,area_ratio,0.890927192895753
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0002850285034235524
+ours w/o vlm,covering,area_ratio,1.000066494724168
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.007697775959570239
+ours w/o vlm,covering,area_ratio,0.9627038403414875
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0011785738064118644
+ours w/o vlm,covering,area_ratio,0.1754012421288359
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00044226332306091616
+ours w/o vlm,covering,area_ratio,0.8891096955479219
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0009696325746904815
+ours w/o vlm,covering,area_ratio,0.8992727115264142
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0012412398548643975
+ours w/o vlm,covering,area_ratio,0.9062628004375874
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00034555346877779747
+ours w/o vlm,covering,area_ratio,0.887203378474416
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0001724068333775447
+ours w/o vlm,covering,area_ratio,0.2835539909314627
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.004254768951543256
+ours w/o vlm,covering,area_ratio,0.8901045598849856
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00011295675957192961
+ours w/o vlm,covering,area_ratio,0.6341699146606257
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.12585968355203897
+ours w/o vlm,covering,area_ratio,0.27266111068978044
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.011125875493513229
+ours w/o vlm,covering,area_ratio,1.8391539289875203
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.017644861341771432
+ours w/o vlm,covering,area_ratio,0.8925993143110589
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00017667921610508511
+ours w/o vlm,covering,area_ratio,0.8900749855090299
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.000346326607292446
+ours w/o vlm,covering,area_ratio,0.27488515802369157
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.003940955955536487
+ours w/o vlm,covering,area_ratio,0.9055354897776148
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00013790234322057357
+ours w/o vlm,covering,area_ratio,0.8936305949881096
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.000491354448156514
+ours w/o vlm,covering,area_ratio,0.8851895246432862
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00038885580568294475
+ours w/o vlm,covering,area_ratio,0.8923965782841684
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0001447762140812159
+ours w/o vlm,covering,area_ratio,0.9622598022800415
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0026281332532044946
+ours w/o vlm,covering,area_ratio,0.8955390523654201
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00019259036274325026
+ours w/o vlm,covering,area_ratio,0.2760720737280315
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00733035843331364
+ours w/o vlm,covering,area_ratio,0.8832881904529534
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00010909341855188843
+ours w/o vlm,covering,area_ratio,0.898121601203462
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0002901985027099876
+ours w/o vlm,covering,area_ratio,0.29279061699933717
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0031592741301869594
+ours w/o vlm,covering,area_ratio,0.27183730384062993
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.002787737575503941
+ours w/o vlm,covering,area_ratio,0.896597180962779
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00022603498996735179
+ours w/o vlm,covering,area_ratio,0.5744480545654466
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.23764539131088075
+ours w/o vlm,covering,area_ratio,0.8939764640301835
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0004519421872457549
+ours w/o vlm,covering,area_ratio,0.8900636778156201
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00014357553205038276
+ours w/o vlm,covering,area_ratio,0.24025967868076284
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.003646000770483062
+ours w/o vlm,covering,area_ratio,0.42829387350248027
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0036258493280168307
+ours w/o vlm,covering,area_ratio,0.16474794094912767
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0013746883834088372
+ours w/o vlm,covering,area_ratio,0.893927631894421
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0016936930233462794
+ours w/o vlm,covering,area_ratio,0.8901126011773107
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00023226563049620434
+ours w/o vlm,covering,area_ratio,0.8844918447749593
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0002682959879676411
+ours w/o vlm,covering,area_ratio,0.8827255309895404
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00012315130165108828
+ours w/o vlm,covering,area_ratio,1.0487733604199685
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0033609793797618687
+ours w/o vlm,covering,area_ratio,0.08495362547732861
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00019016970353910923
+ours w/o vlm,covering,area_ratio,0.25494441960708125
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.007104205481936668
+ours w/o vlm,covering,area_ratio,1.6313058258627104
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.1555326562625624
+ours w/o vlm,covering,area_ratio,0.8928914208218317
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0002067076480455838
+ours w/o vlm,covering,area_ratio,0.9028664743809044
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00019730471525973022
+ours w/o vlm,covering,area_ratio,0.2609015378731023
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.006034817013225
+ours w/o vlm,covering,area_ratio,0.9085076765284213
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00023586382003535375
+ours w/o vlm,covering,area_ratio,0.8963442215816043
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0002838391181247776
+ours w/o vlm,covering,area_ratio,0.2573745667359801
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.006468749484871318
+ours w/o vlm,covering,area_ratio,0.2782454959782847
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.014089440982033564
+ours w/o vlm,covering,area_ratio,0.5927459917263774
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.04853530365181577
+ours w/o vlm,covering,area_ratio,0.8880119175744333
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0008699529749404825
+ours w/o vlm,covering,area_ratio,1.645484960892087
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.24506791773564068
+ours w/o vlm,covering,area_ratio,0.889940583974037
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0006074936398387639
+ours w/o vlm,covering,area_ratio,0.916842845060914
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.0005231648361043288
+ours w/o vlm,covering,area_ratio,0.8568692355114284
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.000678668482062062
+ours w/o vlm,covering,area_ratio,0.9779690540528871
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.004834310669284908
+ours w/o vlm,covering,area_ratio,0.966344285071969
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.001660684570440591
+ours w/o vlm,covering,area_ratio,0.90403751996596
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00011649530217015678
+ours w/o vlm,covering,area_ratio,0.8859255810046198
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.00010539292208068363
+ours w/o vlm,covering,area_ratio,0.8795222929004022
+ours w/o vlm,covering,variance_nearest_neighbor_distance,0.000214463956205133
+meta,flocking,spatial_variance,0.3079653298818136
+meta,flocking,mean_dtw_distance,799.8925290689576
+meta,flocking,spatial_variance,0.2876162527700601
+meta,flocking,mean_dtw_distance,767.6828932547188
+meta,flocking,spatial_variance,1.3086200456455752
+meta,flocking,mean_dtw_distance,1035.2998212677462
+meta,flocking,spatial_variance,0.28858403499239726
+meta,flocking,mean_dtw_distance,771.9669665777532
+meta,flocking,spatial_variance,0.16876549390747447
+meta,flocking,mean_dtw_distance,893.2217786207764
+meta,flocking,spatial_variance,8.80554185264738
+meta,flocking,mean_dtw_distance,4036.1236554213133
+meta,flocking,spatial_variance,0.28485037587360473
+meta,flocking,mean_dtw_distance,767.9692344537932
+meta,flocking,spatial_variance,0.27710609827534255
+meta,flocking,mean_dtw_distance,757.9497988231672
+meta,flocking,spatial_variance,0.3071210087238093
+meta,flocking,mean_dtw_distance,796.4881158302106
+meta,flocking,spatial_variance,0.33854666604305805
+meta,flocking,mean_dtw_distance,838.5051986642786
+meta,flocking,spatial_variance,0.11734763371485021
+meta,flocking,mean_dtw_distance,478.0762444717767
+meta,flocking,spatial_variance,0.29441324932790724
+meta,flocking,mean_dtw_distance,780.1400749960288
+meta,flocking,spatial_variance,0.2877955719333981
+meta,flocking,mean_dtw_distance,1152.7354914072612
+meta,flocking,spatial_variance,0.2695372608411605
+meta,flocking,mean_dtw_distance,749.6767776592649
+meta,flocking,spatial_variance,0.15539024144495228
+meta,flocking,mean_dtw_distance,522.9781391635523
+meta,flocking,spatial_variance,1.3865796968328754
+meta,flocking,mean_dtw_distance,1117.160581299703
+meta,flocking,spatial_variance,3.772834991471198
+meta,flocking,mean_dtw_distance,3453.803214786721
+meta,flocking,spatial_variance,0.07962944041983591
+meta,flocking,mean_dtw_distance,408.3483456014822
+meta,flocking,spatial_variance,0.2714826648899861
+meta,flocking,mean_dtw_distance,1114.1844838338334
+meta,flocking,spatial_variance,0.29271222456649126
+meta,flocking,mean_dtw_distance,721.2205299747063
+meta,flocking,spatial_variance,0.30812201917893445
+meta,flocking,mean_dtw_distance,799.690902964212
+meta,flocking,spatial_variance,0.31890693345586835
+meta,flocking,mean_dtw_distance,806.1616485603372
+meta,flocking,spatial_variance,0.2771918536409115
+meta,flocking,mean_dtw_distance,1131.455197682901
+meta,flocking,spatial_variance,0.24843109117601564
+meta,flocking,mean_dtw_distance,719.4518000376567
+meta,flocking,spatial_variance,0.2805009885995886
+meta,flocking,mean_dtw_distance,1141.0967852670715
+meta,flocking,spatial_variance,1.6362541634101908
+meta,flocking,mean_dtw_distance,2392.0242997863365
+meta,flocking,spatial_variance,0.19190836704087202
+meta,flocking,mean_dtw_distance,593.635740711208
+meta,flocking,spatial_variance,0.2915019210858847
+meta,flocking,mean_dtw_distance,779.9659501437809
+meta,flocking,spatial_variance,1.1579463929049023
+meta,flocking,mean_dtw_distance,636.2870195779886
+meta,flocking,spatial_variance,0.21885630061913214
+meta,flocking,mean_dtw_distance,684.7505953025737
+meta,flocking,spatial_variance,0.11430590109078291
+meta,flocking,mean_dtw_distance,762.994731729649
+meta,flocking,spatial_variance,0.247557970758597
+meta,flocking,mean_dtw_distance,1061.3442149888037
+meta,flocking,spatial_variance,0.07467345890523079
+meta,flocking,mean_dtw_distance,603.4622785147418
+meta,flocking,spatial_variance,1.6676978650448917
+meta,flocking,mean_dtw_distance,2653.4374484846544
+meta,flocking,spatial_variance,0.31751642769805477
+meta,flocking,mean_dtw_distance,220.29553850727365
+meta,flocking,spatial_variance,0.2963809707569981
+meta,flocking,mean_dtw_distance,785.548653527136
+meta,flocking,spatial_variance,0.3035801809581118
+meta,flocking,mean_dtw_distance,785.2759301236314
+meta,flocking,spatial_variance,5.88198990883518
+meta,flocking,mean_dtw_distance,3581.527752945432
+meta,flocking,spatial_variance,0.3245860527412314
+meta,flocking,mean_dtw_distance,1224.2486579172848
+meta,flocking,spatial_variance,0.25435719416150776
+meta,flocking,mean_dtw_distance,584.0583072369454
+meta,flocking,spatial_variance,0.07417294600390568
+meta,flocking,mean_dtw_distance,544.602013658027
+meta,flocking,spatial_variance,0.18630961586749842
+meta,flocking,mean_dtw_distance,559.9807176461759
+meta,flocking,spatial_variance,1.8857118400568038
+meta,flocking,mean_dtw_distance,2216.96154918646
+meta,flocking,spatial_variance,1.750123564615762
+meta,flocking,mean_dtw_distance,2679.6392758879306
+meta,flocking,spatial_variance,0.2561138354322992
+meta,flocking,mean_dtw_distance,728.6054715881395
+meta,flocking,spatial_variance,3.075823863830497
+meta,flocking,mean_dtw_distance,2390.4737275811303
+meta,flocking,spatial_variance,0.614815281266983
+meta,flocking,mean_dtw_distance,472.32275670226915
+meta,flocking,spatial_variance,0.21817970143948748
+meta,flocking,mean_dtw_distance,1001.5025517058214
+meta,flocking,spatial_variance,6.468572770900563
+meta,flocking,mean_dtw_distance,4080.2319723996343
+meta,flocking,spatial_variance,0.14527773136634842
+meta,flocking,mean_dtw_distance,539.5768320390498
+meta,flocking,spatial_variance,0.699879279142884
+meta,flocking,mean_dtw_distance,320.3142172536369
+meta,flocking,spatial_variance,0.12591917179306858
+meta,flocking,mean_dtw_distance,563.016085001945
+meta,flocking,spatial_variance,0.6656492427073277
+meta,flocking,mean_dtw_distance,1597.08807361974
+meta,flocking,spatial_variance,0.4958928869986094
+meta,flocking,mean_dtw_distance,928.0311138656576
+meta,flocking,spatial_variance,0.29763625417587514
+meta,flocking,mean_dtw_distance,786.1587866054675
+meta,flocking,spatial_variance,0.30222663814815964
+meta,flocking,mean_dtw_distance,787.576276183652
+meta,flocking,spatial_variance,0.8155379666960829
+meta,flocking,mean_dtw_distance,1596.8631054956275
+meta,flocking,spatial_variance,1.7228548466719877
+meta,flocking,mean_dtw_distance,1697.778277967643
+meta,flocking,spatial_variance,0.30084879376171236
+meta,flocking,mean_dtw_distance,656.7378707048819
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,1.0
+meta,crossing,target_achievement_ratio,1.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,1.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,1.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,1.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,1.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,1.0
+meta,crossing,target_achievement_ratio,1.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,1.0
+meta,crossing,target_achievement_ratio,0.8333333333333334
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.16666666666666666
+meta,crossing,target_achievement_ratio,1.0
+meta,crossing,target_achievement_ratio,0.6666666666666666
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,1.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,1.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,1.0
+meta,crossing,target_achievement_ratio,1.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,1.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,1.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,1.0
+meta,crossing,target_achievement_ratio,0.0
+meta,crossing,target_achievement_ratio,0.0
+meta,aggregation,max_min_distance,2.6088183632826176
+meta,aggregation,max_min_distance,2.929853416611552
+meta,aggregation,max_min_distance,0.7976711572757571
+meta,aggregation,max_min_distance,0.2339527551043929
+meta,aggregation,max_min_distance,0.19320376387038304
+meta,aggregation,max_min_distance,0.2228244889183558
+meta,aggregation,max_min_distance,0.009506264842258944
+meta,aggregation,max_min_distance,0.34379259882368185
+meta,aggregation,max_min_distance,0.3571140031162842
+meta,aggregation,max_min_distance,0.5701060664638116
+meta,aggregation,max_min_distance,3.547539789083365
+meta,aggregation,max_min_distance,0.4493654934492574
+meta,aggregation,max_min_distance,0.19430815614186137
+meta,aggregation,max_min_distance,1.791675939749362
+meta,aggregation,max_min_distance,0.197362849271883
+meta,aggregation,max_min_distance,0.28962412018304157
+meta,aggregation,max_min_distance,0.5120899692245611
+meta,aggregation,max_min_distance,1.995302668707769
+meta,aggregation,max_min_distance,0.12140114750702785
+meta,aggregation,max_min_distance,1.8482805781416187
+meta,aggregation,max_min_distance,3.054907647161114
+meta,aggregation,max_min_distance,0.21008581279495014
+meta,aggregation,max_min_distance,0.22560532367701913
+meta,aggregation,max_min_distance,0.2611876865644637
+meta,aggregation,max_min_distance,2.833852688141853
+meta,aggregation,max_min_distance,1.731770619610293
+meta,aggregation,max_min_distance,1.4538349759586608
+meta,aggregation,max_min_distance,0.25979006759372464
+meta,aggregation,max_min_distance,4.952790935322431
+meta,aggregation,max_min_distance,3.523869129690591
+meta,aggregation,max_min_distance,0.21136677710857574
+meta,aggregation,max_min_distance,1.7461787545269494
+meta,aggregation,max_min_distance,3.3374597944933284
+meta,aggregation,max_min_distance,2.637780142126106
+meta,aggregation,max_min_distance,0.19402573263769793
+meta,aggregation,max_min_distance,0.09476908022127106
+meta,aggregation,max_min_distance,0.2087037127916547
+meta,aggregation,max_min_distance,0.27753544903286936
+meta,aggregation,max_min_distance,1.39721549021859
+meta,aggregation,max_min_distance,2.5919014787919483
+meta,aggregation,max_min_distance,1.5383829662555024
+meta,aggregation,max_min_distance,4.751337292394508
+meta,aggregation,max_min_distance,0.27778457972266857
+meta,aggregation,max_min_distance,2.421960245006975
+meta,aggregation,max_min_distance,1.01891633240581
+meta,aggregation,max_min_distance,2.356068647477642
+meta,aggregation,max_min_distance,0.10275228228036654
+meta,aggregation,max_min_distance,0.2842974979507746
+meta,aggregation,max_min_distance,-0.003994873108546904
+meta,aggregation,max_min_distance,0.2424055666139748
+meta,aggregation,max_min_distance,0.229758915087406
+meta,aggregation,max_min_distance,0.2866151070464355
+meta,aggregation,max_min_distance,0.210896561072519
+meta,aggregation,max_min_distance,0.29702331135716475
+meta,aggregation,max_min_distance,0.21100411898222718
+meta,aggregation,max_min_distance,0.13122787961813576
+meta,aggregation,max_min_distance,0.2676575191967229
+meta,aggregation,max_min_distance,3.2273278300381163
+meta,shaping,procrustes_distance,0.05659583595956503
+meta,shaping,procrustes_distance,0.0003840919966693966
+meta,shaping,procrustes_distance,0.0010504347181061182
+meta,shaping,procrustes_distance,0.00030382122839851366
+meta,shaping,procrustes_distance,0.00018706648914883147
+meta,shaping,procrustes_distance,0.0022624697891721235
+meta,shaping,procrustes_distance,0.09491650321502555
+meta,shaping,procrustes_distance,0.00040665241946987504
+meta,shaping,procrustes_distance,0.3794643898485803
+meta,shaping,procrustes_distance,0.2707030423352485
+meta,shaping,procrustes_distance,0.00014528132131177093
+meta,shaping,procrustes_distance,0.00032303670330190143
+meta,shaping,procrustes_distance,0.49592868793506917
+meta,shaping,procrustes_distance,0.509274848441835
+meta,shaping,procrustes_distance,0.0002616323973133724
+meta,shaping,procrustes_distance,0.00031473516656285516
+meta,shaping,procrustes_distance,0.00010863307276391097
+meta,shaping,procrustes_distance,0.15330703460445566
+meta,shaping,procrustes_distance,0.6367719938843887
+meta,shaping,procrustes_distance,0.7526327763368368
+meta,shaping,procrustes_distance,0.48717075602519566
+meta,shaping,procrustes_distance,0.005146118741372336
+meta,shaping,procrustes_distance,0.00026478265387223644
+meta,shaping,procrustes_distance,0.001719549788992207
+meta,shaping,procrustes_distance,0.5441788057398448
+meta,shaping,procrustes_distance,0.8379304699255059
+meta,shaping,procrustes_distance,0.004437058177507669
+meta,shaping,procrustes_distance,0.0010292309461089164
+meta,shaping,procrustes_distance,0.7971421436599345
+meta,shaping,procrustes_distance,0.00011718510169116217
+meta,shaping,procrustes_distance,0.00017081756441139937
+meta,shaping,procrustes_distance,0.7460053466526785
+meta,shaping,procrustes_distance,0.0003165848052580718
+meta,shaping,procrustes_distance,0.006540576513722645
+meta,shaping,procrustes_distance,0.862172608516092
+meta,shaping,procrustes_distance,0.36814968292919087
+meta,shaping,procrustes_distance,0.0003583695277447971
+meta,shaping,procrustes_distance,0.6745620637556552
+meta,shaping,procrustes_distance,0.28529060392952044
+meta,shaping,procrustes_distance,0.0003998533924854231
+meta,shaping,procrustes_distance,0.00017243346531006624
+meta,shaping,procrustes_distance,0.0003848250590901671
+meta,shaping,procrustes_distance,0.6541404944175463
+meta,shaping,procrustes_distance,0.06761714184575442
+meta,shaping,procrustes_distance,0.6768167831893392
+meta,shaping,procrustes_distance,0.0012607885715451709
+meta,shaping,procrustes_distance,0.0007998467308380016
+meta,shaping,procrustes_distance,0.00013635446759773968
+meta,shaping,procrustes_distance,0.6998219926114306
+meta,shaping,procrustes_distance,0.686115423312668
+meta,shaping,procrustes_distance,0.011245615746731396
+meta,shaping,procrustes_distance,0.6749540268043419
+meta,shaping,procrustes_distance,0.7000922850966602
+meta,shaping,procrustes_distance,0.3763402023506877
+meta,shaping,procrustes_distance,0.004042052095061193
+meta,shaping,procrustes_distance,0.4868362348027556
+meta,shaping,procrustes_distance,0.7488323303858955
+meta,shaping,procrustes_distance,0.011032953437086344
+meta,shaping,procrustes_distance,0.0007993856930152426
+meta,shaping,procrustes_distance,0.7678301698496436
+meta,shaping,procrustes_distance,0.00016858655083882546
+meta,shaping,procrustes_distance,0.5889474617230799
+meta,shaping,procrustes_distance,0.4596897683823091
+meta,shaping,procrustes_distance,0.001243721402592783
+meta,shaping,procrustes_distance,0.851797680436732
+meta,shaping,procrustes_distance,0.48426339880867636
+meta,shaping,procrustes_distance,0.09880042862665839
+meta,shaping,procrustes_distance,0.7041851820533586
+meta,shaping,procrustes_distance,0.6240716648880913
+meta,shaping,procrustes_distance,0.6926964526875595
+meta,encircling,mean_distance_error,0.6565532516118717
+meta,encircling,mean_distance_error,1.224369836584155
+meta,encircling,mean_distance_error,0.9158070921127429
+meta,encircling,mean_distance_error,0.03690517103840415
+meta,encircling,mean_distance_error,0.8678701680279198
+meta,encircling,mean_distance_error,0.5826983280184973
+meta,encircling,mean_distance_error,1.1707866182330346
+meta,encircling,mean_distance_error,2.4604845439323353
+meta,encircling,mean_distance_error,0.0323618433055437
+meta,encircling,mean_distance_error,1.5048622145244763
+meta,encircling,mean_distance_error,0.14881550458138015
+meta,encircling,mean_distance_error,2.338737621654163
+meta,encircling,mean_distance_error,2.402897542444063
+meta,encircling,mean_distance_error,1.5151198429407158
+meta,encircling,mean_distance_error,1.057002253372214
+meta,encircling,mean_distance_error,0.7913023178213535
+meta,encircling,mean_distance_error,0.3439594491123774
+meta,encircling,mean_distance_error,1.512592523652825
+meta,encircling,mean_distance_error,2.0120097809941417
+meta,encircling,mean_distance_error,3.146979758420614
+meta,encircling,mean_distance_error,0.6976841038742686
+meta,encircling,mean_distance_error,0.123763939146617
+meta,encircling,mean_distance_error,0.6926026008158798
+meta,encircling,mean_distance_error,0.6961201784189646
+meta,encircling,mean_distance_error,0.021927364954943036
+meta,encircling,mean_distance_error,0.735462395828232
+meta,encircling,mean_distance_error,0.5031432829460416
+meta,encircling,mean_distance_error,1.2218492754740347
+meta,encircling,mean_distance_error,0.6895271507931149
+meta,encircling,mean_distance_error,0.3865380227210034
+meta,encircling,mean_distance_error,1.511852973682459
+meta,encircling,mean_distance_error,0.8938243480933696
+meta,encircling,mean_distance_error,0.6910053049593717
+meta,encircling,mean_distance_error,0.588705461090622
+meta,encircling,mean_distance_error,0.3895368357469607
+meta,encircling,mean_distance_error,0.507266503873332
+meta,encircling,mean_distance_error,1.5451664309856186
+meta,encircling,mean_distance_error,0.18103998444466418
+meta,encircling,mean_distance_error,1.039500188742815
+meta,encircling,mean_distance_error,0.4832767758923617
+meta,encircling,mean_distance_error,0.24440693518659296
+meta,encircling,mean_distance_error,0.05586694081508912
+meta,encircling,mean_distance_error,1.2018181228996985
+meta,encircling,mean_distance_error,0.06257914472029763
+meta,encircling,mean_distance_error,0.6570865777197211
+meta,encircling,mean_distance_error,1.23015322077905
+meta,encircling,mean_distance_error,0.45059231783114395
+meta,encircling,mean_distance_error,0.7134653232946673
+meta,encircling,mean_distance_error,0.37863909119044004
+meta,encircling,mean_distance_error,0.576830673194713
+meta,encircling,mean_distance_error,1.659145853957576
+meta,encircling,mean_distance_error,2.3147557130111687
+meta,encircling,mean_distance_error,0.18677838246793757
+meta,encircling,mean_distance_error,0.4041081266701143
+meta,encircling,mean_distance_error,1.1744919365872377
+meta,encircling,mean_distance_error,1.5594904624179182
+meta,encircling,mean_distance_error,2.1666743026409243
+meta,encircling,mean_distance_error,1.3403230906374646
+meta,encircling,mean_distance_error,0.019415455406869824
+meta,encircling,mean_distance_error,0.16435367944325305
+meta,encircling,mean_distance_error,0.7300030208127805
+meta,encircling,mean_distance_error,0.4995856244146328
+meta,encircling,mean_distance_error,2.2147542440590158
+meta,encircling,mean_distance_error,0.708846970504565
+meta,encircling,mean_distance_error,1.5596716619372435
+meta,encircling,mean_distance_error,0.0307498145714105
+meta,encircling,mean_distance_error,0.022227091332563675
+meta,encircling,mean_distance_error,0.5556691948463425
+meta,encircling,mean_distance_error,0.052361597225998
+meta,encircling,mean_distance_error,0.03465251790952919
+meta,covering,area_ratio,0.26595750226060355
+meta,covering,variance_nearest_neighbor_distance,0.00971891385231199
+meta,covering,area_ratio,1.4125878681510426
+meta,covering,variance_nearest_neighbor_distance,0.0012141111255886332
+meta,covering,area_ratio,0.13151722127108054
+meta,covering,variance_nearest_neighbor_distance,0.009656830288862016
+meta,covering,area_ratio,0.2602463878710727
+meta,covering,variance_nearest_neighbor_distance,0.014466207074788557
+meta,covering,area_ratio,0.5625941106700041
+meta,covering,variance_nearest_neighbor_distance,0.013486678147086024
+meta,covering,area_ratio,0.13333926764778284
+meta,covering,variance_nearest_neighbor_distance,0.0017735678499851762
+meta,covering,area_ratio,0.2730259695121046
+meta,covering,variance_nearest_neighbor_distance,0.004016037222951934
+meta,covering,area_ratio,0.2668707210766658
+meta,covering,variance_nearest_neighbor_distance,0.00296651228167129
+meta,covering,area_ratio,1.3910108019573644
+meta,covering,variance_nearest_neighbor_distance,0.006994601837120406
+meta,covering,area_ratio,1.1488788832910237
+meta,covering,variance_nearest_neighbor_distance,0.7812371159636464
+meta,covering,area_ratio,0.5215550325673786
+meta,covering,variance_nearest_neighbor_distance,0.08649182910751557
+meta,covering,area_ratio,0.8823187995861813
+meta,covering,variance_nearest_neighbor_distance,0.08580062101358085
+meta,covering,area_ratio,0.2324474838655721
+meta,covering,variance_nearest_neighbor_distance,0.00445371659636366
+meta,covering,area_ratio,0.2518152093211702
+meta,covering,variance_nearest_neighbor_distance,0.00921277131133679
+meta,covering,area_ratio,0.2836489014193912
+meta,covering,variance_nearest_neighbor_distance,0.0043355637736313115
+meta,covering,area_ratio,0.2567700186357738
+meta,covering,variance_nearest_neighbor_distance,0.005044608488626638
+meta,covering,area_ratio,0.11917052352171208
+meta,covering,variance_nearest_neighbor_distance,0.04024656317533443
+meta,covering,area_ratio,0.26534007134171456
+meta,covering,variance_nearest_neighbor_distance,0.015117784184294207
+meta,covering,area_ratio,0.818596316031789
+meta,covering,variance_nearest_neighbor_distance,0.1430224203704462
+meta,covering,area_ratio,0.8289576560470593
+meta,covering,variance_nearest_neighbor_distance,0.27372091644723506
+meta,covering,area_ratio,1.1548149327551644
+meta,covering,variance_nearest_neighbor_distance,0.004323659509408005
+meta,covering,area_ratio,0.3965181247152206
+meta,covering,variance_nearest_neighbor_distance,0.04351107848580892
+meta,covering,area_ratio,0.28653122897426697
+meta,covering,variance_nearest_neighbor_distance,0.003913842533473611
+meta,covering,area_ratio,0.6312689129413243
+meta,covering,variance_nearest_neighbor_distance,0.09000366167969223
+meta,covering,area_ratio,0.2621964912649543
+meta,covering,variance_nearest_neighbor_distance,0.0031390225995189015
+meta,covering,area_ratio,1.6169262010190097
+meta,covering,variance_nearest_neighbor_distance,0.09050281091239927
+meta,covering,area_ratio,0.23235648467209577
+meta,covering,variance_nearest_neighbor_distance,0.005203093124208652
+meta,covering,area_ratio,0.607306529424667
+meta,covering,variance_nearest_neighbor_distance,0.03287169334371982
+meta,covering,area_ratio,0.2604615616492023
+meta,covering,variance_nearest_neighbor_distance,0.002482640365626903
+meta,covering,area_ratio,0.27598290070625386
+meta,covering,variance_nearest_neighbor_distance,0.006243362176915802
+meta,covering,area_ratio,0.25341552079212
+meta,covering,variance_nearest_neighbor_distance,0.010663504609320315
+meta,covering,area_ratio,0.245392049740316
+meta,covering,variance_nearest_neighbor_distance,0.009889628907973768
+meta,covering,area_ratio,0.7736805966781536
+meta,covering,variance_nearest_neighbor_distance,0.1307455351216663
+meta,covering,area_ratio,0.10025536169586502
+meta,covering,variance_nearest_neighbor_distance,0.00024002047953312466
+meta,covering,area_ratio,0.25237122826936653
+meta,covering,variance_nearest_neighbor_distance,0.0028469220238695123
+meta,covering,area_ratio,0.6651162645351111
+meta,covering,variance_nearest_neighbor_distance,0.13643899267384874
+meta,covering,area_ratio,0.31735586564748985
+meta,covering,variance_nearest_neighbor_distance,0.1371692728890374
+meta,covering,area_ratio,0.068736842484685
+meta,covering,variance_nearest_neighbor_distance,0.012561909855690397
+meta,covering,area_ratio,0.0902112037103365
+meta,covering,variance_nearest_neighbor_distance,0.0019544504529540605
+meta,covering,area_ratio,0.8342256931843722
+meta,covering,variance_nearest_neighbor_distance,0.012475032439950224
+meta,covering,area_ratio,0.13357446736493597
+meta,covering,variance_nearest_neighbor_distance,0.00032011737005232773
+meta,covering,area_ratio,0.155258569910732
+meta,covering,variance_nearest_neighbor_distance,0.003043741273832116
+meta,covering,area_ratio,1.655501736383318
+meta,covering,variance_nearest_neighbor_distance,0.4764090370311178
+meta,covering,area_ratio,0.12593103680727735
+meta,covering,variance_nearest_neighbor_distance,0.005018332782222094
+meta,covering,area_ratio,0.8871265313335741
+meta,covering,variance_nearest_neighbor_distance,0.0016809556875511562
+meta,covering,area_ratio,0.27859110625176675
+meta,covering,variance_nearest_neighbor_distance,0.00564075912736922
+meta,covering,area_ratio,0.25491522011178386
+meta,covering,variance_nearest_neighbor_distance,0.0054787923210094696
+meta,covering,area_ratio,0.2324639408718567
+meta,covering,variance_nearest_neighbor_distance,0.004956393559584224
+meta,covering,area_ratio,1.057656468506649
+meta,covering,variance_nearest_neighbor_distance,0.043250769098926514
+meta,covering,area_ratio,0.2868576961693092
+meta,covering,variance_nearest_neighbor_distance,0.0033145754885880296
+meta,covering,area_ratio,0.10496734670109632
+meta,covering,variance_nearest_neighbor_distance,0.0032720458045642103
+meta,covering,area_ratio,0.5322914386481598
+meta,covering,variance_nearest_neighbor_distance,0.14778436405325115
+meta,covering,area_ratio,0.24965666566207487
+meta,covering,variance_nearest_neighbor_distance,0.01972801762738157
+meta,covering,area_ratio,0.8647324421868666
+meta,covering,variance_nearest_neighbor_distance,0.03275183811867641
+meta,covering,area_ratio,0.06250057214390958
+meta,covering,variance_nearest_neighbor_distance,0.003956957751380174
+meta,covering,area_ratio,0.25488302873896795
+meta,covering,variance_nearest_neighbor_distance,0.003582192795320339
+meta,covering,area_ratio,1.278228013453866
+meta,covering,variance_nearest_neighbor_distance,0.0033862789863483515
+meta,covering,area_ratio,1.0103629433636212
+meta,covering,variance_nearest_neighbor_distance,0.014158907831447201
+meta,covering,area_ratio,0.31755808131748103
+meta,covering,variance_nearest_neighbor_distance,0.03767348655169137
+meta,covering,area_ratio,0.08050529800737007
+meta,covering,variance_nearest_neighbor_distance,0.004122015510946604
+meta,covering,area_ratio,0.19749296925601412
+meta,covering,variance_nearest_neighbor_distance,0.012888938947411522
+meta,covering,area_ratio,0.26939287094608927
+meta,covering,variance_nearest_neighbor_distance,0.0035795995816881175
+meta,covering,area_ratio,1.6686655713255911
+meta,covering,variance_nearest_neighbor_distance,0.2849874107678223
+meta,covering,area_ratio,0.8826703271321971
+meta,covering,variance_nearest_neighbor_distance,0.03878563771285941
+meta,covering,area_ratio,0.2663168752043747
+meta,covering,variance_nearest_neighbor_distance,0.0036716965725302132
+meta,covering,area_ratio,0.13878122562935669
+meta,covering,variance_nearest_neighbor_distance,0.013086650337850147
+meta,covering,area_ratio,0.0519372771697863
+meta,covering,variance_nearest_neighbor_distance,0.006548759924191752
+meta,covering,area_ratio,0.8889509160934014
+meta,covering,variance_nearest_neighbor_distance,0.00011820777804239517
+meta,covering,area_ratio,1.0395154477347874
+meta,covering,variance_nearest_neighbor_distance,0.06838764607601833
+meta,covering,area_ratio,0.2747503695175908
+meta,covering,variance_nearest_neighbor_distance,0.009991310450919198
+llm2swarm,flocking,spatial_variance,0.3175415209010979
+llm2swarm,flocking,mean_dtw_distance,159.39877465362855
+llm2swarm,flocking,spatial_variance,0.4729182654884685
+llm2swarm,flocking,mean_dtw_distance,1243.4981204289707
+llm2swarm,flocking,spatial_variance,0.13171866190081263
+llm2swarm,flocking,mean_dtw_distance,792.2293754818584
+llm2swarm,flocking,spatial_variance,3.1993438007196735
+llm2swarm,flocking,mean_dtw_distance,3364.5054704195095
+llm2swarm,flocking,spatial_variance,3.106916735117087
+llm2swarm,flocking,mean_dtw_distance,3207.4782708213775
+llm2swarm,flocking,spatial_variance,0.29832079395204214
+llm2swarm,flocking,mean_dtw_distance,1167.5612890453494
+llm2swarm,flocking,spatial_variance,0.2875195972804737
+llm2swarm,flocking,mean_dtw_distance,154.55778870722563
+llm2swarm,flocking,spatial_variance,0.2920939614042726
+llm2swarm,flocking,mean_dtw_distance,155.28390732083196
+llm2swarm,flocking,spatial_variance,0.4863768455461456
+llm2swarm,flocking,mean_dtw_distance,1271.5202852589248
+llm2swarm,flocking,spatial_variance,0.26745243242087546
+llm2swarm,flocking,mean_dtw_distance,151.09614404752915
+llm2swarm,flocking,spatial_variance,1.2020350552062895
+llm2swarm,flocking,mean_dtw_distance,1673.010929965037
+llm2swarm,flocking,spatial_variance,0.1091184335535815
+llm2swarm,flocking,mean_dtw_distance,644.9981959699014
+llm2swarm,flocking,spatial_variance,0.3395557170625203
+llm2swarm,flocking,mean_dtw_distance,167.34420769374944
+llm2swarm,flocking,spatial_variance,2.1297439199399992
+llm2swarm,flocking,mean_dtw_distance,2538.749261580761
+llm2swarm,flocking,spatial_variance,0.2802971842144091
+llm2swarm,flocking,mean_dtw_distance,149.1692503387539
+llm2swarm,flocking,spatial_variance,0.2897316739737201
+llm2swarm,flocking,mean_dtw_distance,152.8637656059099
+llm2swarm,flocking,spatial_variance,0.21688466161283704
+llm2swarm,flocking,mean_dtw_distance,926.6176983594489
+llm2swarm,flocking,spatial_variance,0.3026638106219777
+llm2swarm,flocking,mean_dtw_distance,153.08373023330975
+llm2swarm,flocking,spatial_variance,4.2154844080034755
+llm2swarm,flocking,mean_dtw_distance,3808.3820063890353
+llm2swarm,flocking,spatial_variance,2.856501132171746
+llm2swarm,flocking,mean_dtw_distance,3110.412285163176
+llm2swarm,flocking,spatial_variance,3.198092747847654
+llm2swarm,flocking,mean_dtw_distance,3182.036366198649
+llm2swarm,flocking,spatial_variance,0.3274454648790309
+llm2swarm,flocking,mean_dtw_distance,163.88957504141536
+llm2swarm,flocking,spatial_variance,0.28632717903106464
+llm2swarm,flocking,mean_dtw_distance,154.37049741993027
+llm2swarm,flocking,spatial_variance,0.25706941706054753
+llm2swarm,flocking,mean_dtw_distance,144.27491018660803
+llm2swarm,flocking,spatial_variance,0.3035505905786585
+llm2swarm,flocking,mean_dtw_distance,154.00304943206334
+llm2swarm,flocking,spatial_variance,0.3155724386246162
+llm2swarm,flocking,mean_dtw_distance,159.1859916659496
+llm2swarm,flocking,spatial_variance,2.5797051320578728
+llm2swarm,flocking,mean_dtw_distance,2840.400512700698
+llm2swarm,flocking,spatial_variance,10.790132292014551
+llm2swarm,flocking,mean_dtw_distance,5923.577837039448
+llm2swarm,flocking,spatial_variance,0.32632675490620294
+llm2swarm,flocking,mean_dtw_distance,165.5564836865021
+llm2swarm,flocking,spatial_variance,7.237709667410692
+llm2swarm,flocking,mean_dtw_distance,4945.0687107525055
+llm2swarm,flocking,spatial_variance,2.942322803988535
+llm2swarm,flocking,mean_dtw_distance,2981.2850774624626
+llm2swarm,flocking,spatial_variance,4.199745395674935
+llm2swarm,flocking,mean_dtw_distance,3832.8438581214136
+llm2swarm,flocking,spatial_variance,0.3551353386158044
+llm2swarm,flocking,mean_dtw_distance,171.40470345891796
+llm2swarm,flocking,spatial_variance,0.296274704288938
+llm2swarm,flocking,mean_dtw_distance,154.1055457269261
+llm2swarm,flocking,spatial_variance,0.30651664306267945
+llm2swarm,flocking,mean_dtw_distance,1181.397616093382
+llm2swarm,flocking,spatial_variance,0.3091125235374833
+llm2swarm,flocking,mean_dtw_distance,159.2179896507209
+llm2swarm,flocking,spatial_variance,7.608063105159134
+llm2swarm,flocking,mean_dtw_distance,539.0466214303289
+llm2swarm,flocking,spatial_variance,0.29417565451517114
+llm2swarm,flocking,mean_dtw_distance,154.21472725865792
+llm2swarm,flocking,spatial_variance,0.7941258922025975
+llm2swarm,flocking,mean_dtw_distance,1471.8756465539773
+llm2swarm,flocking,spatial_variance,0.3339651247355645
+llm2swarm,flocking,mean_dtw_distance,1242.17154140188
+llm2swarm,flocking,spatial_variance,7.66249950299793
+llm2swarm,flocking,mean_dtw_distance,430.9298812242434
+llm2swarm,flocking,spatial_variance,2.6002051805695516
+llm2swarm,flocking,mean_dtw_distance,2903.06999569603
+llm2swarm,flocking,spatial_variance,0.2875162251890486
+llm2swarm,flocking,mean_dtw_distance,151.47100816368226
+llm2swarm,flocking,spatial_variance,0.3252877560491578
+llm2swarm,flocking,mean_dtw_distance,1220.8717368546677
+llm2swarm,flocking,spatial_variance,2.7942427466664883
+llm2swarm,flocking,mean_dtw_distance,2821.878186387865
+llm2swarm,flocking,spatial_variance,2.7632364792141715
+llm2swarm,flocking,mean_dtw_distance,2944.193278554939
+llm2swarm,flocking,spatial_variance,0.3020222187094582
+llm2swarm,flocking,mean_dtw_distance,160.42671856607302
+llm2swarm,flocking,spatial_variance,0.3360478999288605
+llm2swarm,flocking,mean_dtw_distance,161.02282286581726
+llm2swarm,flocking,spatial_variance,3.070099151041278
+llm2swarm,flocking,mean_dtw_distance,3278.9120362148446
+llm2swarm,flocking,spatial_variance,0.29857571356079904
+llm2swarm,flocking,mean_dtw_distance,1172.2582312798427
+llm2swarm,flocking,spatial_variance,0.24825343807323286
+llm2swarm,flocking,mean_dtw_distance,214.60354052959863
+llm2swarm,flocking,spatial_variance,0.2587318840629182
+llm2swarm,flocking,mean_dtw_distance,143.89536339251552
+llm2swarm,flocking,spatial_variance,7.039025510520941
+llm2swarm,flocking,mean_dtw_distance,4831.177075697446
+llm2swarm,flocking,spatial_variance,2.346518606983933
+llm2swarm,flocking,mean_dtw_distance,2775.2653835815518
+llm2swarm,flocking,spatial_variance,0.31098692985052034
+llm2swarm,flocking,mean_dtw_distance,161.18306901975194
+llm2swarm,flocking,spatial_variance,1.9418679706406736
+llm2swarm,flocking,mean_dtw_distance,2642.518820335322
+llm2swarm,flocking,spatial_variance,2.5796930413164647
+llm2swarm,flocking,mean_dtw_distance,2832.472755821528
+llm2swarm,flocking,spatial_variance,1.5350483936085104
+llm2swarm,flocking,mean_dtw_distance,2478.1772585537287
+llm2swarm,flocking,spatial_variance,0.31893387779194116
+llm2swarm,flocking,mean_dtw_distance,157.74385655200837
+llm2swarm,flocking,spatial_variance,0.2941720345660249
+llm2swarm,flocking,mean_dtw_distance,153.1253355846954
+llm2swarm,flocking,spatial_variance,0.321896906197619
+llm2swarm,flocking,mean_dtw_distance,160.97505611046157
+llm2swarm,flocking,spatial_variance,1.5589049873177907
+llm2swarm,flocking,mean_dtw_distance,2504.0136432582694
+llm2swarm,flocking,spatial_variance,0.3108137680622462
+llm2swarm,flocking,mean_dtw_distance,155.63692842661774
+llm2swarm,flocking,spatial_variance,0.24646039437479722
+llm2swarm,flocking,mean_dtw_distance,142.25268970291785
+llm2swarm,flocking,spatial_variance,0.2573689596500717
+llm2swarm,flocking,mean_dtw_distance,143.97817926846758
+llm2swarm,flocking,spatial_variance,0.29145014834764826
+llm2swarm,flocking,mean_dtw_distance,1046.3457352123307
+llm2swarm,flocking,spatial_variance,1.5639869300375366
+llm2swarm,flocking,mean_dtw_distance,2461.7303565158613
+llm2swarm,flocking,spatial_variance,2.5543502444033312
+llm2swarm,flocking,mean_dtw_distance,2827.4034021008665
+llm2swarm,flocking,spatial_variance,3.7019761853557576
+llm2swarm,flocking,mean_dtw_distance,3657.6248865171087
+llm2swarm,flocking,spatial_variance,0.11572752935394323
+llm2swarm,flocking,mean_dtw_distance,766.5231558924887
+llm2swarm,flocking,spatial_variance,0.31037502285438306
+llm2swarm,flocking,mean_dtw_distance,156.20528464190667
+llm2swarm,flocking,spatial_variance,0.3305135555301041
+llm2swarm,flocking,mean_dtw_distance,167.35894041617152
+llm2swarm,flocking,spatial_variance,2.820422258349337
+llm2swarm,flocking,mean_dtw_distance,2921.6491985076855
+llm2swarm,flocking,spatial_variance,1.1035432135306917
+llm2swarm,flocking,mean_dtw_distance,1613.4467036296141
+llm2swarm,flocking,spatial_variance,0.2813159289158981
+llm2swarm,flocking,mean_dtw_distance,152.50654018068187
+llm2swarm,flocking,spatial_variance,0.34046827960424664
+llm2swarm,flocking,mean_dtw_distance,164.59516341594426
+llm2swarm,flocking,spatial_variance,1.819167242698364
+llm2swarm,flocking,mean_dtw_distance,2672.154980398642
+llm2swarm,flocking,spatial_variance,0.8842347652556903
+llm2swarm,flocking,mean_dtw_distance,1628.6961369064834
+llm2swarm,flocking,spatial_variance,0.2774854799200597
+llm2swarm,flocking,mean_dtw_distance,153.27971115080072
+llm2swarm,flocking,spatial_variance,0.3076242468778334
+llm2swarm,flocking,mean_dtw_distance,1189.6853252995668
+llm2swarm,flocking,spatial_variance,0.30209084499795874
+llm2swarm,flocking,mean_dtw_distance,1167.286255541662
+llm2swarm,flocking,spatial_variance,0.29217857476516657
+llm2swarm,flocking,mean_dtw_distance,1049.074537981475
+llm2swarm,flocking,spatial_variance,0.28446316381331044
+llm2swarm,flocking,mean_dtw_distance,151.50067006613511
+llm2swarm,flocking,spatial_variance,0.5365258632656981
+llm2swarm,flocking,mean_dtw_distance,1533.985787392194
+llm2swarm,flocking,spatial_variance,4.002100799574018
+llm2swarm,flocking,mean_dtw_distance,3443.96281109845
+llm2swarm,flocking,spatial_variance,0.26907043156005017
+llm2swarm,flocking,mean_dtw_distance,146.9889129988019
+llm2swarm,flocking,spatial_variance,0.34876488824579743
+llm2swarm,flocking,mean_dtw_distance,167.84046236223793
+llm2swarm,flocking,spatial_variance,7.037645440752065
+llm2swarm,flocking,mean_dtw_distance,379.1933256017291
+llm2swarm,flocking,spatial_variance,0.32541141336849777
+llm2swarm,flocking,mean_dtw_distance,1105.2564455501317
+llm2swarm,flocking,spatial_variance,0.09238421764517954
+llm2swarm,flocking,mean_dtw_distance,713.1503263774678
+llm2swarm,flocking,spatial_variance,0.3233147220611539
+llm2swarm,flocking,mean_dtw_distance,159.17127739351267
+llm2swarm,flocking,spatial_variance,0.28664248699066414
+llm2swarm,flocking,mean_dtw_distance,151.53108175566848
+llm2swarm,flocking,spatial_variance,0.28358345984347005
+llm2swarm,flocking,mean_dtw_distance,150.86672518346654
+llm2swarm,flocking,spatial_variance,0.32585041595724035
+llm2swarm,flocking,mean_dtw_distance,1227.184118015266
+llm2swarm,flocking,spatial_variance,4.117966659333723
+llm2swarm,flocking,mean_dtw_distance,3434.293526139045
+llm2swarm,flocking,spatial_variance,0.32794952730564997
+llm2swarm,flocking,mean_dtw_distance,165.98845599561486
+llm2swarm,flocking,spatial_variance,0.3605852292369245
+llm2swarm,flocking,mean_dtw_distance,1281.5953675351157
+llm2swarm,flocking,spatial_variance,0.3044804702728483
+llm2swarm,flocking,mean_dtw_distance,159.08175954521633
+llm2swarm,flocking,spatial_variance,2.5880279852589974
+llm2swarm,flocking,mean_dtw_distance,2777.5967057403163
+llm2swarm,flocking,spatial_variance,8.967299860403418
+llm2swarm,flocking,mean_dtw_distance,517.3911367718538
+llm2swarm,flocking,spatial_variance,0.2685368506951725
+llm2swarm,flocking,mean_dtw_distance,1109.4167442909177
+llm2swarm,flocking,spatial_variance,0.3280306332205308
+llm2swarm,flocking,mean_dtw_distance,166.37023511625165
+llm2swarm,flocking,spatial_variance,0.2780542139992242
+llm2swarm,flocking,mean_dtw_distance,1130.2262747574869
+llm2swarm,flocking,spatial_variance,2.8233853649765965
+llm2swarm,flocking,mean_dtw_distance,2820.973643203985
+llm2swarm,flocking,spatial_variance,0.2263618923782617
+llm2swarm,flocking,mean_dtw_distance,952.793167178526
+llm2swarm,flocking,spatial_variance,0.3127943679244418
+llm2swarm,flocking,mean_dtw_distance,158.78333745543523
+llm2swarm,flocking,spatial_variance,0.2909417362725653
+llm2swarm,flocking,mean_dtw_distance,153.10771345581875
+llm2swarm,flocking,spatial_variance,0.13901459249052894
+llm2swarm,flocking,mean_dtw_distance,764.4795353746246
+llm2swarm,flocking,spatial_variance,8.466962623409184
+llm2swarm,flocking,mean_dtw_distance,427.01495448511304
+llm2swarm,flocking,spatial_variance,7.095274704274028
+llm2swarm,flocking,mean_dtw_distance,398.443665989616
+llm2swarm,flocking,spatial_variance,0.10718992767133823
+llm2swarm,flocking,mean_dtw_distance,720.2500761303936
+llm2swarm,flocking,spatial_variance,1.7300695772086527
+llm2swarm,flocking,mean_dtw_distance,2610.8608863715463
+llm2swarm,flocking,spatial_variance,0.3428989512057878
+llm2swarm,flocking,mean_dtw_distance,163.8888136062017
+llm2swarm,flocking,spatial_variance,0.21892543158398636
+llm2swarm,flocking,mean_dtw_distance,929.9326570522734
+llm2swarm,flocking,spatial_variance,0.2860026844837198
+llm2swarm,flocking,mean_dtw_distance,1141.1788560893879
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,1.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.16666666666666666
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,1.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,1.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,1.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,1.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,1.0
+llm2swarm,crossing,target_achievement_ratio,1.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,1.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,1.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,1.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.16666666666666666
+llm2swarm,crossing,target_achievement_ratio,1.0
+llm2swarm,crossing,target_achievement_ratio,1.0
+llm2swarm,crossing,target_achievement_ratio,1.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,1.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,1.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,1.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,1.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,1.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,1.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,1.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,1.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,crossing,target_achievement_ratio,0.0
+llm2swarm,aggregation,max_min_distance,1.6676187888908134
+llm2swarm,aggregation,max_min_distance,3.7507211447535673
+llm2swarm,aggregation,max_min_distance,3.1227605522096624
+llm2swarm,aggregation,max_min_distance,1.3925891023773669
+llm2swarm,aggregation,max_min_distance,0.7994228466091131
+llm2swarm,aggregation,max_min_distance,1.5697513664309213
+llm2swarm,aggregation,max_min_distance,1.719352754579656
+llm2swarm,aggregation,max_min_distance,2.671779504840652
+llm2swarm,aggregation,max_min_distance,2.156127745040364
+llm2swarm,aggregation,max_min_distance,1.6624559628300195
+llm2swarm,aggregation,max_min_distance,0.41199117000234126
+llm2swarm,aggregation,max_min_distance,1.9493977726928822
+llm2swarm,aggregation,max_min_distance,0.892216737947372
+llm2swarm,aggregation,max_min_distance,0.006461831728375611
+llm2swarm,aggregation,max_min_distance,0.8044966423636104
+llm2swarm,aggregation,max_min_distance,0.1893257064968144
+llm2swarm,aggregation,max_min_distance,4.805315617022842
+llm2swarm,aggregation,max_min_distance,2.3030522469897536
+llm2swarm,aggregation,max_min_distance,2.008914748808377
+llm2swarm,aggregation,max_min_distance,0.5592459414761395
+llm2swarm,aggregation,max_min_distance,2.7163073104483892
+llm2swarm,aggregation,max_min_distance,1.8151649087704824
+llm2swarm,aggregation,max_min_distance,0.5103178033331781
+llm2swarm,aggregation,max_min_distance,0.03409284916235811
+llm2swarm,aggregation,max_min_distance,1.2048344537387754
+llm2swarm,aggregation,max_min_distance,0.43014961087288556
+llm2swarm,aggregation,max_min_distance,1.5539902236453644
+llm2swarm,aggregation,max_min_distance,2.8146099633356356
+llm2swarm,aggregation,max_min_distance,0.496578267497005
+llm2swarm,aggregation,max_min_distance,0.032953113916258076
+llm2swarm,aggregation,max_min_distance,0.01374810315971517
+llm2swarm,aggregation,max_min_distance,1.5621904248233343
+llm2swarm,aggregation,max_min_distance,2.6995312801602016
+llm2swarm,aggregation,max_min_distance,3.018231065054649
+llm2swarm,aggregation,max_min_distance,0.8122296408994374
+llm2swarm,aggregation,max_min_distance,1.8437504977942079
+llm2swarm,aggregation,max_min_distance,2.4086903431915307
+llm2swarm,aggregation,max_min_distance,1.2838847726457405
+llm2swarm,aggregation,max_min_distance,2.21911028576194
+llm2swarm,aggregation,max_min_distance,1.4685729182577467
+llm2swarm,aggregation,max_min_distance,1.3827014797551795
+llm2swarm,aggregation,max_min_distance,0.4255865524447335
+llm2swarm,aggregation,max_min_distance,0.5353387768225437
+llm2swarm,aggregation,max_min_distance,2.2226380657152554
+llm2swarm,aggregation,max_min_distance,2.55661332163988
+llm2swarm,aggregation,max_min_distance,2.230939162260297
+llm2swarm,aggregation,max_min_distance,2.654304127241056
+llm2swarm,aggregation,max_min_distance,1.17830607118125
+llm2swarm,aggregation,max_min_distance,0.9862897686512389
+llm2swarm,aggregation,max_min_distance,0.4517821615559123
+llm2swarm,aggregation,max_min_distance,-0.0003704692342434701
+llm2swarm,aggregation,max_min_distance,0.3242235484851144
+llm2swarm,aggregation,max_min_distance,2.3987182170067802
+llm2swarm,aggregation,max_min_distance,1.5334501169019807
+llm2swarm,aggregation,max_min_distance,1.1676418652505918
+llm2swarm,aggregation,max_min_distance,1.3937332070922244
+llm2swarm,aggregation,max_min_distance,2.153093071802587
+llm2swarm,aggregation,max_min_distance,2.665132882620899
+llm2swarm,aggregation,max_min_distance,2.5081488222191726
+llm2swarm,aggregation,max_min_distance,2.8243146220981754
+llm2swarm,aggregation,max_min_distance,2.000855721447803
+llm2swarm,aggregation,max_min_distance,2.2825146227334896
+llm2swarm,aggregation,max_min_distance,1.253339634207569
+llm2swarm,aggregation,max_min_distance,3.4600740211301133
+llm2swarm,aggregation,max_min_distance,1.5997069160542323
+llm2swarm,aggregation,max_min_distance,1.941048625392127
+llm2swarm,aggregation,max_min_distance,2.53225737166392
+llm2swarm,aggregation,max_min_distance,3.82020940867174
+llm2swarm,aggregation,max_min_distance,1.6258222503319233
+llm2swarm,aggregation,max_min_distance,1.2155494714092925
+llm2swarm,aggregation,max_min_distance,2.459757843777298
+llm2swarm,aggregation,max_min_distance,0.37712473629394144
+llm2swarm,aggregation,max_min_distance,1.6336359211025204
+llm2swarm,aggregation,max_min_distance,3.013585052296356
+llm2swarm,aggregation,max_min_distance,0.23539709166104805
+llm2swarm,aggregation,max_min_distance,0.7049428929589561
+llm2swarm,aggregation,max_min_distance,0.8583500533389348
+llm2swarm,aggregation,max_min_distance,1.4107422694081893
+llm2swarm,aggregation,max_min_distance,2.508906852925841
+llm2swarm,aggregation,max_min_distance,0.012261426975420792
+llm2swarm,aggregation,max_min_distance,0.8490840080556494
+llm2swarm,aggregation,max_min_distance,1.1300287778518199
+llm2swarm,aggregation,max_min_distance,0.7474234079633679
+llm2swarm,aggregation,max_min_distance,2.4183082209971976
+llm2swarm,aggregation,max_min_distance,1.144407376078357
+llm2swarm,aggregation,max_min_distance,0.4368411450848941
+llm2swarm,aggregation,max_min_distance,2.642350352739296
+llm2swarm,aggregation,max_min_distance,0.95669463517877
+llm2swarm,aggregation,max_min_distance,3.3023086008085385
+llm2swarm,aggregation,max_min_distance,2.7285000745888652
+llm2swarm,aggregation,max_min_distance,2.7988344426917937
+llm2swarm,aggregation,max_min_distance,1.5395990870329301
+llm2swarm,aggregation,max_min_distance,2.0553046243784747
+llm2swarm,aggregation,max_min_distance,2.111888578045671
+llm2swarm,aggregation,max_min_distance,1.802698979900226
+llm2swarm,aggregation,max_min_distance,0.8121098002712366
+llm2swarm,aggregation,max_min_distance,0.4002659156417879
+llm2swarm,aggregation,max_min_distance,3.1601969514427246
+llm2swarm,aggregation,max_min_distance,0.8671934864704289
+llm2swarm,aggregation,max_min_distance,0.5807712110296304
+llm2swarm,aggregation,max_min_distance,0.9202965240534267
+llm2swarm,aggregation,max_min_distance,2.663460767198462
+llm2swarm,aggregation,max_min_distance,3.446518151164577
+llm2swarm,aggregation,max_min_distance,0.5980038742676244
+llm2swarm,aggregation,max_min_distance,1.3304249735070408
+llm2swarm,aggregation,max_min_distance,2.643379370749573
+llm2swarm,aggregation,max_min_distance,0.14214746847533655
+llm2swarm,aggregation,max_min_distance,1.7748915878800926
+llm2swarm,aggregation,max_min_distance,2.0539157278049527
+llm2swarm,aggregation,max_min_distance,0.3151623697644966
+llm2swarm,aggregation,max_min_distance,0.782872634064276
+llm2swarm,aggregation,max_min_distance,0.9957965491235659
+llm2swarm,aggregation,max_min_distance,1.3016224172183402
+llm2swarm,aggregation,max_min_distance,2.33980180027237
+llm2swarm,aggregation,max_min_distance,1.7230593356723536
+llm2swarm,aggregation,max_min_distance,4.998733262368662
+llm2swarm,aggregation,max_min_distance,1.4483429168588091
+llm2swarm,aggregation,max_min_distance,2.3105780203157438
+llm2swarm,aggregation,max_min_distance,2.092000798115166
+llm2swarm,aggregation,max_min_distance,2.520866754388262
+llm2swarm,shaping,procrustes_distance,0.00018725655950250906
+llm2swarm,shaping,procrustes_distance,2.731462957756337e-05
+llm2swarm,shaping,procrustes_distance,0.804208680242781
+llm2swarm,shaping,procrustes_distance,0.7985030609549029
+llm2swarm,shaping,procrustes_distance,0.00034505174936297816
+llm2swarm,shaping,procrustes_distance,0.4364014311803218
+llm2swarm,shaping,procrustes_distance,0.7896156502388955
+llm2swarm,shaping,procrustes_distance,0.00029098329867285655
+llm2swarm,shaping,procrustes_distance,0.00027095785030494755
+llm2swarm,shaping,procrustes_distance,0.5613997357816352
+llm2swarm,shaping,procrustes_distance,0.0012231201894141895
+llm2swarm,shaping,procrustes_distance,0.6662176038907102
+llm2swarm,shaping,procrustes_distance,0.0008261136692793337
+llm2swarm,shaping,procrustes_distance,0.6573066444364178
+llm2swarm,shaping,procrustes_distance,0.0036133267271948022
+llm2swarm,shaping,procrustes_distance,0.814626254061388
+llm2swarm,shaping,procrustes_distance,0.0008068700063306401
+llm2swarm,shaping,procrustes_distance,0.44960135944578045
+llm2swarm,shaping,procrustes_distance,0.0007592275111058667
+llm2swarm,shaping,procrustes_distance,0.7669207693400293
+llm2swarm,shaping,procrustes_distance,0.0005480977700537027
+llm2swarm,shaping,procrustes_distance,0.8537069231541436
+llm2swarm,shaping,procrustes_distance,0.7671885684357418
+llm2swarm,shaping,procrustes_distance,0.0025005785634547484
+llm2swarm,shaping,procrustes_distance,0.8301458798400821
+llm2swarm,shaping,procrustes_distance,0.7922125447992895
+llm2swarm,shaping,procrustes_distance,0.6187880956115359
+llm2swarm,shaping,procrustes_distance,0.7424617916412626
+llm2swarm,shaping,procrustes_distance,4.838270891867416e-05
+llm2swarm,shaping,procrustes_distance,0.4794714566721893
+llm2swarm,shaping,procrustes_distance,0.0003350641783381131
+llm2swarm,shaping,procrustes_distance,0.567296380371374
+llm2swarm,shaping,procrustes_distance,0.0008280573141821547
+llm2swarm,shaping,procrustes_distance,0.7881154791566799
+llm2swarm,shaping,procrustes_distance,0.0014035549224058954
+llm2swarm,shaping,procrustes_distance,0.0002431859260812663
+llm2swarm,shaping,procrustes_distance,0.0007681730608226032
+llm2swarm,shaping,procrustes_distance,0.0027554931562639323
+llm2swarm,shaping,procrustes_distance,0.8992770522431094
+llm2swarm,shaping,procrustes_distance,0.0004568555210158639
+llm2swarm,shaping,procrustes_distance,8.172244131720941e-05
+llm2swarm,shaping,procrustes_distance,0.0007370677244335047
+llm2swarm,shaping,procrustes_distance,0.0030036598603242863
+llm2swarm,shaping,procrustes_distance,0.4392353161433352
+llm2swarm,shaping,procrustes_distance,0.47810573525238653
+llm2swarm,shaping,procrustes_distance,0.9023700438650754
+llm2swarm,shaping,procrustes_distance,0.004351262900101379
+llm2swarm,shaping,procrustes_distance,8.512202412102682e-05
+llm2swarm,shaping,procrustes_distance,0.00013457355904545264
+llm2swarm,shaping,procrustes_distance,0.8859934284724493
+llm2swarm,shaping,procrustes_distance,0.0006114524161662982
+llm2swarm,shaping,procrustes_distance,0.000346730760183451
+llm2swarm,shaping,procrustes_distance,0.8329057370153914
+llm2swarm,shaping,procrustes_distance,0.6740105046070899
+llm2swarm,shaping,procrustes_distance,0.03564585513020513
+llm2swarm,shaping,procrustes_distance,0.006054681266281518
+llm2swarm,shaping,procrustes_distance,0.0005628761781515103
+llm2swarm,shaping,procrustes_distance,0.00048801068346843667
+llm2swarm,shaping,procrustes_distance,0.6457274046783277
+llm2swarm,shaping,procrustes_distance,0.060956959144879294
+llm2swarm,shaping,procrustes_distance,0.4163761899830731
+llm2swarm,shaping,procrustes_distance,0.7135782722857318
+llm2swarm,shaping,procrustes_distance,0.0006398620379842446
+llm2swarm,shaping,procrustes_distance,0.018542219705311412
+llm2swarm,shaping,procrustes_distance,0.0013501519075776632
+llm2swarm,shaping,procrustes_distance,0.24422475327800253
+llm2swarm,shaping,procrustes_distance,0.00015539052771741378
+llm2swarm,shaping,procrustes_distance,0.6742770798670963
+llm2swarm,shaping,procrustes_distance,0.00044565054532334
+llm2swarm,shaping,procrustes_distance,0.0007668042859790884
+llm2swarm,shaping,procrustes_distance,0.001045542302670374
+llm2swarm,shaping,procrustes_distance,0.0002046533493391538
+llm2swarm,shaping,procrustes_distance,0.0006260185994082017
+llm2swarm,shaping,procrustes_distance,0.0007355946327814032
+llm2swarm,shaping,procrustes_distance,0.00032995648376951605
+llm2swarm,shaping,procrustes_distance,0.4654651003298507
+llm2swarm,shaping,procrustes_distance,0.5309271869590088
+llm2swarm,shaping,procrustes_distance,0.0017559504765188227
+llm2swarm,shaping,procrustes_distance,0.00026425333376402466
+llm2swarm,shaping,procrustes_distance,0.7911689519291829
+llm2swarm,shaping,procrustes_distance,0.0007431492288462506
+llm2swarm,shaping,procrustes_distance,0.002949435955562382
+llm2swarm,shaping,procrustes_distance,0.9271332869605183
+llm2swarm,shaping,procrustes_distance,0.8703617494835567
+llm2swarm,shaping,procrustes_distance,0.2462144497937941
+llm2swarm,shaping,procrustes_distance,0.0004137182493400761
+llm2swarm,shaping,procrustes_distance,0.6081143772351236
+llm2swarm,shaping,procrustes_distance,0.4019329707372816
+llm2swarm,shaping,procrustes_distance,0.0029686677355169454
+llm2swarm,shaping,procrustes_distance,0.4408677625335285
+llm2swarm,shaping,procrustes_distance,0.32316013560643075
+llm2swarm,shaping,procrustes_distance,0.6755335847215318
+llm2swarm,shaping,procrustes_distance,0.56400293966409
+llm2swarm,shaping,procrustes_distance,0.6496465540141927
+llm2swarm,shaping,procrustes_distance,0.0008016020415503339
+llm2swarm,shaping,procrustes_distance,0.8343446481019826
+llm2swarm,shaping,procrustes_distance,0.5769556634445712
+llm2swarm,shaping,procrustes_distance,0.0007893432484162778
+llm2swarm,shaping,procrustes_distance,0.8333440761586299
+llm2swarm,shaping,procrustes_distance,0.34506826869195495
+llm2swarm,shaping,procrustes_distance,0.001995771544662006
+llm2swarm,shaping,procrustes_distance,0.6683654640638695
+llm2swarm,shaping,procrustes_distance,0.00046047454307529773
+llm2swarm,shaping,procrustes_distance,0.7733960142557944
+llm2swarm,shaping,procrustes_distance,0.0009180583391679253
+llm2swarm,shaping,procrustes_distance,0.0013051026513699983
+llm2swarm,shaping,procrustes_distance,0.7338825313649282
+llm2swarm,shaping,procrustes_distance,2.2820507065397684e-05
+llm2swarm,shaping,procrustes_distance,0.00024609589261976103
+llm2swarm,shaping,procrustes_distance,0.0001916846438046179
+llm2swarm,shaping,procrustes_distance,0.001257388437446388
+llm2swarm,shaping,procrustes_distance,0.23936574362204827
+llm2swarm,shaping,procrustes_distance,0.0002369840613386728
+llm2swarm,shaping,procrustes_distance,0.0001416916860178145
+llm2swarm,shaping,procrustes_distance,0.00021784651727320515
+llm2swarm,shaping,procrustes_distance,0.00032866457843916315
+llm2swarm,shaping,procrustes_distance,0.0020721582911507647
+llm2swarm,shaping,procrustes_distance,0.0004464056856201648
+llm2swarm,shaping,procrustes_distance,0.0004844604127317793
+llm2swarm,shaping,procrustes_distance,0.5537406477195452
+llm2swarm,encircling,mean_distance_error,0.00962256197833348
+llm2swarm,encircling,mean_distance_error,0.2196857393504957
+llm2swarm,encircling,mean_distance_error,1.920079018688415
+llm2swarm,encircling,mean_distance_error,0.12954703965981348
+llm2swarm,encircling,mean_distance_error,0.019150815210269918
+llm2swarm,encircling,mean_distance_error,1.7279919280053384
+llm2swarm,encircling,mean_distance_error,1.6470596248352525
+llm2swarm,encircling,mean_distance_error,0.04300271396002838
+llm2swarm,encircling,mean_distance_error,0.011710358961982451
+llm2swarm,encircling,mean_distance_error,0.06808288702492067
+llm2swarm,encircling,mean_distance_error,0.04597202088803665
+llm2swarm,encircling,mean_distance_error,0.017975694403850533
+llm2swarm,encircling,mean_distance_error,0.023882322963099684
+llm2swarm,encircling,mean_distance_error,1.810508463092533
+llm2swarm,encircling,mean_distance_error,1.4559995548232232
+llm2swarm,encircling,mean_distance_error,1.1169135810082595
+llm2swarm,encircling,mean_distance_error,0.013186165633286765
+llm2swarm,encircling,mean_distance_error,0.02257944565335457
+llm2swarm,encircling,mean_distance_error,0.006599201554595831
+llm2swarm,encircling,mean_distance_error,1.378639340857628
+llm2swarm,encircling,mean_distance_error,1.3954543539093853
+llm2swarm,encircling,mean_distance_error,0.020277252327743023
+llm2swarm,encircling,mean_distance_error,1.0961939574623334
+llm2swarm,encircling,mean_distance_error,1.5983591200520648
+llm2swarm,encircling,mean_distance_error,0.019606070079547695
+llm2swarm,encircling,mean_distance_error,1.7863719803519205
+llm2swarm,encircling,mean_distance_error,0.009109595993426867
+llm2swarm,encircling,mean_distance_error,0.04877026074497898
+llm2swarm,encircling,mean_distance_error,0.012757961349080138
+llm2swarm,encircling,mean_distance_error,0.01356008924730582
+llm2swarm,encircling,mean_distance_error,1.0448479042312537
+llm2swarm,encircling,mean_distance_error,0.016904489873816615
+llm2swarm,encircling,mean_distance_error,0.0262452708929554
+llm2swarm,encircling,mean_distance_error,0.018182011508307727
+llm2swarm,encircling,mean_distance_error,0.005522645001897845
+llm2swarm,encircling,mean_distance_error,0.021615775924976394
+llm2swarm,encircling,mean_distance_error,0.05072720376074136
+llm2swarm,encircling,mean_distance_error,0.025150349567520897
+llm2swarm,encircling,mean_distance_error,0.01813165995891473
+llm2swarm,encircling,mean_distance_error,1.4999041005022395
+llm2swarm,encircling,mean_distance_error,0.014904043751751953
+llm2swarm,encircling,mean_distance_error,0.01342499643480799
+llm2swarm,encircling,mean_distance_error,1.3763651493900522
+llm2swarm,encircling,mean_distance_error,0.14229650024303792
+llm2swarm,encircling,mean_distance_error,1.435958140417676
+llm2swarm,encircling,mean_distance_error,0.6785624581086535
+llm2swarm,encircling,mean_distance_error,1.3169916292445885
+llm2swarm,encircling,mean_distance_error,0.9488766997993482
+llm2swarm,encircling,mean_distance_error,0.019683732499169753
+llm2swarm,encircling,mean_distance_error,1.7273771914178282
+llm2swarm,encircling,mean_distance_error,0.01963854732486192
+llm2swarm,encircling,mean_distance_error,1.0594707374629622
+llm2swarm,encircling,mean_distance_error,0.023808393252479337
+llm2swarm,encircling,mean_distance_error,0.06801635731144502
+llm2swarm,encircling,mean_distance_error,1.195301452879556
+llm2swarm,encircling,mean_distance_error,2.3506974003660868
+llm2swarm,encircling,mean_distance_error,1.7715452259197584
+llm2swarm,encircling,mean_distance_error,0.13171839782136616
+llm2swarm,encircling,mean_distance_error,0.01355549155305961
+llm2swarm,encircling,mean_distance_error,1.2406661232141472
+llm2swarm,encircling,mean_distance_error,0.026395815262417743
+llm2swarm,encircling,mean_distance_error,1.889844820802045
+llm2swarm,encircling,mean_distance_error,0.015434323723003388
+llm2swarm,encircling,mean_distance_error,0.019997489134031154
+llm2swarm,encircling,mean_distance_error,0.032430041118964505
+llm2swarm,encircling,mean_distance_error,1.2391401783879097
+llm2swarm,encircling,mean_distance_error,1.6894059084037736
+llm2swarm,encircling,mean_distance_error,0.6283671897557982
+llm2swarm,encircling,mean_distance_error,0.02686153341322382
+llm2swarm,encircling,mean_distance_error,0.018156826803806703
+llm2swarm,encircling,mean_distance_error,0.023727544658432853
+llm2swarm,encircling,mean_distance_error,0.015801954172144323
+llm2swarm,encircling,mean_distance_error,1.3719565892426957
+llm2swarm,encircling,mean_distance_error,0.9891372858416179
+llm2swarm,encircling,mean_distance_error,1.0701353519350505
+llm2swarm,encircling,mean_distance_error,0.01730164076298618
+llm2swarm,encircling,mean_distance_error,1.8292847744641636
+llm2swarm,encircling,mean_distance_error,1.6007745353531433
+llm2swarm,encircling,mean_distance_error,1.3045018955899834
+llm2swarm,encircling,mean_distance_error,1.315329168423206
+llm2swarm,encircling,mean_distance_error,0.0103785313118957
+llm2swarm,encircling,mean_distance_error,1.4903150863344392
+llm2swarm,encircling,mean_distance_error,0.01703065381754861
+llm2swarm,encircling,mean_distance_error,1.0080090437803313
+llm2swarm,encircling,mean_distance_error,0.01635404995923127
+llm2swarm,encircling,mean_distance_error,1.2355270504936409
+llm2swarm,encircling,mean_distance_error,0.014019005507876917
+llm2swarm,encircling,mean_distance_error,0.7122744027035962
+llm2swarm,encircling,mean_distance_error,1.5990308917916183
+llm2swarm,encircling,mean_distance_error,0.01601815257568412
+llm2swarm,encircling,mean_distance_error,0.00625434106510897
+llm2swarm,encircling,mean_distance_error,0.02017433893246536
+llm2swarm,encircling,mean_distance_error,0.859028002270425
+llm2swarm,encircling,mean_distance_error,0.009573787334113515
+llm2swarm,encircling,mean_distance_error,0.044273834980224434
+llm2swarm,encircling,mean_distance_error,0.012542463418868055
+llm2swarm,encircling,mean_distance_error,0.015247406458208676
+llm2swarm,encircling,mean_distance_error,2.299841066666652
+llm2swarm,encircling,mean_distance_error,0.028743589803649622
+llm2swarm,encircling,mean_distance_error,0.020341208479722206
+llm2swarm,encircling,mean_distance_error,0.020872277046402227
+llm2swarm,encircling,mean_distance_error,0.024906440782683947
+llm2swarm,encircling,mean_distance_error,1.3602014380734975
+llm2swarm,encircling,mean_distance_error,0.00600403378350219
+llm2swarm,encircling,mean_distance_error,0.024075889960341452
+llm2swarm,encircling,mean_distance_error,0.021747254140856615
+llm2swarm,encircling,mean_distance_error,0.012035617775358961
+llm2swarm,encircling,mean_distance_error,0.8635003636966528
+llm2swarm,encircling,mean_distance_error,0.022810287078892155
+llm2swarm,encircling,mean_distance_error,1.6630784519328465
+llm2swarm,encircling,mean_distance_error,0.06246959783292433
+llm2swarm,encircling,mean_distance_error,0.004739894134661711
+llm2swarm,encircling,mean_distance_error,1.0750079352424482
+llm2swarm,encircling,mean_distance_error,0.016404900747941764
+llm2swarm,encircling,mean_distance_error,0.01769841371996711
+llm2swarm,encircling,mean_distance_error,1.530765675010479
+llm2swarm,encircling,mean_distance_error,1.4912571519331876
+llm2swarm,encircling,mean_distance_error,0.011827121516688058
+llm2swarm,encircling,mean_distance_error,1.2238744351139015
+llm2swarm,encircling,mean_distance_error,0.020310338187249904
+llm2swarm,covering,area_ratio,1.3442156919333472
+llm2swarm,covering,variance_nearest_neighbor_distance,0.001417572249866683
+llm2swarm,covering,area_ratio,1.3824974960377783
+llm2swarm,covering,variance_nearest_neighbor_distance,0.024508515542880804
+llm2swarm,covering,area_ratio,1.4123704813591922
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0016093261418732466
+llm2swarm,covering,area_ratio,0.2933153464449424
+llm2swarm,covering,variance_nearest_neighbor_distance,0.011586115380611162
+llm2swarm,covering,area_ratio,0.25503738787788655
+llm2swarm,covering,variance_nearest_neighbor_distance,0.004265950147444365
+llm2swarm,covering,area_ratio,0.8401778598854428
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0014503954991985353
+llm2swarm,covering,area_ratio,1.1772181656112766
+llm2swarm,covering,variance_nearest_neighbor_distance,0.07265339759726963
+llm2swarm,covering,area_ratio,0.2561928122320411
+llm2swarm,covering,variance_nearest_neighbor_distance,0.004672052123751162
+llm2swarm,covering,area_ratio,0.23200163540761584
+llm2swarm,covering,variance_nearest_neighbor_distance,0.007150564728626654
+llm2swarm,covering,area_ratio,0.27724336535717903
+llm2swarm,covering,variance_nearest_neighbor_distance,0.011756533998221666
+llm2swarm,covering,area_ratio,0.5403620327544584
+llm2swarm,covering,variance_nearest_neighbor_distance,0.05705285717429698
+llm2swarm,covering,area_ratio,0.4294816834409953
+llm2swarm,covering,variance_nearest_neighbor_distance,0.03300528031548251
+llm2swarm,covering,area_ratio,0.037702659481334076
+llm2swarm,covering,variance_nearest_neighbor_distance,0.00020528569922783322
+llm2swarm,covering,area_ratio,1.3734774128755318
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0003089581631582095
+llm2swarm,covering,area_ratio,0.2779781307003611
+llm2swarm,covering,variance_nearest_neighbor_distance,0.001027678743121538
+llm2swarm,covering,area_ratio,0.3723098907492199
+llm2swarm,covering,variance_nearest_neighbor_distance,0.032172778234681204
+llm2swarm,covering,area_ratio,0.26474621049446406
+llm2swarm,covering,variance_nearest_neighbor_distance,0.006923603241657918
+llm2swarm,covering,area_ratio,1.3715577382201138
+llm2swarm,covering,variance_nearest_neighbor_distance,0.00844568315172101
+llm2swarm,covering,area_ratio,0.24261607247315647
+llm2swarm,covering,variance_nearest_neighbor_distance,0.008921904806848752
+llm2swarm,covering,area_ratio,0.929318534371774
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0007918804768040958
+llm2swarm,covering,area_ratio,0.19059646170301014
+llm2swarm,covering,variance_nearest_neighbor_distance,0.005730801947234551
+llm2swarm,covering,area_ratio,0.8729095543121699
+llm2swarm,covering,variance_nearest_neighbor_distance,0.03193137217378756
+llm2swarm,covering,area_ratio,0.2736249702248802
+llm2swarm,covering,variance_nearest_neighbor_distance,0.007299545419740452
+llm2swarm,covering,area_ratio,1.353423086130407
+llm2swarm,covering,variance_nearest_neighbor_distance,0.051688957273290106
+llm2swarm,covering,area_ratio,0.280970555060383
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0028120132547115755
+llm2swarm,covering,area_ratio,0.33994430470957826
+llm2swarm,covering,variance_nearest_neighbor_distance,0.03551338644626512
+llm2swarm,covering,area_ratio,0.14992569289662253
+llm2swarm,covering,variance_nearest_neighbor_distance,0.006930861106012271
+llm2swarm,covering,area_ratio,0.3409029502872368
+llm2swarm,covering,variance_nearest_neighbor_distance,0.040203209770396826
+llm2swarm,covering,area_ratio,0.4622238559486602
+llm2swarm,covering,variance_nearest_neighbor_distance,0.02904366062836761
+llm2swarm,covering,area_ratio,0.9341286631675079
+llm2swarm,covering,variance_nearest_neighbor_distance,0.05317866986506857
+llm2swarm,covering,area_ratio,0.2663573218218575
+llm2swarm,covering,variance_nearest_neighbor_distance,0.010270287165819684
+llm2swarm,covering,area_ratio,0.25607992489905834
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0068096080121907085
+llm2swarm,covering,area_ratio,0.23118298906929666
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0071213920729903644
+llm2swarm,covering,area_ratio,0.9069615523538662
+llm2swarm,covering,variance_nearest_neighbor_distance,0.000814981303388425
+llm2swarm,covering,area_ratio,0.2604910933760089
+llm2swarm,covering,variance_nearest_neighbor_distance,0.004228923974219954
+llm2swarm,covering,area_ratio,0.27354279229570166
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0046878558145895385
+llm2swarm,covering,area_ratio,0.8495229199223145
+llm2swarm,covering,variance_nearest_neighbor_distance,0.08905174771791091
+llm2swarm,covering,area_ratio,1.3571778497179197
+llm2swarm,covering,variance_nearest_neighbor_distance,0.018922181456145045
+llm2swarm,covering,area_ratio,0.3052859469452675
+llm2swarm,covering,variance_nearest_neighbor_distance,0.02000332681873425
+llm2swarm,covering,area_ratio,0.26223198272634507
+llm2swarm,covering,variance_nearest_neighbor_distance,0.004623694483454165
+llm2swarm,covering,area_ratio,0.27206282152989925
+llm2swarm,covering,variance_nearest_neighbor_distance,0.005165642039661968
+llm2swarm,covering,area_ratio,0.2415464817964958
+llm2swarm,covering,variance_nearest_neighbor_distance,0.032595574779655
+llm2swarm,covering,area_ratio,0.19750055425746516
+llm2swarm,covering,variance_nearest_neighbor_distance,0.007780937879969877
+llm2swarm,covering,area_ratio,0.26194521172025825
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0026547544293031855
+llm2swarm,covering,area_ratio,0.6054054421530572
+llm2swarm,covering,variance_nearest_neighbor_distance,0.16020130918004455
+llm2swarm,covering,area_ratio,1.3911478382769393
+llm2swarm,covering,variance_nearest_neighbor_distance,0.002190138800911905
+llm2swarm,covering,area_ratio,0.35537151473271383
+llm2swarm,covering,variance_nearest_neighbor_distance,0.025259102073688887
+llm2swarm,covering,area_ratio,1.3810264785043842
+llm2swarm,covering,variance_nearest_neighbor_distance,0.01755199689239403
+llm2swarm,covering,area_ratio,0.9039201379090244
+llm2swarm,covering,variance_nearest_neighbor_distance,0.026340777790242624
+llm2swarm,covering,area_ratio,1.3615798096935663
+llm2swarm,covering,variance_nearest_neighbor_distance,0.1565640491700449
+llm2swarm,covering,area_ratio,0.27361709935376227
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0014593342102340884
+llm2swarm,covering,area_ratio,0.2445316692678702
+llm2swarm,covering,variance_nearest_neighbor_distance,0.00531075402721679
+llm2swarm,covering,area_ratio,0.9073678187356484
+llm2swarm,covering,variance_nearest_neighbor_distance,0.052521224708590795
+llm2swarm,covering,area_ratio,0.2671699579734191
+llm2swarm,covering,variance_nearest_neighbor_distance,0.004499479687051673
+llm2swarm,covering,area_ratio,0.3108119042198908
+llm2swarm,covering,variance_nearest_neighbor_distance,0.003075945073441221
+llm2swarm,covering,area_ratio,0.9229255729737272
+llm2swarm,covering,variance_nearest_neighbor_distance,0.06994601506576842
+llm2swarm,covering,area_ratio,0.25577355238050764
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0031896366804931367
+llm2swarm,covering,area_ratio,0.2656850350138628
+llm2swarm,covering,variance_nearest_neighbor_distance,0.006127102601105397
+llm2swarm,covering,area_ratio,0.907305763578315
+llm2swarm,covering,variance_nearest_neighbor_distance,0.07670739565852785
+llm2swarm,covering,area_ratio,0.07741007410583582
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0006461443149459599
+llm2swarm,covering,area_ratio,1.1220911004908547
+llm2swarm,covering,variance_nearest_neighbor_distance,0.01264817247368897
+llm2swarm,covering,area_ratio,0.2349858604579746
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0024807131640007824
+llm2swarm,covering,area_ratio,0.9158496810141881
+llm2swarm,covering,variance_nearest_neighbor_distance,0.06239820244997308
+llm2swarm,covering,area_ratio,0.25481939764072675
+llm2swarm,covering,variance_nearest_neighbor_distance,0.004421779752503751
+llm2swarm,covering,area_ratio,1.3541387504962183
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0010812477159407364
+llm2swarm,covering,area_ratio,0.25646570680586406
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0021582458195545996
+llm2swarm,covering,area_ratio,0.25254464211608757
+llm2swarm,covering,variance_nearest_neighbor_distance,0.004481533487272326
+llm2swarm,covering,area_ratio,0.8849548691150185
+llm2swarm,covering,variance_nearest_neighbor_distance,0.07112172975557485
+llm2swarm,covering,area_ratio,0.25587728668870346
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0021162059177355485
+llm2swarm,covering,area_ratio,0.5238535910046016
+llm2swarm,covering,variance_nearest_neighbor_distance,0.03536313884078508
+llm2swarm,covering,area_ratio,0.256561496523644
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0023159328085662883
+llm2swarm,covering,area_ratio,0.9187604246682434
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0010834239725052105
+llm2swarm,covering,area_ratio,0.2615089677964377
+llm2swarm,covering,variance_nearest_neighbor_distance,0.005554785142626603
+llm2swarm,covering,area_ratio,0.3186189751136
+llm2swarm,covering,variance_nearest_neighbor_distance,0.03292643881641018
+llm2swarm,covering,area_ratio,0.459385778561659
+llm2swarm,covering,variance_nearest_neighbor_distance,0.03230889839897036
+llm2swarm,covering,area_ratio,0.24973138351793694
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0009034006613055368
+llm2swarm,covering,area_ratio,0.22948607163123114
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0034253070875844083
+llm2swarm,covering,area_ratio,0.3263211574230426
+llm2swarm,covering,variance_nearest_neighbor_distance,0.004938169550095517
+llm2swarm,covering,area_ratio,0.6169600377990423
+llm2swarm,covering,variance_nearest_neighbor_distance,0.19223852032651945
+llm2swarm,covering,area_ratio,0.03495179602085781
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0002344599621667579
+llm2swarm,covering,area_ratio,0.5297736377541526
+llm2swarm,covering,variance_nearest_neighbor_distance,0.4433149800566842
+llm2swarm,covering,area_ratio,0.24998620049344528
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0037052027796928046
+llm2swarm,covering,area_ratio,0.9057011040187075
+llm2swarm,covering,variance_nearest_neighbor_distance,0.061724565144743046
+llm2swarm,covering,area_ratio,0.9133779011253871
+llm2swarm,covering,variance_nearest_neighbor_distance,0.025705078070989085
+llm2swarm,covering,area_ratio,0.25903726409872446
+llm2swarm,covering,variance_nearest_neighbor_distance,0.008262354147494703
+llm2swarm,covering,area_ratio,0.03284423868084632
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0005767163177883561
+llm2swarm,covering,area_ratio,0.2523882389070608
+llm2swarm,covering,variance_nearest_neighbor_distance,0.005725427165837278
+llm2swarm,covering,area_ratio,1.3042523933625088
+llm2swarm,covering,variance_nearest_neighbor_distance,0.07256895166400201
+llm2swarm,covering,area_ratio,0.19809057583025008
+llm2swarm,covering,variance_nearest_neighbor_distance,0.004257726418877492
+llm2swarm,covering,area_ratio,1.345855924330874
+llm2swarm,covering,variance_nearest_neighbor_distance,0.06116717339029733
+llm2swarm,covering,area_ratio,1.3497153307935494
+llm2swarm,covering,variance_nearest_neighbor_distance,0.035177519645870285
+llm2swarm,covering,area_ratio,0.24494363633986105
+llm2swarm,covering,variance_nearest_neighbor_distance,0.002516308290732265
+llm2swarm,covering,area_ratio,1.3966866002438543
+llm2swarm,covering,variance_nearest_neighbor_distance,0.057145962151631736
+llm2swarm,covering,area_ratio,0.3145561581867613
+llm2swarm,covering,variance_nearest_neighbor_distance,0.005899250016346441
+llm2swarm,covering,area_ratio,0.28706917356808676
+llm2swarm,covering,variance_nearest_neighbor_distance,0.02128973913620843
+llm2swarm,covering,area_ratio,0.9106978717716822
+llm2swarm,covering,variance_nearest_neighbor_distance,0.08806598919631906
+llm2swarm,covering,area_ratio,0.251724879709061
+llm2swarm,covering,variance_nearest_neighbor_distance,0.01743461079987988
+llm2swarm,covering,area_ratio,0.2768539610925422
+llm2swarm,covering,variance_nearest_neighbor_distance,0.004614614273726603
+llm2swarm,covering,area_ratio,0.264673516580742
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0054793464107887845
+llm2swarm,covering,area_ratio,1.2453233904101677
+llm2swarm,covering,variance_nearest_neighbor_distance,0.02548922008926064
+llm2swarm,covering,area_ratio,0.2647298799030864
+llm2swarm,covering,variance_nearest_neighbor_distance,0.003175245046453231
+llm2swarm,covering,area_ratio,1.351983113016542
+llm2swarm,covering,variance_nearest_neighbor_distance,0.00015588837580762902
+llm2swarm,covering,area_ratio,1.4046695034078747
+llm2swarm,covering,variance_nearest_neighbor_distance,0.03882586071289667
+llm2swarm,covering,area_ratio,0.6153450222339327
+llm2swarm,covering,variance_nearest_neighbor_distance,0.07406596418496196
+llm2swarm,covering,area_ratio,0.8943003762535688
+llm2swarm,covering,variance_nearest_neighbor_distance,0.06531527136735754
+llm2swarm,covering,area_ratio,0.11372494397763494
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0006067477452311553
+llm2swarm,covering,area_ratio,1.360920707552572
+llm2swarm,covering,variance_nearest_neighbor_distance,0.03270141233942949
+llm2swarm,covering,area_ratio,0.2960418097862732
+llm2swarm,covering,variance_nearest_neighbor_distance,0.03290603079738763
+llm2swarm,covering,area_ratio,1.3689234826455214
+llm2swarm,covering,variance_nearest_neighbor_distance,0.006172327130863142
+llm2swarm,covering,area_ratio,0.2477662802703289
+llm2swarm,covering,variance_nearest_neighbor_distance,0.006269619947593123
+llm2swarm,covering,area_ratio,0.2854361797446141
+llm2swarm,covering,variance_nearest_neighbor_distance,0.005237002218694857
+llm2swarm,covering,area_ratio,0.2840550466874355
+llm2swarm,covering,variance_nearest_neighbor_distance,0.013130372472831827
+llm2swarm,covering,area_ratio,0.2518703136525966
+llm2swarm,covering,variance_nearest_neighbor_distance,0.003530173541411951
+llm2swarm,covering,area_ratio,0.8993605161177145
+llm2swarm,covering,variance_nearest_neighbor_distance,0.05785702436455452
+llm2swarm,covering,area_ratio,0.8607908564919498
+llm2swarm,covering,variance_nearest_neighbor_distance,0.24193453797869183
+llm2swarm,covering,area_ratio,0.24537855241855386
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0012476791470085987
+llm2swarm,covering,area_ratio,0.263072656606233
+llm2swarm,covering,variance_nearest_neighbor_distance,0.005657093468348553
+llm2swarm,covering,area_ratio,1.3408458743925484
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0008222455587096823
+llm2swarm,covering,area_ratio,0.31988266492292844
+llm2swarm,covering,variance_nearest_neighbor_distance,0.04051296129843868
+llm2swarm,covering,area_ratio,0.029227758889868567
+llm2swarm,covering,variance_nearest_neighbor_distance,0.0004046407954586686
+cap,flocking,spatial_variance,0.11229250129885676
+cap,flocking,mean_dtw_distance,422.00560974152717
+cap,flocking,spatial_variance,6.699688598254575
+cap,flocking,mean_dtw_distance,2597.344750731251
+cap,flocking,spatial_variance,0.35828298568062134
+cap,flocking,mean_dtw_distance,857.2884834104823
+cap,flocking,spatial_variance,0.25518752555267166
+cap,flocking,mean_dtw_distance,201.6222585007868
+cap,flocking,spatial_variance,0.23649501642362447
+cap,flocking,mean_dtw_distance,526.5140121822526
+cap,flocking,spatial_variance,0.25453707822651367
+cap,flocking,mean_dtw_distance,547.8294678609443
+cap,flocking,spatial_variance,0.08296785082946176
+cap,flocking,mean_dtw_distance,398.10648072488584
+cap,flocking,spatial_variance,1.7914372285119085
+cap,flocking,mean_dtw_distance,2664.797957686493
+cap,flocking,spatial_variance,0.25886989759629037
+cap,flocking,mean_dtw_distance,729.109617858984
+cap,flocking,spatial_variance,8.722973077583191
+cap,flocking,mean_dtw_distance,2731.576905240588
+cap,flocking,spatial_variance,0.2735230021264805
+cap,flocking,mean_dtw_distance,753.9560250311049
+cap,flocking,spatial_variance,0.27985391657459674
+cap,flocking,mean_dtw_distance,576.0265781078056
+cap,flocking,spatial_variance,0.4858673105966829
+cap,flocking,mean_dtw_distance,701.393301541697
+cap,flocking,spatial_variance,0.357395271337541
+cap,flocking,mean_dtw_distance,208.06206966328384
+cap,flocking,spatial_variance,0.09419276999009396
+cap,flocking,mean_dtw_distance,471.45560820170243
+cap,flocking,spatial_variance,0.13356471380106708
+cap,flocking,mean_dtw_distance,385.8228246655777
+cap,flocking,spatial_variance,11.732202766366186
+cap,flocking,mean_dtw_distance,5451.9069374416795
+cap,flocking,spatial_variance,0.1892245973548551
+cap,flocking,mean_dtw_distance,535.1862884054573
+cap,flocking,spatial_variance,0.20790017257330234
+cap,flocking,mean_dtw_distance,390.57857411527056
+cap,flocking,spatial_variance,0.42116343978098175
+cap,flocking,mean_dtw_distance,192.19501408554063
+cap,flocking,spatial_variance,0.4037162201860675
+cap,flocking,mean_dtw_distance,223.86119118568504
+cap,flocking,spatial_variance,0.43699607394668355
+cap,flocking,mean_dtw_distance,660.830451562276
+cap,flocking,spatial_variance,0.36489758517072574
+cap,flocking,mean_dtw_distance,1274.4830868656404
+cap,flocking,spatial_variance,0.08648749804099509
+cap,flocking,mean_dtw_distance,557.8510679263892
+cap,flocking,spatial_variance,0.06636653358102362
+cap,flocking,mean_dtw_distance,393.33359135233485
+cap,flocking,spatial_variance,12.21454315925206
+cap,flocking,mean_dtw_distance,6219.842862837465
+cap,flocking,spatial_variance,0.8287218923846125
+cap,flocking,mean_dtw_distance,1212.5011424438264
+cap,flocking,spatial_variance,4.375704237176491
+cap,flocking,mean_dtw_distance,2500.634829892682
+cap,flocking,spatial_variance,1.812702615575572
+cap,flocking,mean_dtw_distance,1480.4466774167904
+cap,flocking,spatial_variance,2.3992786872208116
+cap,flocking,mean_dtw_distance,2525.562304440572
+cap,flocking,spatial_variance,0.13225363970033716
+cap,flocking,mean_dtw_distance,420.3472162370471
+cap,flocking,spatial_variance,0.13840833874598485
+cap,flocking,mean_dtw_distance,430.1766202149626
+cap,flocking,spatial_variance,0.6253540587096895
+cap,flocking,mean_dtw_distance,562.7508271734077
+cap,flocking,spatial_variance,0.16539776533704706
+cap,flocking,mean_dtw_distance,529.8726695783841
+cap,flocking,spatial_variance,0.34688635309583427
+cap,flocking,mean_dtw_distance,847.9933851264126
+cap,flocking,spatial_variance,0.19641530358843692
+cap,flocking,mean_dtw_distance,576.6569102425763
+cap,flocking,spatial_variance,0.08678957996360093
+cap,flocking,mean_dtw_distance,454.1677637037996
+cap,flocking,spatial_variance,4.40522620344181
+cap,flocking,mean_dtw_distance,3413.379156162954
+cap,flocking,spatial_variance,2.8196510491603908
+cap,flocking,mean_dtw_distance,3226.5616687136994
+cap,flocking,spatial_variance,0.21379673598329024
+cap,flocking,mean_dtw_distance,614.9597153970515
+cap,flocking,spatial_variance,0.30440666452691345
+cap,flocking,mean_dtw_distance,792.5516032084419
+cap,flocking,spatial_variance,1.4295397852421468
+cap,flocking,mean_dtw_distance,225.93266309902927
+cap,flocking,spatial_variance,0.8523986160900185
+cap,flocking,mean_dtw_distance,1179.785172129377
+cap,flocking,spatial_variance,0.1341678221599896
+cap,flocking,mean_dtw_distance,503.85589515117726
+cap,flocking,spatial_variance,0.307436372034169
+cap,flocking,mean_dtw_distance,794.3744152421714
+cap,flocking,spatial_variance,0.39863487328255187
+cap,flocking,mean_dtw_distance,691.6987369593691
+cap,flocking,spatial_variance,0.29236767814526693
+cap,flocking,mean_dtw_distance,1168.512680676758
+cap,flocking,spatial_variance,12.008975685517974
+cap,flocking,mean_dtw_distance,6116.267334099802
+cap,flocking,spatial_variance,7.627272162849537
+cap,flocking,mean_dtw_distance,3892.652766172848
+cap,flocking,spatial_variance,0.30861636978097823
+cap,flocking,mean_dtw_distance,794.6626338573745
+cap,flocking,spatial_variance,0.22333019570819385
+cap,flocking,mean_dtw_distance,714.4177171450347
+cap,flocking,spatial_variance,0.1740322241822697
+cap,flocking,mean_dtw_distance,488.4310342483801
+cap,flocking,spatial_variance,0.19411625427421242
+cap,flocking,mean_dtw_distance,572.0901231377184
+cap,flocking,spatial_variance,6.373871153539012
+cap,flocking,mean_dtw_distance,2045.2940988706907
+cap,flocking,spatial_variance,0.18003310882448773
+cap,flocking,mean_dtw_distance,609.1834511500658
+cap,flocking,spatial_variance,11.799152731837228
+cap,flocking,mean_dtw_distance,5760.151008520349
+cap,flocking,spatial_variance,0.12167723601596545
+cap,flocking,mean_dtw_distance,499.92706794151644
+cap,flocking,spatial_variance,6.1527878650998336
+cap,flocking,mean_dtw_distance,4004.530963232955
+cap,flocking,spatial_variance,1.1132080723210804
+cap,flocking,mean_dtw_distance,2029.0476541340036
+cap,flocking,spatial_variance,0.5320898526573834
+cap,flocking,mean_dtw_distance,278.4945292999195
+cap,flocking,spatial_variance,0.28516167532387493
+cap,flocking,mean_dtw_distance,186.81728147899344
+cap,flocking,spatial_variance,0.24247254421756106
+cap,flocking,mean_dtw_distance,570.313404135125
+cap,flocking,spatial_variance,0.20805726396120566
+cap,flocking,mean_dtw_distance,583.2086766798164
+cap,flocking,spatial_variance,0.567792644507998
+cap,flocking,mean_dtw_distance,643.0086199492556
+cap,flocking,spatial_variance,0.11241136728481269
+cap,flocking,mean_dtw_distance,490.1774449688951
+cap,flocking,spatial_variance,1.2338061901487782
+cap,flocking,mean_dtw_distance,1269.26666482271
+cap,flocking,spatial_variance,0.13242120368850158
+cap,flocking,mean_dtw_distance,378.96635249082885
+cap,flocking,spatial_variance,0.18180143285136696
+cap,flocking,mean_dtw_distance,523.3860395324508
+cap,flocking,spatial_variance,1.554685019378944
+cap,flocking,mean_dtw_distance,2073.4383987012534
+cap,flocking,spatial_variance,0.23163170952738565
+cap,flocking,mean_dtw_distance,713.5766931668933
+cap,flocking,spatial_variance,5.1040561553957
+cap,flocking,mean_dtw_distance,2552.2403568750065
+cap,flocking,spatial_variance,0.15638525581099544
+cap,flocking,mean_dtw_distance,420.2956630123602
+cap,flocking,spatial_variance,0.15879559934203802
+cap,flocking,mean_dtw_distance,445.1522130602283
+cap,flocking,spatial_variance,0.26016693261952084
+cap,flocking,mean_dtw_distance,734.1044035613621
+cap,flocking,spatial_variance,0.48307750906886365
+cap,flocking,mean_dtw_distance,176.23136846656362
+cap,flocking,spatial_variance,0.37672009818575924
+cap,flocking,mean_dtw_distance,784.0427508122497
+cap,flocking,spatial_variance,0.2696563855627348
+cap,flocking,mean_dtw_distance,633.7668945659145
+cap,flocking,spatial_variance,0.26076212473356675
+cap,flocking,mean_dtw_distance,733.5139567577841
+cap,flocking,spatial_variance,2.988883737256352
+cap,flocking,mean_dtw_distance,2036.8976008273626
+cap,flocking,spatial_variance,2.853782145326215
+cap,flocking,mean_dtw_distance,1255.2395100030317
+cap,flocking,spatial_variance,0.20694021354144315
+cap,flocking,mean_dtw_distance,478.38332426082906
+cap,flocking,spatial_variance,0.15976211499603665
+cap,flocking,mean_dtw_distance,406.3511192243667
+cap,flocking,spatial_variance,2.998711093193455
+cap,flocking,mean_dtw_distance,2057.3059944169427
+cap,flocking,spatial_variance,4.776703475090778
+cap,flocking,mean_dtw_distance,1559.7880918301198
+cap,flocking,spatial_variance,0.29971642383957964
+cap,flocking,mean_dtw_distance,194.47506728588442
+cap,flocking,spatial_variance,1.1863342256958957
+cap,flocking,mean_dtw_distance,216.41244598961742
+cap,flocking,spatial_variance,0.35343108231481785
+cap,flocking,mean_dtw_distance,212.60528107681435
+cap,flocking,spatial_variance,0.10796757139960148
+cap,flocking,mean_dtw_distance,500.3692622355125
+cap,flocking,spatial_variance,0.480231554520959
+cap,flocking,mean_dtw_distance,1343.9690666762247
+cap,flocking,spatial_variance,0.32641845741843667
+cap,flocking,mean_dtw_distance,1192.0930983176283
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,0.3333333333333333
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,0.3333333333333333
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,0.8333333333333334
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,0.16666666666666666
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,0.6666666666666666
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,0.8333333333333334
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,0.6666666666666666
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,0.8333333333333334
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,0.5
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,1.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,0.0
+cap,crossing,target_achievement_ratio,0.0
+cap,aggregation,max_min_distance,2.3111887720306012
+cap,aggregation,max_min_distance,0.021159490041826212
+cap,aggregation,max_min_distance,1.0554697922557332
+cap,aggregation,max_min_distance,2.373872436255765
+cap,aggregation,max_min_distance,2.1650973137552154
+cap,aggregation,max_min_distance,1.0120582943179748
+cap,aggregation,max_min_distance,0.002440743236159698
+cap,aggregation,max_min_distance,1.8490902999035772
+cap,aggregation,max_min_distance,1.5254039622092064
+cap,aggregation,max_min_distance,1.843856896157033
+cap,aggregation,max_min_distance,4.788303182042372
+cap,aggregation,max_min_distance,1.9823586060140663
+cap,aggregation,max_min_distance,3.195735100681821
+cap,aggregation,max_min_distance,2.6426187567428605
+cap,aggregation,max_min_distance,1.4741281160982698
+cap,aggregation,max_min_distance,2.536045116742665
+cap,aggregation,max_min_distance,2.479707127012224
+cap,aggregation,max_min_distance,1.3845479699832473
+cap,aggregation,max_min_distance,1.3422312983123368
+cap,aggregation,max_min_distance,2.604301396141373
+cap,aggregation,max_min_distance,1.5316170830211733
+cap,aggregation,max_min_distance,0.004450987078909063
+cap,aggregation,max_min_distance,1.9988749882446386
+cap,aggregation,max_min_distance,0.037499121409636516
+cap,aggregation,max_min_distance,0.013179732507658581
+cap,aggregation,max_min_distance,0.22758632165141324
+cap,aggregation,max_min_distance,2.5591835519882595
+cap,aggregation,max_min_distance,1.5790729342855891
+cap,aggregation,max_min_distance,0.06641775407588402
+cap,aggregation,max_min_distance,1.94612991441274
+cap,aggregation,max_min_distance,0.12491287429516645
+cap,aggregation,max_min_distance,1.3753367925452742
+cap,aggregation,max_min_distance,-0.001559209765912728
+cap,aggregation,max_min_distance,1.5437048852400206
+cap,aggregation,max_min_distance,2.015114792101589
+cap,aggregation,max_min_distance,0.027053442859093085
+cap,aggregation,max_min_distance,0.09673920973184541
+cap,aggregation,max_min_distance,4.774270004481619
+cap,aggregation,max_min_distance,1.07790497455958
+cap,aggregation,max_min_distance,1.7575249904617063
+cap,aggregation,max_min_distance,2.365733976533168
+cap,aggregation,max_min_distance,0.949379138055503
+cap,aggregation,max_min_distance,1.7992888826416866
+cap,aggregation,max_min_distance,0.7498154039691929
+cap,aggregation,max_min_distance,0.03656322563355499
+cap,aggregation,max_min_distance,3.025351151206407
+cap,aggregation,max_min_distance,2.4583052849723526
+cap,aggregation,max_min_distance,3.3982689618338497
+cap,aggregation,max_min_distance,1.9177080781388403
+cap,aggregation,max_min_distance,3.1027476787272006
+cap,aggregation,max_min_distance,2.563273309390814
+cap,aggregation,max_min_distance,1.1194545747363356
+cap,aggregation,max_min_distance,0.016038982979053457
+cap,aggregation,max_min_distance,2.270429575990532
+cap,aggregation,max_min_distance,3.017320350425018
+cap,aggregation,max_min_distance,0.007687050196213435
+cap,aggregation,max_min_distance,2.209736621456952
+cap,aggregation,max_min_distance,3.3292483809928615
+cap,aggregation,max_min_distance,2.645195485500699
+cap,aggregation,max_min_distance,2.513058987239496
+cap,aggregation,max_min_distance,1.296956264381673
+cap,aggregation,max_min_distance,1.7177608859938165
+cap,aggregation,max_min_distance,0.13479872551122152
+cap,aggregation,max_min_distance,0.000995746860612462
+cap,aggregation,max_min_distance,3.3849213136002434
+cap,aggregation,max_min_distance,0.829631087744557
+cap,aggregation,max_min_distance,0.0248193354977157
+cap,aggregation,max_min_distance,0.615670864174227
+cap,aggregation,max_min_distance,2.152753802329279
+cap,aggregation,max_min_distance,2.795628629591713
+cap,aggregation,max_min_distance,1.7511188081328173
+cap,aggregation,max_min_distance,1.2533429170678652
+cap,aggregation,max_min_distance,1.6627090188407831
+cap,aggregation,max_min_distance,1.1432659408651127
+cap,aggregation,max_min_distance,1.6398776400241715
+cap,aggregation,max_min_distance,2.237416987527241
+cap,aggregation,max_min_distance,0.023405945169202552
+cap,aggregation,max_min_distance,1.8941053670618084
+cap,aggregation,max_min_distance,1.6288488992021548
+cap,aggregation,max_min_distance,1.8603168600272044
+cap,aggregation,max_min_distance,0.03563381181716491
+cap,aggregation,max_min_distance,1.2453527734374503
+cap,aggregation,max_min_distance,0.0035379072940469047
+cap,aggregation,max_min_distance,2.244497213213032
+cap,aggregation,max_min_distance,2.9204243423668315
+cap,aggregation,max_min_distance,4.30336818497476
+cap,aggregation,max_min_distance,1.838616537315905
+cap,aggregation,max_min_distance,0.23424847637478075
+cap,aggregation,max_min_distance,1.1330154542163078
+cap,aggregation,max_min_distance,2.3473333534617256
+cap,aggregation,max_min_distance,-0.11805583146727475
+cap,aggregation,max_min_distance,1.6199198490760571
+cap,aggregation,max_min_distance,0.017242940628051595
+cap,aggregation,max_min_distance,3.43020410804874
+cap,aggregation,max_min_distance,2.162259852970807
+cap,aggregation,max_min_distance,1.5138319302753391
+cap,aggregation,max_min_distance,2.7074873241933437
+cap,aggregation,max_min_distance,1.618697438526882
+cap,aggregation,max_min_distance,0.08217753988849563
+cap,aggregation,max_min_distance,2.001663166523219
+cap,shaping,procrustes_distance,0.6388731661551157
+cap,shaping,procrustes_distance,0.2058936386070616
+cap,shaping,procrustes_distance,0.6756810000096001
+cap,shaping,procrustes_distance,0.5834699973852031
+cap,shaping,procrustes_distance,0.7652859948842075
+cap,shaping,procrustes_distance,0.4878922322455399
+cap,shaping,procrustes_distance,0.23098027186842765
+cap,shaping,procrustes_distance,0.8039616236372663
+cap,shaping,procrustes_distance,0.00012937671860901068
+cap,shaping,procrustes_distance,0.4167004146171943
+cap,shaping,procrustes_distance,0.40565329834680053
+cap,shaping,procrustes_distance,0.6090376623311188
+cap,shaping,procrustes_distance,0.00012447932986644968
+cap,shaping,procrustes_distance,0.8554073037990693
+cap,shaping,procrustes_distance,0.5797182636055611
+cap,shaping,procrustes_distance,0.0013817809395170284
+cap,shaping,procrustes_distance,0.07811206309504412
+cap,shaping,procrustes_distance,0.0016311815207093465
+cap,shaping,procrustes_distance,0.055404228060446224
+cap,shaping,procrustes_distance,0.6866856718685815
+cap,shaping,procrustes_distance,0.09190385705004775
+cap,shaping,procrustes_distance,0.640916013061566
+cap,shaping,procrustes_distance,0.8677355062605158
+cap,shaping,procrustes_distance,0.41647962703684016
+cap,shaping,procrustes_distance,0.2774913103630467
+cap,shaping,procrustes_distance,0.660600607012707
+cap,shaping,procrustes_distance,0.9043692254921898
+cap,shaping,procrustes_distance,0.7488859469402477
+cap,shaping,procrustes_distance,0.937947160338904
+cap,shaping,procrustes_distance,0.00016849172161435903
+cap,shaping,procrustes_distance,0.0009524516188540353
+cap,shaping,procrustes_distance,0.572735139254417
+cap,shaping,procrustes_distance,0.0014318374414165641
+cap,shaping,procrustes_distance,0.6796203530192312
+cap,shaping,procrustes_distance,0.4716067961855322
+cap,shaping,procrustes_distance,0.5391809994112474
+cap,shaping,procrustes_distance,0.28321809050323266
+cap,shaping,procrustes_distance,0.09392939753741956
+cap,shaping,procrustes_distance,0.1270774464914169
+cap,shaping,procrustes_distance,0.0006147448191048953
+cap,shaping,procrustes_distance,0.682881758684866
+cap,shaping,procrustes_distance,0.6276047673316216
+cap,shaping,procrustes_distance,0.00046171681856672583
+cap,shaping,procrustes_distance,0.8786466418218197
+cap,shaping,procrustes_distance,0.7477664248121904
+cap,shaping,procrustes_distance,0.851310162368172
+cap,shaping,procrustes_distance,0.8695929083161443
+cap,shaping,procrustes_distance,0.0005223262008675796
+cap,shaping,procrustes_distance,0.6238870591049996
+cap,shaping,procrustes_distance,0.7884847988972206
+cap,shaping,procrustes_distance,0.0002680202998219808
+cap,shaping,procrustes_distance,0.3123017339314707
+cap,shaping,procrustes_distance,0.34858605187303093
+cap,shaping,procrustes_distance,0.8180329681971733
+cap,shaping,procrustes_distance,0.6246221205549933
+cap,shaping,procrustes_distance,0.2325264984938923
+cap,shaping,procrustes_distance,0.7883401277542682
+cap,shaping,procrustes_distance,0.0005270226998715934
+cap,shaping,procrustes_distance,0.38491151669772544
+cap,shaping,procrustes_distance,0.7330882553570871
+cap,shaping,procrustes_distance,0.00016818518670806264
+cap,shaping,procrustes_distance,0.005388814654690269
+cap,shaping,procrustes_distance,0.8158911655916448
+cap,shaping,procrustes_distance,0.9424508777691142
+cap,shaping,procrustes_distance,0.07925987518769764
+cap,shaping,procrustes_distance,0.6706448147313465
+cap,shaping,procrustes_distance,0.7440404020186913
+cap,shaping,procrustes_distance,0.5910275241232446
+cap,shaping,procrustes_distance,0.795514245719582
+cap,shaping,procrustes_distance,0.7992767269040297
+cap,shaping,procrustes_distance,0.0016465171569854623
+cap,shaping,procrustes_distance,0.0005347131491144562
+cap,shaping,procrustes_distance,0.7245980035854361
+cap,shaping,procrustes_distance,0.5812400525801538
+cap,shaping,procrustes_distance,0.7442962664754522
+cap,shaping,procrustes_distance,0.35577908824702004
+cap,shaping,procrustes_distance,0.8107910564509169
+cap,shaping,procrustes_distance,0.7051078869991707
+cap,shaping,procrustes_distance,0.8673443398417833
+cap,shaping,procrustes_distance,0.5628525529350744
+cap,shaping,procrustes_distance,0.9032399681078445
+cap,shaping,procrustes_distance,0.609016965756006
+cap,shaping,procrustes_distance,0.8151409758098112
+cap,shaping,procrustes_distance,0.727054271222847
+cap,shaping,procrustes_distance,0.0007903788144486629
+cap,shaping,procrustes_distance,0.8336317089728645
+cap,shaping,procrustes_distance,0.0001387507009894377
+cap,shaping,procrustes_distance,0.8134078825644626
+cap,shaping,procrustes_distance,0.8102806244413296
+cap,shaping,procrustes_distance,0.4265099670637893
+cap,shaping,procrustes_distance,0.4529262491211106
+cap,shaping,procrustes_distance,0.34548051831715065
+cap,shaping,procrustes_distance,0.0002986263164201345
+cap,shaping,procrustes_distance,0.7015852767994344
+cap,shaping,procrustes_distance,0.8541769301318599
+cap,shaping,procrustes_distance,0.6387711341445491
+cap,shaping,procrustes_distance,0.7215945953011802
+cap,shaping,procrustes_distance,0.6850614844486913
+cap,shaping,procrustes_distance,0.9628438528843711
+cap,shaping,procrustes_distance,0.5600395501916027
+cap,shaping,procrustes_distance,0.7902397327786719
+cap,shaping,procrustes_distance,0.0002157076789886744
+cap,shaping,procrustes_distance,0.03837874865439508
+cap,shaping,procrustes_distance,0.869049714971674
+cap,shaping,procrustes_distance,0.00023268008004788548
+cap,shaping,procrustes_distance,0.6251957927591428
+cap,shaping,procrustes_distance,0.8253332278234401
+cap,shaping,procrustes_distance,0.0021691014753304756
+cap,shaping,procrustes_distance,0.00035181166342717284
+cap,shaping,procrustes_distance,0.0015774468418641486
+cap,encircling,mean_distance_error,1.8004226797393497
+cap,encircling,mean_distance_error,0.04748569524119023
+cap,encircling,mean_distance_error,0.2923169489981342
+cap,encircling,mean_distance_error,1.8962772796002056
+cap,encircling,mean_distance_error,1.0978580476154558
+cap,encircling,mean_distance_error,2.1507239584979283
+cap,encircling,mean_distance_error,1.0080308532504763
+cap,encircling,mean_distance_error,2.4948638611192844
+cap,encircling,mean_distance_error,0.554612864674737
+cap,encircling,mean_distance_error,0.02863372088150723
+cap,encircling,mean_distance_error,0.05633258061540031
+cap,encircling,mean_distance_error,0.04232332152743449
+cap,encircling,mean_distance_error,0.09512074023080407
+cap,encircling,mean_distance_error,0.6887617060731924
+cap,encircling,mean_distance_error,0.07757929412428542
+cap,encircling,mean_distance_error,0.06063144517870528
+cap,encircling,mean_distance_error,0.960421109708702
+cap,encircling,mean_distance_error,0.16058253175113082
+cap,encircling,mean_distance_error,0.047592822085983366
+cap,encircling,mean_distance_error,0.04074830977399448
+cap,encircling,mean_distance_error,0.1564394249505886
+cap,encircling,mean_distance_error,0.841217712552844
+cap,encircling,mean_distance_error,0.046293916932872735
+cap,encircling,mean_distance_error,0.020148793325574288
+cap,encircling,mean_distance_error,0.7743471249784452
+cap,encircling,mean_distance_error,0.06173936257052783
+cap,encircling,mean_distance_error,0.7553285872801895
+cap,encircling,mean_distance_error,1.9717701551707931
+cap,encircling,mean_distance_error,1.2833454835564855
+cap,encircling,mean_distance_error,0.05422287002371917
+cap,encircling,mean_distance_error,0.017677803161831502
+cap,encircling,mean_distance_error,0.07491530734345873
+cap,encircling,mean_distance_error,0.8500329589883635
+cap,encircling,mean_distance_error,0.05492316644189584
+cap,encircling,mean_distance_error,0.5985726386685016
+cap,encircling,mean_distance_error,0.404181905787451
+cap,encircling,mean_distance_error,0.040745950503767205
+cap,encircling,mean_distance_error,1.4788937537677063
+cap,encircling,mean_distance_error,1.6124855531667839
+cap,encircling,mean_distance_error,0.8566236245662081
+cap,encircling,mean_distance_error,1.9495280995824877
+cap,encircling,mean_distance_error,2.8135795872697904
+cap,encircling,mean_distance_error,1.7962384054521074
+cap,encircling,mean_distance_error,1.0303435805734902
+cap,encircling,mean_distance_error,2.4252505797160127
+cap,encircling,mean_distance_error,1.5218968998608287
+cap,encircling,mean_distance_error,0.042545989490876825
+cap,encircling,mean_distance_error,0.4791641261624407
+cap,encircling,mean_distance_error,2.327521920434421
+cap,encircling,mean_distance_error,0.08340965515768173
+cap,encircling,mean_distance_error,0.06491953557290464
+cap,encircling,mean_distance_error,0.06881938727391151
+cap,encircling,mean_distance_error,1.2826727952381682
+cap,encircling,mean_distance_error,0.022814777587217932
+cap,encircling,mean_distance_error,0.03620422235485099
+cap,encircling,mean_distance_error,2.0284536576105623
+cap,encircling,mean_distance_error,0.06853198642202431
+cap,encircling,mean_distance_error,0.06199970525551605
+cap,encircling,mean_distance_error,1.021837661232611
+cap,encircling,mean_distance_error,1.2855755746845456
+cap,encircling,mean_distance_error,0.5236920225394361
+cap,encircling,mean_distance_error,0.5316545537269431
+cap,encircling,mean_distance_error,0.7489237872216202
+cap,encircling,mean_distance_error,0.06818528609221769
+cap,encircling,mean_distance_error,1.1647492494612355
+cap,encircling,mean_distance_error,2.0017414434187306
+cap,encircling,mean_distance_error,2.435617236345841
+cap,encircling,mean_distance_error,1.009747609679868
+cap,encircling,mean_distance_error,2.3481637524892136
+cap,encircling,mean_distance_error,1.2220989935836855
+cap,encircling,mean_distance_error,0.2678950890720105
+cap,encircling,mean_distance_error,1.406632555316172
+cap,encircling,mean_distance_error,2.404358355930816
+cap,encircling,mean_distance_error,0.2473034855009608
+cap,encircling,mean_distance_error,1.6561014135680996
+cap,encircling,mean_distance_error,2.3277615374300322
+cap,encircling,mean_distance_error,0.41737380140394315
+cap,encircling,mean_distance_error,0.35180876746047646
+cap,encircling,mean_distance_error,0.027187069508809336
+cap,encircling,mean_distance_error,1.228417239718264
+cap,encircling,mean_distance_error,1.3088573794891305
+cap,encircling,mean_distance_error,0.6229125989642383
+cap,encircling,mean_distance_error,2.066291581221352
+cap,encircling,mean_distance_error,0.34324138196288456
+cap,encircling,mean_distance_error,0.6331075440446161
+cap,encircling,mean_distance_error,1.2916067206092134
+cap,encircling,mean_distance_error,1.6606225082755615
+cap,encircling,mean_distance_error,0.04092002696504123
+cap,encircling,mean_distance_error,0.5928332137616844
+cap,encircling,mean_distance_error,0.04766573614365014
+cap,covering,area_ratio,1.1160890736663716
+cap,covering,variance_nearest_neighbor_distance,0.01417968990018861
+cap,covering,area_ratio,0.16391663863686473
+cap,covering,variance_nearest_neighbor_distance,0.0003399002594041205
+cap,covering,area_ratio,1.393408518142855
+cap,covering,variance_nearest_neighbor_distance,0.00479450022424719
+cap,covering,area_ratio,0.8866938865735537
+cap,covering,variance_nearest_neighbor_distance,0.0005516802636832797
+cap,covering,area_ratio,1.3947809817240564
+cap,covering,variance_nearest_neighbor_distance,0.0029966329779111713
+cap,covering,area_ratio,0.6465302923081824
+cap,covering,variance_nearest_neighbor_distance,0.06854487867077541
+cap,covering,area_ratio,1.0022600804466453
+cap,covering,variance_nearest_neighbor_distance,0.31806548600450124
+cap,covering,area_ratio,0.3286347706419119
+cap,covering,variance_nearest_neighbor_distance,0.004802189557017971
+cap,covering,area_ratio,0.8851441655569258
+cap,covering,variance_nearest_neighbor_distance,0.13249053646982653
+cap,covering,area_ratio,0.3564154061043878
+cap,covering,variance_nearest_neighbor_distance,0.0016060627060023728
+cap,covering,area_ratio,1.2708603830448617
+cap,covering,variance_nearest_neighbor_distance,0.030041598294943503
+cap,covering,area_ratio,0.9179843277879945
+cap,covering,variance_nearest_neighbor_distance,0.029192403823162346
+cap,covering,area_ratio,0.06147352006078964
+cap,covering,variance_nearest_neighbor_distance,0.005703004439417701
+cap,covering,area_ratio,0.7268217064928456
+cap,covering,variance_nearest_neighbor_distance,0.13321441007099316
+cap,covering,area_ratio,0.09150966009093944
+cap,covering,variance_nearest_neighbor_distance,0.0012917921769028003
+cap,covering,area_ratio,0.8926796509894173
+cap,covering,variance_nearest_neighbor_distance,0.09337130456482383
+cap,covering,area_ratio,0.9197268109770489
+cap,covering,variance_nearest_neighbor_distance,0.07979093263777137
+cap,covering,area_ratio,0.28088375151909245
+cap,covering,variance_nearest_neighbor_distance,0.008333854584028808
+cap,covering,area_ratio,1.4667159635294906
+cap,covering,variance_nearest_neighbor_distance,0.20230185462124034
+cap,covering,area_ratio,0.023244693615753893
+cap,covering,variance_nearest_neighbor_distance,0.000222972109229357
+cap,covering,area_ratio,0.028817816872093237
+cap,covering,variance_nearest_neighbor_distance,0.0003564895798860041
+cap,covering,area_ratio,0.4125363559920527
+cap,covering,variance_nearest_neighbor_distance,0.09297794441036945
+cap,covering,area_ratio,0.22282498314002294
+cap,covering,variance_nearest_neighbor_distance,0.0032224994085684657
+cap,covering,area_ratio,0.9376366825496191
+cap,covering,variance_nearest_neighbor_distance,0.0068560570558140075
+cap,covering,area_ratio,0.15684214446497793
+cap,covering,variance_nearest_neighbor_distance,0.00025690533043008605
+cap,covering,area_ratio,0.9142381255511595
+cap,covering,variance_nearest_neighbor_distance,0.0005290150134683424
+cap,covering,area_ratio,0.942338318260202
+cap,covering,variance_nearest_neighbor_distance,0.0004069850704180879
+cap,covering,area_ratio,1.359417838116749
+cap,covering,variance_nearest_neighbor_distance,0.0005819702915556095
+cap,covering,area_ratio,0.9061197369851431
+cap,covering,variance_nearest_neighbor_distance,0.0006137821857990589
+cap,covering,area_ratio,1.3728759915535766
+cap,covering,variance_nearest_neighbor_distance,0.0015043313503152677
+cap,covering,area_ratio,0.9328375917488889
+cap,covering,variance_nearest_neighbor_distance,0.0004189331320886186
+cap,covering,area_ratio,0.16150880942288426
+cap,covering,variance_nearest_neighbor_distance,0.00022419808748936213
+cap,covering,area_ratio,1.233932518042428
+cap,covering,variance_nearest_neighbor_distance,0.01712509284414998
+cap,covering,area_ratio,0.9599315140960053
+cap,covering,variance_nearest_neighbor_distance,0.008396194037577489
+cap,covering,area_ratio,1.3750317299046297
+cap,covering,variance_nearest_neighbor_distance,0.001489178828878315
+cap,covering,area_ratio,1.2527689228818135
+cap,covering,variance_nearest_neighbor_distance,0.01234572678248625
+cap,covering,area_ratio,0.8977760584294537
+cap,covering,variance_nearest_neighbor_distance,0.002297428880423526
+cap,covering,area_ratio,1.4068552126770808
+cap,covering,variance_nearest_neighbor_distance,0.0012986507051467614
+cap,covering,area_ratio,1.378546828515933
+cap,covering,variance_nearest_neighbor_distance,0.0014149530694770901
+cap,covering,area_ratio,0.9587035051239802
+cap,covering,variance_nearest_neighbor_distance,0.006526705107802502
+cap,covering,area_ratio,1.2174053015783497
+cap,covering,variance_nearest_neighbor_distance,0.06740597450554185
+cap,covering,area_ratio,1.3919923284982039
+cap,covering,variance_nearest_neighbor_distance,0.006280706457033638
+cap,covering,area_ratio,1.6716781154692308
+cap,covering,variance_nearest_neighbor_distance,0.2573635767175991
+cap,covering,area_ratio,1.3334683869524548
+cap,covering,variance_nearest_neighbor_distance,0.03444939424647886
+cap,covering,area_ratio,1.0963783548331247
+cap,covering,variance_nearest_neighbor_distance,0.2999149799589561
+cap,covering,area_ratio,0.901567156521731
+cap,covering,variance_nearest_neighbor_distance,0.0001914384963585581
+cap,covering,area_ratio,1.414598887164336
+cap,covering,variance_nearest_neighbor_distance,0.002755550216938296
+cap,covering,area_ratio,0.8842523928824852
+cap,covering,variance_nearest_neighbor_distance,0.0012498468654156
+cap,covering,area_ratio,0.23500209956823676
+cap,covering,variance_nearest_neighbor_distance,0.0075324833694533164
+cap,covering,area_ratio,0.2842396481855802
+cap,covering,variance_nearest_neighbor_distance,0.0037717212517693654
+cap,covering,area_ratio,0.16666058546727602
+cap,covering,variance_nearest_neighbor_distance,0.0009372933581928588
+cap,covering,area_ratio,0.1427670620518328
+cap,covering,variance_nearest_neighbor_distance,0.0041267114274996545
+cap,covering,area_ratio,0.1746328469338833
+cap,covering,variance_nearest_neighbor_distance,0.030628443967037584
+cap,covering,area_ratio,0.4101280583273226
+cap,covering,variance_nearest_neighbor_distance,0.1025332035525746
+cap,covering,area_ratio,0.2785128870509971
+cap,covering,variance_nearest_neighbor_distance,0.00841768559565071
+cap,covering,area_ratio,0.942966688024775
+cap,covering,variance_nearest_neighbor_distance,0.0045550560269733194
+cap,covering,area_ratio,0.19783941636707575
+cap,covering,variance_nearest_neighbor_distance,0.0009250922697820673
+cap,covering,area_ratio,0.8685701690297603
+cap,covering,variance_nearest_neighbor_distance,0.05669278044759947
+cap,covering,area_ratio,0.9442529671905263
+cap,covering,variance_nearest_neighbor_distance,0.0012665142719371345
+cap,covering,area_ratio,0.20560560975531755
+cap,covering,variance_nearest_neighbor_distance,0.0016237111822273152
+cap,covering,area_ratio,1.05877211783264
+cap,covering,variance_nearest_neighbor_distance,0.033330030202471196
+cap,covering,area_ratio,1.5346923818057385
+cap,covering,variance_nearest_neighbor_distance,0.04757360143205835
+cap,covering,area_ratio,0.2628796250703937
+cap,covering,variance_nearest_neighbor_distance,0.0024766088933441763
+cap,covering,area_ratio,0.9666779032130152
+cap,covering,variance_nearest_neighbor_distance,0.005448530038347467
+cap,covering,area_ratio,0.026707097101739623
+cap,covering,variance_nearest_neighbor_distance,0.0036073882944813967
+cap,covering,area_ratio,0.8904939380433723
+cap,covering,variance_nearest_neighbor_distance,0.0396807621421026
+cap,covering,area_ratio,0.9939609137088873
+cap,covering,variance_nearest_neighbor_distance,0.0419817150612984
+cap,covering,area_ratio,0.900590270079642
+cap,covering,variance_nearest_neighbor_distance,0.006496415785702477
+cap,covering,area_ratio,1.37255137730139
+cap,covering,variance_nearest_neighbor_distance,0.003633950007460272
+cap,covering,area_ratio,1.3902346742034177
+cap,covering,variance_nearest_neighbor_distance,0.005267827699350985

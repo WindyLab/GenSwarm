@@ -13,8 +13,8 @@
 }
 "model": {
   "VLM": "",
-    "GPT": "gpt-4o-2024-11-20",
-#  "GPT": "DMXAPI-HuoShan-DeepSeek-V3",
+#    "GPT": "gpt-4o-2024-11-20",
+  "GPT": "DMXAPI-HuoShan-DeepSeek-V3",
 #  "GPT": "o1-mini",
   "QWEN": "qwen-vl-plus",
   "CLAUDE": "input the claude model here"

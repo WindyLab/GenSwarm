@@ -8,23 +8,23 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 task_keys = [
     # "exploration"
-    # "crossing",
-    "encircling",
-    "shaping",
+    "crossing",
+    # "encircling",
+    # "shaping",
     # "bridging",
     # "aggregation",
     # "flocking",
-    "covering",
+    # "covering",
 ]
 
 # llm_model_list = ["gpt-4o-2024-11-20"]
-# llm_model_list = ["DMXAPI-HuoShan-DeepSeek-V3"]
+llm_model_list = ["DMXAPI-HuoShan-DeepSeek-V3"]
 # llm_model_list = ["o1-mini"]
-llm_model_list = ["o1-mini", "gpt-4o-2024-11-20"]
+# llm_model_list = ["o1-mini", "gpt-4o-2024-11-20"]
 
 prompt_type_list = [
     # "default",
-    "compound"
+    # "compound"
     # "simple",
     # "simple_strategy",
     # "narrative",
@@ -49,8 +49,9 @@ run_modes = [
     # 'continue',
     # 'fail_rerun',
     #  'rerun',
+    "continue",
     # 'fail_rerun',
-    'analyze',
+    # 'analyze',
 ]
 # run_modes = [
 #     'analyze',
@@ -68,7 +69,7 @@ def run_batch(batch_num, task_name, run_mode, test_mode, task_path):
 
 
 def run_batches(llm, prompt_type, task_name, run_mode, test_mode):
-    batch_numbers = range(1, 2)  # Adjust range as needed
+    batch_numbers = range(1, 51)  # Adjust range as needed
     with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
         # Submit all batches to the executor and create progress bar
         future_to_batch = {executor.submit(run_batch, batch_num, task_name, run_mode, test_mode,

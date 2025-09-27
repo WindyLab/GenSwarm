@@ -81,10 +81,10 @@ def run_all(llm_list, prompt_list, task_list, repeat_count=1, max_workers=1, tim
 
 
 if __name__ == "__main__":
-    llm_model_list = ["gpt-4o-2024-11-20"]
+    llm_model_list = ["DMXAPI-HuoShan-DeepSeek-V3"]
     prompt_type_list = [
-        # "default",
-        "compound",
+        "default",
+        # "compound",
         # "simple",
         # "simple_strategy",
         # "narrative",
@@ -92,12 +92,13 @@ if __name__ == "__main__":
         # "structured_strategy"
     ]
     task_list = [
-        "shaping",
-        "encircling",
-        "covering",
+        # "shaping",
+        # "encircling",
+        # "covering",
+        "crossing"
         # "exploration"
     ]
-    repeat_each = 100  # 每种组合重复几次
+    repeat_each = 50  # 每种组合重复几次
     max_concurrent = 50
     per_task_timeout = 1800
     timestamp = datetime.now().strftime("[%Y-%m-%d %H:%M:%S:%f]")
