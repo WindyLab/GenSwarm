@@ -61,7 +61,7 @@ def main():
     parser.add_argument(
         "--task_name",
         type=str,
-        default="shaping",
+        default="covering",
         help="The name of the task to run",
     )
     parser.add_argument(
@@ -119,7 +119,7 @@ def main():
     #     '2025-01-14_23-43-31', '2025-01-14_23-41-27',
     #
     # ]
-    exp_list = ['2025-09-26']
+    exp_list = ['2025-10-17']
 
     runner.run(exp_list=exp_list)
 

@@ -13,8 +13,8 @@ task_keys = [
     # "shaping",
     # "bridging",
     # "aggregation",
-    # "flocking",
-    "covering",
+    "flocking",
+    # "covering",
     # "clustering",
     # "pursuing"
 ]
@@ -33,9 +33,9 @@ run_modes = [
     # 'rerun',
     # 'continue',
     # 'fail_rerun',
-    # 'rerun',
+    'rerun',
     # 'fail_rerun',
-    'analyze',
+    # 'analyze',
 ]
 # run_modes = [
 #     'analyze',
@@ -53,7 +53,7 @@ def run_batch(batch_num, task_name, run_mode, test_mode, task_path):
 
 
 def run_batches(task_name, run_mode, test_mode):
-    batch_numbers = range(1, 2)  # Adjust range as needed
+    batch_numbers = range(1, 51)  # Adjust range as needed
     with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
         # Submit all batches to the executor and create progress bar
         future_to_batch = {executor.submit(run_batch, batch_num, task_name, run_mode, test_mode,
