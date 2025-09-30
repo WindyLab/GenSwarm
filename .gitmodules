@@ -1,0 +1,3 @@
+[submodule "comparative/comparative"]
+	path = comparative/comparative
+	url = https://github.com/jwk1rose/genswarm_comparative.git
