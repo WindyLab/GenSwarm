@@ -50,8 +50,8 @@ class _ColoredFormatter(logging.Formatter):
             f"{log_level_color}[{record.levelname}]{_ANSI_COLOR_CODES['RESET']}"
         )
         record.name = f"{log_level_color}[{record.name}]{_ANSI_COLOR_CODES['RESET']}"
-        if isinstance(record.created, float):
-            record.created = f"{log_level_color}[{float(record.created):.6f}]{_ANSI_COLOR_CODES['RESET']}"
+        # ✅ 不修改 record.created，因为 logging 系统需要它保持 float 类型
+        # 如果需要颜色，应该在格式化后的字符串上添加
 
         return super(_ColoredFormatter, self).format(record)
 

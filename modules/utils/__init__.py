@@ -11,7 +11,6 @@ tort, or otherwise, arising from, out of, or in connection with the
 software or the use or other dealings in the software.
 """
 
-from .code_analyzer import CodeAnalyzer
 from .logger import setup_logger, LoggerLevel
 from .media import generate_video_from_frames, process_video, create_video_from_frames
 from .root import get_project_root, root_manager
@@ -19,7 +18,6 @@ from .run_scripts import run_script
 from .save_json import save_dict_to_json
 
 __all__ = [
-    "CodeAnalyzer",
     "setup_logger",
     "LoggerLevel",
     "generate_video_from_frames",

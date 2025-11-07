@@ -64,7 +64,6 @@ if __name__ == "__main__":
     parameter_service.add_argument('--prompt_type', type=str, default='default', help='Prompt template category')
     parameter_service.add_argument('--llm_name', type=str, default='gpt-4o', help='Name of the LLM used')
     parameter_service.add_argument('--task_name', type=str, default='flocking', help='Name of the task')
-
     args = parameter_service.parse_arguments(sys_args)
     parameter_service.args = args  # 更新保存的 args
 
@@ -77,34 +76,42 @@ if __name__ == "__main__":
 
     task = get_user_commands(experiment_name,format_type=args.prompt_type)[0]
     env_config_file = config_mapping(experiment_name)
-    file_name = root_manager.update_root(args=args)
+    root_manager.update_root(args=args)
 
     logger.log(f"\n{parameter_service.format_arguments_as_table(args)}", "warning")
 
     asyncio.run(run_task(task, args))
-    # rich_print(title="Code Generation", content="All code has been generated, ready to be deployed.")
-    # # experiment_name = "encircling"
-    # # file_name = "2024-12-17_11-56-41"
-    # test_mode = "full_version"
-    # rospy.set_param('pub_mqtt', False)
-    # if test_mode == "real":
-    #     env_config_path = f"./config/real_env/{env_config_file}"
-    #     experiment_duration = 60
-    # else:
-    #     env_config_path = f"./config/env/{env_config_file}"
-    #     experiment_duration = 10
-    # runner_class = task_mapping(experiment_name)
-    # runner = runner_class(
-    #     env_config_path=env_config_path,
-    #     workspace_path=experiment_name,
-    #     experiment_duration=experiment_duration,
-    #     exp_batch=0,
-    #     run_mode="rerun",
-    #     test_mode=test_mode,
-    #     max_speed=4.5,
-    #     tolerance=0.15,
-    # )
-    # runner.run(exp_list=[file_name])
+    rich_print(title="Code Generation", content="All code has been generated, ready to be deployed.")
+    
+    # 从workspace_root提取刚生成的实验目录名（最后一级目录）
+    file_name = root_manager.workspace_root.name  # 例如: "2025-11-07_08-59-35_015288"
+
+    workspace_relative_path = root_manager.workspace_root.relative_to(
+        root_manager.project_root / "workspace"
+    ).parent
+    
+    print(f"file_name: {file_name}")
+    print(f"workspace_path: {workspace_relative_path}")
+    
+    test_mode = "full_version"
+    if test_mode == "real":
+        env_config_path = f"./config/real_env/{env_config_file}"
+        experiment_duration = 60
+    else:
+        env_config_path = f"./config/env/{env_config_file}"
+        experiment_duration = 10
+    runner_class = task_mapping(experiment_name)
+    runner = runner_class(
+        env_config_path=env_config_path,
+        workspace_path=str(workspace_relative_path),  # 使用完整的相对路径
+        experiment_duration=experiment_duration,
+        exp_batch=0,
+        run_mode="rerun",
+        test_mode=test_mode,
+        max_speed=4.5,
+        tolerance=0.15,
+    )
+    runner.run(exp_list=[file_name])
     #
     # test_mode = "real"
     # if test_mode == "real":

@@ -53,7 +53,7 @@ graph TB
 
 ### 2. 安装Docker
 
-#### Linux (Ubuntu/Debian)
+#### Linux (Ubuntu，推荐)
 ```bash
 # 安装Docker
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -179,7 +179,7 @@ docker build -t huabench/code-llm:base -f base.Dockerfile .
 # 验证镜像构建成功
 docker images | grep "code-llm"
 # 输出示例：
-# huabench/code-llm   base      abc123def456   5 minutes ago   2.5GB
+# huabench/code-llm   base      abc123def456   5 minutes ago   3.58GB
 ```
 
 **构建时间**: 约 5-10 分钟（取决于网络速度）
@@ -267,18 +267,12 @@ docker build -t huabench/code-llm:runtime -f docker/runtime.Dockerfile .
 # 验证镜像
 docker images | grep "code-llm"
 # 输出示例：
-# huabench/code-llm   runtime   def456abc789   10 minutes ago   4.5GB
-# huabench/code-llm   base      abc123def456   20 minutes ago   2.5GB
+# huabench/code-llm   runtime   def456abc789   10 minutes ago    5.28GB
+# huabench/code-llm   base      abc123def456   20 minutes ago    3.58GB
 ```
 
 **构建时间**: 约 10-20 分钟（取决于网络速度和依赖下载）
 
-**常见问题**：
-- ⚠️ 如果遇到 `pip install` 超时，可以设置国内镜像源：
-  ```bash
-  # 临时使用清华镜像
-  pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
-  ```
 
 ---
 
@@ -379,39 +373,276 @@ python --version
 echo $ROS_DISTRO
 # 输出: noetic
 
-# 验证GenSwarm模块
-cd src/code_llm
-python -c "from modules.framework.workflow import Workflow; print('✓ GenSwarm imported')"
 ```
 
-#### 4.2 运行代码生成任务
+#### 4.2 完整执行流程（从零开始）
+
+以下是完整的代码生成与仿真验证流程，适用于首次运行或新任务执行：
+
+##### Step 1: 配置API密钥
+
+在运行前，需要配置LLM API密钥：
+
+```bash
+# 编辑配置文件（在宿主机或容器内都可以）
+vi config/llm_config.yaml
+
+# 配置你的API密钥
+api_key: "your-api-key-here"
+api_base: "https://api.openai.com/v1"  # 根据使用的LLM调整
+```
+
+##### Step 2: 启动Runtime容器
+
+```bash
+# 在项目根目录下
+cd docker
+
+# 启动runtime容器（会自动挂载项目代码）
+docker compose run runtime-base
+
+# 容器启动后，你会看到提示符：
+# (py310) root@docker-desktop:/catkin_ws#
+```
+
+##### Step 3: 编译ROS工作空间
 
 ```bash
 # 在容器内执行
 
+# 编译catkin工作空间
+cd /catkin_ws
+catkin_make
+
+# 加载ROS环境
+source ./devel/setup.bash
+
+# 验证ROS环境
+echo $ROS_PACKAGE_PATH
+# 应输出包含 /catkin_ws/src 的路径
+```
+
+##### Step 4: 启动ROS核心（另开终端）
+
+在**宿主机**上打开新终端：
+
+```bash
+# 查找运行中的容器ID
+docker ps
+# 输出示例：
+# CONTAINER ID   IMAGE                       COMMAND                  STATUS
+# 0e16a39e2b84   huabench/code-llm:runtime   "/ros_entrypoint.sh…"   Up 5 minutes
+
+# 进入同一个容器（替换<CONTAINER_ID>为实际ID）
+docker exec -it <CONTAINER_ID> /bin/bash
+
+# 在新终端中启动roscore
+roscore
+
+# roscore会持续运行，输出类似：
+# started roslaunch server http://docker-desktop:xxxxx/
+# ros_comm version 1.15.x
+# ...
+```
+
+##### Step 5: 运行代码生成任务（第一个终端）
+
+返回第一个终端（容器内），执行代码生成：
+
+```bash
 # 切换到项目目录
 cd /catkin_ws/src/code_llm
 
-# 运行单个任务
+# 运行单个任务（以encircling为例）
 python run/run_single.py \
-    --llm_name gpt-4 \
-    --run_experiment_name flocking \
-    --test_mode debug
+    --llm_name o1-mini \
+    --task_name encircling
 
-# 运行批量任务
-python run/run_batch.py \
-    --llm_name gpt-4 \
-    --prompt_type CoT \
-    --test_mode full_version
-
-# 运行大规模批量任务
-python run/run_batch_large.py \
-    --llm_names gpt-4,claude-3 \
-    --prompt_types CoT,ReAct \
-    --run_experiment_names flocking,covering,encircling
+# 参数说明：
+# --llm_name: LLM模型名称（如 gpt-4o, o1-mini, claude-3-5-sonnet等）
+# --task_name: 任务名称（encircling, flocking, shaping等）
 ```
 
-#### 4.3 挂载卷说明
+**执行过程**：
+
+运行后，终端会输出详细的执行日志，包括：
+
+```
+[时间戳][INFO] Current Stage: Code Generation
+[时间戳][INFO] Current Action: AnalyzeConstraints
+[时间戳][DEBUG] Prompt: ...
+[时间戳][INFO] Response: ...
+...
+[时间戳][SUCCESS] Code Generation: All code has been generated
+[时间戳][INFO] Starting simulation verification...
+Environment started successfully with path: /catkin_ws/src/code_llm/workspace/...
+[时间戳][INFO] Run allocate success
+[时间戳][INFO] Run code success
+Saved simulation data as pickle at: /catkin_ws/src/code_llm/workspace/.../full_version.pkl
+Saved animation as MP4 at: /catkin_ws/src/code_llm/workspace/.../full_version.mp4
+```
+
+**执行时间**：
+- 代码生成阶段：约 2-5 分钟（取决于LLM响应速度）
+- 仿真验证阶段：约 10-30 秒
+- 总计：约 3-6 分钟
+
+##### Step 6: 查看生成结果
+
+```bash
+# 在容器内查看生成的代码目录
+cd workspace/o1-mini/default/encircling/
+ls
+
+# 输出示例（会显示生成的时间戳目录）：
+# 2025-11-07_09-21-45_053613
+# 2025-11-07_09-25-03_349248
+# ...
+
+# 进入最新生成的目录
+cd 2025-11-07_09-25-03_349248
+ls
+
+# 目录内容说明：
+```
+
+| 文件/目录 | 说明                   |
+|-----------|----------------------|
+| **global_skill.py** | 全局协调代码（角色分配、目标计算）    |
+| **local_skill.py** | 局部控制代码（运动控制、避障）      |
+| **global_apis.py** | 全局API接口              |
+| **apis.py** | 局部API接口              |
+| **allocate_run.py** | 角色分配执行脚本             |
+| **run.py** | 主运行脚本                |
+| **full_version.mp4** | 仿真动画视频               |
+| **full_version.pkl** | 仿真数据（可用于分析）          |
+| **full_version.json** | 仿真结果统计               |
+| **log.md** | 完整执行日志               |
+| **command.md** | 任务描述                 |
+| **constraints.md** | 约束条件                 |
+| **flow.md** | 控制流程说明               |
+| **data/** | 仿真过程数据（轨迹、帧图像等,暂时弃用） |
+
+##### Step 7: 查看仿真视频
+
+生成的 `full_version.mp4` 文件可以直接播放，显示机器人的运动过程。
+
+**在宿主机上查看**（推荐）：
+
+```bash
+# 由于使用了卷挂载，生成的文件会自动同步到宿主机
+# 在宿主机项目根目录下查找
+cd /path/to/GenSwarm/workspace/o1-mini/default/encircling/2025-11-07_09-25-03_349248
+
+# macOS
+open full_version.mp4
+
+# Linux
+xdg-open full_version.mp4
+
+# Windows (WSL2)
+explorer.exe full_version.mp4
+```
+
+##### Step 8: 分析实验结果
+
+```bash
+# 查看结果统计
+cat full_version.json
+
+# 输出示例：
+# {
+#   "analysis": {
+#     "mean_distance_error": 0.116,
+#     "variance_distance_error": 0.007,
+#     "initial_distance_error": 1.396,
+#     "success": false
+#   },
+#   "experiment_data": {...}
+# }
+```
+
+**结果评估指标**：
+- `mean_distance_error`: 平均距离误差（越小越好）
+- `variance_distance_error`: 距离误差方差（越小越稳定）
+- `initial_distance_error`: 初始距离误差
+- `success`: 任务是否成功（根据任务特定条件判断）
+
+##### Step 9: 运行批量实验（可选）
+
+如果需要运行多次实验或不同任务：
+
+```bash
+# 运行批量任务
+python run/run_batch.py \
+    --llm_name gpt-4o \
+    --task_name flocking \
+    --num_experiments 10
+
+# 或运行多个任务
+python run/run_batch.py \
+    --llm_name o1-mini \
+    --task_name encircling,flocking,shaping
+```
+
+##### Step 10: 清理与退出
+
+```bash
+# 在roscore终端按 Ctrl+C 停止roscore
+
+# 在代码生成终端输入exit退出容器
+exit
+
+# 或在宿主机停止容器
+docker compose -f docker/docker-compose.yml down
+```
+
+---
+
+#### 4.3 常见问题处理
+
+**Q1: 运行时提示"ROS master not found"**
+```bash
+# 确保roscore在另一个终端运行
+# 检查ROS_MASTER_URI环境变量
+echo $ROS_MASTER_URI
+# 应输出: http://docker-desktop:11311 或类似地址
+
+# 如果没有，手动设置
+export ROS_MASTER_URI=http://localhost:11311
+```
+
+**Q2: API调用失败**
+```bash
+# 检查API密钥配置
+cat config/llm_config.yaml
+
+# 测试网络连接
+ping -c 3 api.openai.com
+
+# 检查代理设置（如果使用代理）
+echo $http_proxy
+echo $https_proxy
+```
+
+**Q3: 内存不足**
+```bash
+# 检查Docker内存限制
+docker info | grep Memory
+
+# 增加Docker内存限制（在Docker Desktop设置中）
+# 建议至少分配 8GB 内存
+```
+
+**Q4: 生成的代码有语法错误**
+```bash
+# 查看日志中的错误信息
+cat workspace/.../log.md | grep -A 5 "Error"
+
+# 检查语法
+python -m py_compile workspace/.../local_skill.py
+python -m py_compile workspace/.../global_skill.py
+```
 
 Runtime容器使用Docker卷挂载，实现**代码实时同步**：
 
@@ -470,322 +701,7 @@ export STAGE=2 && docker compose up deploy  # 清理阶段
 
 ---
 
-### 运行方式三：单元测试
 
-```bash
-# 运行所有单元测试
-docker compose -f docker/docker-compose.yml up unittest
-
-# 或进入容器手动运行
-docker compose run runtime-base
-
-# 容器内执行
-cd /catkin_ws/src/code_llm
-conda activate py310
-python -m unittest discover tests
-```
-
----
-
-## 常用命令
-
-### 镜像管理
-
-```bash
-# 查看所有镜像
-docker images
-
-# 删除镜像
-docker rmi huabench/code-llm:runtime
-
-# 清理悬空镜像（释放空间）
-docker image prune -f
-
-# 清理所有未使用镜像
-docker image prune -a -f
-
-# 查看镜像构建历史
-docker history huabench/code-llm:runtime
-```
-
-### 容器管理
-
-```bash
-# 查看运行中的容器
-docker ps
-
-# 查看所有容器（包括停止的）
-docker ps -a
-
-# 停止容器
-docker stop <container_id>
-
-# 删除容器
-docker rm <container_id>
-
-# 清理所有停止的容器
-docker container prune -f
-
-# 进入运行中的容器
-docker exec -it <container_id> /bin/bash
-```
-
-### Docker Compose命令
-
-```bash
-# 启动服务（前台）
-docker compose -f docker/docker-compose.yml up runtime-base
-
-# 启动服务（后台）
-docker compose -f docker/docker-compose.yml up -d runtime-base
-
-# 停止服务
-docker compose -f docker/docker-compose.yml down
-
-# 查看服务日志
-docker compose -f docker/docker-compose.yml logs -f runtime-base
-
-# 重新构建并启动
-docker compose -f docker/docker-compose.yml up --build runtime-base
-
-# 进入服务容器
-docker compose -f docker/docker-compose.yml exec runtime-base /bin/bash
-```
-
-### 数据卷管理
-
-```bash
-# 查看所有数据卷
-docker volume ls
-
-# 删除数据卷
-docker volume rm <volume_name>
-
-# 清理未使用的数据卷
-docker volume prune -f
-```
-
----
-
-## 故障排查
-
-### 问题1：构建失败 - 网络超时
-
-**症状**：
-```
-ERROR: failed to solve: failed to fetch https://...
-```
-
-**解决方案**：
-```bash
-# 配置Docker使用国内镜像源
-sudo mkdir -p /etc/docker
-sudo tee /etc/docker/daemon.json <<-'EOF'
-{
-  "registry-mirrors": [
-    "https://docker.mirrors.ustc.edu.cn",
-    "https://hub-mirror.c.163.com"
-  ]
-}
-EOF
-
-sudo systemctl daemon-reload
-sudo systemctl restart docker
-
-# 重新构建
-docker compose build
-```
-
-### 问题2：pip安装超时
-
-**症状**：
-```
-ERROR: Could not install packages due to an EnvironmentError: ReadTimeoutError
-```
-
-**解决方案**：
-修改 `docker/runtime.Dockerfile`，添加pip国内源：
-```dockerfile
-RUN /bin/bash -c "source activate py310 && \
-                  pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple \
-                  --no-cache-dir -r requirements.txt"
-```
-
-### 问题3：磁盘空间不足
-
-**症状**：
-```
-ERROR: failed to solve: no space left on device
-```
-
-**解决方案**：
-```bash
-# 清理Docker缓存
-docker system prune -a -f
-
-# 查看空间占用
-docker system df
-
-# 删除未使用的镜像、容器、网络
-docker system prune -a --volumes -f
-```
-
-### 问题4：权限问题
-
-**症状**：
-```
-permission denied while trying to connect to the Docker daemon socket
-```
-
-**解决方案**：
-```bash
-# 将用户添加到docker组
-sudo usermod -aG docker $USER
-
-# 重新登录或执行
-newgrp docker
-
-# 验证
-docker run hello-world
-```
-
-### 问题5：容器内无法访问代码
-
-**症状**：
-容器启动后 `/catkin_ws/src/code_llm` 目录为空
-
-**解决方案**：
-```bash
-# 确保从项目根目录启动
-cd /path/to/GenSwarm
-docker compose -f docker/docker-compose.yml run runtime-base
-
-# 检查docker-compose.yml中的volumes配置
-# 应该是相对路径: ..:/catkin_ws/src/code_llm
-```
-
-### 问题6：ROS环境未激活
-
-**症状**：
-```bash
-roscore: command not found
-```
-
-**解决方案**：
-```bash
-# 在容器内执行
-source /opt/ros/noetic/setup.bash
-
-# 或将其添加到.bashrc（已在Dockerfile中配置）
-source ~/.bashrc
-```
-
-### 问题7：conda环境未激活
-
-**症状**：
-```bash
-python --version
-# 输出: Python 3.8.x (应该是3.10.x)
-```
-
-**解决方案**：
-```bash
-# 手动激活
-conda activate py310
-
-# 验证
-python --version
-# 输出: Python 3.10.x
-```
-
-### 问题8：CMake构建缓存冲突
-
-**症状**：
-```
-CMake Error: The source directory does not match the binary directory
-```
-
-**解决方案**：
-```bash
-# 创建.dockerignore文件（如果不存在）
-cat > .dockerignore <<EOF
-build/
-devel/
-.catkin_workspace
-*.pyc
-__pycache__/
-.git/
-.idea/
-.vscode/
-workspace/
-EOF
-
-# 清理本地构建产物
-rm -rf build/ devel/ .catkin_workspace
-
-# 重新构建镜像
-docker compose build --no-cache runtime-base
-```
-
----
-
-## 最佳实践
-
-### 1. 开发工作流
-
-```bash
-# 1. 启动容器（在docker目录下）
-cd docker
-docker compose run runtime-base
-
-# 2. 在容器内开发和测试
-cd /catkin_ws/src/code_llm
-python run/run_single.py --llm_name gpt-4 --run_experiment_name flocking
-
-# 3. 在宿主机编辑代码（使用你喜欢的IDE）
-# 修改会立即同步到容器内
-
-# 4. 退出容器
-exit
-
-# 5. 提交代码
-git add .
-git commit -m "Add new feature"
-```
-
-### 2. 镜像版本管理
-
-```bash
-# 标记版本
-docker tag huabench/code-llm:runtime huabench/code-llm:runtime-v1.0.0
-
-# 推送到Docker Hub（可选）
-docker login
-docker push huabench/code-llm:runtime-v1.0.0
-```
-
-### 3. 定期清理
-
-```bash
-# 每周清理一次
-docker system prune -a -f
-
-# 保留最近的镜像
-docker images | grep "code-llm" | awk '{print $3}' | tail -n +3 | xargs docker rmi
-```
-
-### 4. 性能优化
-
-```bash
-# 使用BuildKit加速构建
-export DOCKER_BUILDKIT=1
-docker compose build
-
-# 并行构建多个镜像
-docker compose build --parallel
-```
-
----
 
 ## 快速参考
 
@@ -806,53 +722,10 @@ docker compose run runtime-base
 # 4. 在容器内运行代码生成
 cd /catkin_ws/src/code_llm
 python run/run_single.py \
-    --llm_name gpt-4 \
-    --run_experiment_name flocking \
-    --test_mode debug
+    --llm_name o1-mini \
+    --run_experiment_name encircling \
 
 # 5. 查看结果
-ls workspace/gpt4/flocking/
+ls workspace
+
 ```
-
-### 环境变量
-
-| 变量 | 说明 | 默认值 |
-|------|------|--------|
-| `PYTHON_VERSION` | Python版本 | 3.10 |
-| `PYTHONPATH` | Python模块路径 | /catkin_ws/src/code_llm |
-| `ROS_MASTER_URI` | ROS主节点URI | http://$(hostname):11311 |
-| `DATA_PATH` | 部署数据路径 | 无 |
-| `STAGE` | 部署阶段(0/1/2) | 无 |
-
-### 常用端口
-
-| 端口 | 服务 | 说明 |
-|------|------|------|
-| 11311 | ROS Master | ROS核心服务 |
-| 22 | SSH | 远程部署连接 |
-
----
-
-## 总结
-
-本文档详细介绍了GenSwarm项目的Docker构建和运行流程：
-
-1. ✅ **多阶段镜像**: base → runtime → deploy
-2. ✅ **预编译策略**: 所有依赖在镜像构建时完成
-3. ✅ **卷挂载**: 实现代码实时同步
-4. ✅ **环境隔离**: Conda环境 + Docker容器
-5. ✅ **自动化部署**: Ansible + Docker Compose
-
-**核心命令回顾**：
-```bash
-# 构建镜像
-docker compose -f docker/docker-compose.yml build
-
-# 运行容器
-cd docker && docker compose run runtime-base
-
-# 执行代码生成
-python run/run_single.py --llm_name gpt-4 --run_experiment_name flocking
-```
-
-如有问题，请参考[故障排查](#故障排查)章节或提交Issue。
