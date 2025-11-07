@@ -1,6 +1,0 @@
-[run]
-omit =
-    /opt/ros/*
-    */cv2/*
-    */devel/*
-    ./modules/prompt/*

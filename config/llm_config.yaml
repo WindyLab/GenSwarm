@@ -1,21 +1,21 @@
 "api_base": {
-  "GPT": "https://vip.DMXapi.com/v1",
+  "GPT": "https://api.openai.com",
+  # any model provider can be added here，if model provider supports openai api format,
+  #  you can use the same api_base and api_key to access the model.
   #  "GPT": "https://api.deepseek.com",
-  "VLM": "https://api.deepseek.com",
+  "VLM": "https://api.openai.com",
   "QWEN": "https://dashscope.aliyuncs.com/compatible-mode/v1",
 }
 "api_key": {
-  "GPT": "sk-cBSqdkbEj5pPeY9pg2TBxgWMX7E8lmLTh4JzamXoR7L1Oymp",
-  #  "GPT": "sk-qiImfEgFlldXAtwPnxfFijlV8ZG1lGQqQhP1mBVW78WyOlYP",
-  "VLM": "sk-cBSqdkbEj5pPeY9pg2TBxgWMX7E8lmLTh4JzamXoR7L1Oymp",
-  "QWEN": "sk-99f55920b8834f6f8c1e78f8d3691c26",
+  "GPT": "sk-xxxx",
+  "VLM": "sk-xxx",
+  "QWEN": "sk-xxx",
   "CLAUDE": "input your claude api here"
 }
 "model": {
   "VLM": "",
 #    "GPT": "gpt-4o-2024-11-20",
   "GPT": "DMXAPI-HuoShan-DeepSeek-V3",
-#  "GPT": "o1-mini",
   "QWEN": "qwen-vl-plus",
   "CLAUDE": "input the claude model here"
 }
