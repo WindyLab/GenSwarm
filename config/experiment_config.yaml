@@ -2,9 +2,6 @@ arguments:
   --run_mode:
     default: run_experiment
     help: options:generate_code,run_test,run_experiment
-  #  --test_dir_name:
-  #    default: 'test'
-  #    help: special for test_code mode to specify the test dir name
   --experiment_nums:
     default: 1
     help: special for generate_code mode to specify the experiment nums
@@ -20,6 +17,3 @@ arguments:
     default: False
   --human_feedback:
     default: False
-#  --generate_mode:
-#    default: 'layer'
-#    help: options:'parallel','sequential','layer'
