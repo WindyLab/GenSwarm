@@ -6,11 +6,11 @@ import json
 import shutil
 import numpy as np
 import matplotlib.pyplot as plt
-plt.rcParams["legend.fontsize"] = 14   # 图注
+plt.rcParams["legend.fontsize"] = 18   # 图注
 plt.rcParams["axes.titlesize"] = 20    # 标题
-plt.rcParams["axes.labelsize"] = 16    # 坐标轴 label
-plt.rcParams["xtick.labelsize"] = 14   # x 轴刻度字体
-plt.rcParams["ytick.labelsize"] = 14 # y 轴刻度字体
+plt.rcParams["axes.labelsize"] = 18    # 坐标轴 label
+plt.rcParams["xtick.labelsize"] = 18   # x 轴刻度字体
+plt.rcParams["ytick.labelsize"] = 18 # y 轴刻度字体
 
 from itertools import permutations
 
