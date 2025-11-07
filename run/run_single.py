@@ -61,12 +61,10 @@ if __name__ == "__main__":
     config_file = "experiment_config.yaml"
     parameter_service.add_arguments_from_yaml(f"./config/{config_file}")
 
-    # ✅ 手动添加新参数（支持从命令行传入）
     parameter_service.add_argument('--prompt_type', type=str, default='default', help='Prompt template category')
-    parameter_service.add_argument('--llm_name', type=str, default='gpt-4', help='Name of the LLM used')
+    parameter_service.add_argument('--llm_name', type=str, default='gpt-4o', help='Name of the LLM used')
     parameter_service.add_argument('--task_name', type=str, default='flocking', help='Name of the task')
 
-    # ✅ 使用 CLI 参数解析，包括你手动添加的两个
     args = parameter_service.parse_arguments(sys_args)
     parameter_service.args = args  # 更新保存的 args
 
